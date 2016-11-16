@@ -1,0 +1,9 @@
+#?delimiters [%, %], [%=, %]
+<html>
+	<body>
+		<p>Dear $$FirstName$$ $$LastName$$,</p>
+		<p>thanks for registering on our website.</p>
+		<p>Best Regards,</p>
+		<p>Acme inc.</p>
+	</body>	
+</html>

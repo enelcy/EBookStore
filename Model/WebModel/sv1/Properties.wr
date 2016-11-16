@@ -1,0 +1,13 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="EBookStore" landmarks="sv1#area1 sv1#area4 sv1#lgu2" homePage="sv1#area1#page1">
+  <OperationUnits>
+    <LoginUnit id="sv1#lgu2" name="Login" landmark="true" secure="false" gr:x="580" gr:y="50">
+      <KOLink id="sv1#lgu2#kln8" name="KOFlow1" to="sv1#page27#mssu9">
+        <LinkParameter id="sv1#lgu2#kln8#par104" name="Login Failed!_Shown Messages" target="sv1#page27#mssu9.shownMessages" sourceValue="Login Failed!"/>
+      </KOLink>
+    </LoginUnit>
+    <LogoutUnit gr:x="275" gr:y="55" id="sv1#lou2" name="Logout" siteView="sv1" protected="true"/>
+    <GetUnit gr:x="-95" gr:y="445" id="sv1#gtu1" name="Get user" contextParameters="UserCtxParam" linkOrder="sv1#gtu1#ln40">
+      <Link id="sv1#gtu1#ln40" name="Flow40" to="sv1#area1#page1#dau1" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+  </OperationUnits>
+</SiteView>

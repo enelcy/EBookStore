@@ -1,0 +1,58 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page20" name="AllUsers" landmark="true" gr:x="200" gr:y="180">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area7#page20#pwu7" name="userlist" linkOrder="sv3#area7#page20#pwu7#ln26 sv3#area7#page20#pwu7#ln27" gr:x="0" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userOID userName password email" maxResults="15">
+      <Link id="sv3#area7#page20#pwu7#ln26" name="delete" to="sv3#dlu1" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area7#page20#pwu7#ln27" name="edit" to="sv3#area7#page16#enu7" type="normal" validate="true">
+        <LinkParameter id="sv3#area7#page20#pwu7#ln27#par76" name="email_email" source="data[].email" target="sv3#area7#page16#enu7#fld29_slot"/>
+        <LinkParameter id="sv3#area7#page20#pwu7#ln27#par77" name="defaultGroup.oid_group - Preselection" source="data[].User2DefaultGroup_groupOID" target="sv3#area7#page16#enu7#sfld6_presel"/>
+        <LinkParameter id="sv3#area7#page20#pwu7#ln27#par78" name="oid_Key Condition [oid]" source="data[].userOID" target="sv3#area7#page16#enu7.userOID"/>
+        <LinkParameter id="sv3#area7#page20#pwu7#ln27#par79" name="password_password" source="data[].password" target="sv3#area7#page16#enu7#fld28_slot"/>
+        <LinkParameter id="sv3#area7#page20#pwu7#ln27#par80" name="userName_username" source="data[].userName" target="sv3#area7#page16#enu7#fld27_slot"/>
+      </Link>
+      <DefaultSortAttribute attribute="userOID" order="ascending"/>
+      <SortAttribute attribute="userOID" order="ascending"/>
+      <SortAttribute attribute="userName" order="ascending"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page20#pwu7">
+          <layout:Attribute attribute="userOID"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Link link="sv3#area7#page20#pwu7#ln26"/>
+          <layout:Link link="sv3#area7#page20#pwu7#ln27"/>
+          <layout:Link link="sv3#area7#page20#pwu7userOID"/>
+          <layout:Link link="sv3#area7#page20#pwu7userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

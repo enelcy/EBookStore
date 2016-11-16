@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area8#page23" name="BookList" landmark="true" gr:x="15" gr:y="160">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area8#page23#pwu8" name="booklist" linkOrder="sv3#area8#page23#pwu8#ln31 sv3#area8#page23#pwu8#ln33" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" maxResults="15" entity="ent3" displayAttributes="ent3#att16 ent3#att17 ent3#att21 ent3#att22 ent3#att23 ent3#att24 ent3#att25 ent3#att26">
+      <Link id="sv3#area8#page23#pwu8#ln31" name="delete" to="sv3#dlu2" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area8#page23#pwu8#ln33" name="edit" to="sv3#area8#page24#enu11" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area8#page23#pwu8">
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att21"/>
+          <layout:Attribute attribute="ent3#att22"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att25"/>
+          <layout:Attribute attribute="ent3#att26"/>
+          <layout:Link link="sv3#area8#page23#pwu8#ln31"/>
+          <layout:Link link="sv3#area8#page23#pwu8#ln33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

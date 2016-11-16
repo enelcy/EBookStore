@@ -1,0 +1,114 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area4#page4" name="Search Books" protected="false" gr:x="0" gr:y="95">
+  <ContentUnits>
+    <EntryUnit id="sv1#area4#page4#enu3" name="Search" linkOrder="sv1#area4#page4#enu3#ln11 sv1#area4#page4#enu3#ln12" gr:x="165" gr:y="10" fieldOrder="sv1#area4#page4#enu3#sfld2 sv1#area4#page4#enu3#fld5" entity="ent3">
+      <Link id="sv1#area4#page4#enu3#ln11" name="Search" to="sv1#area4#page4#pwu9" type="normal" validate="true"/>
+      <SelectionField id="sv1#area4#page4#enu3#sfld2" name="Category" type="string"/>
+      <Field id="sv1#area4#page4#enu3#fld5" name="What are you interesting in?" type="string" modifiable="true"/>
+      <Link id="sv1#area4#page4#enu3#ln12" name="Reset" to="sv1#area4#opu3" type="normal" validate="true"/>
+    </EntryUnit>
+    <SelectorUnit id="sv1#area4#page4#seu4" name="Categories" gr:x="0" gr:y="0" entity="ent1">
+      <Link id="sv1#area4#page4#seu4#ln13" name="Link59" to="sv1#area4#page4#enu3" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page4#seu4#ln13#par32" name="category_PASSING" source="ent1#att2Array" passing="true"/>
+        <LinkParameter id="sv1#area4#page4#seu4#ln13#par33" name="oid_PASSING" source="ent1#att1Array" passing="true"/>
+        <LinkParameter id="sv1#area4#page4#seu4#ln13#par105" name="category_Category [label]" source="ent1#att2Array" target="sv1#area4#page4#enu3#sfld2_label"/>
+        <LinkParameter id="sv1#area4#page4#seu4#ln13#par106" name="oid_Category [output]" source="ent1#att1Array" target="sv1#area4#page4#enu3#sfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="15" gr:y="155" id="sv1#area4#page4#pwu9" name="Book" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att17 ent3#att21 ent3#att23 ent3#att24" blockFactor="8" linkOrder="sv1#area4#page4#pwu9#ln41">
+      <Link id="sv1#area4#page4#pwu9#ln41" name="detail" to="sv1#area4#page4#dau2" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <DataUnit gr:x="195" gr:y="145" id="sv1#area4#page4#dau2" name="BookDetail" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att23 ent3#att24 ent3#att16 ent3#att19">
+      <Selector id="sv1#area4#page4#dau2#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#page4#dau2#su13#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page4#enu3">
+          <layout:Link link="sv1#area4#page4#enu3#ln11"/>
+          <layout:Link link="sv1#area4#page4#enu3#ln12"/>
+          <layout:Field field="sv1#area4#page4#enu3#sfld2"/>
+          <layout:Field field="sv1#area4#page4#enu3#fld5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#area4#page4#pwu9">
+          <layout:Link link="sv1#area4#page4#pwu9#ln41"/>
+          <layout:Link link="sv1#area4#page4#pwu9First"/>
+          <layout:Link link="sv1#area4#page4#pwu9Previous"/>
+          <layout:Link link="sv1#area4#page4#pwu9Block"/>
+          <layout:Link link="sv1#area4#page4#pwu9Next"/>
+          <layout:Link link="sv1#area4#page4#pwu9Last"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att21"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#area4#page4#dau2">
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
