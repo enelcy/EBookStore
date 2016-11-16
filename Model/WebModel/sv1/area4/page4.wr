@@ -1,8 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area4#page4" name="Search Books" protected="false" gr:x="0" gr:y="95">
   <ContentUnits>
     <EntryUnit id="sv1#area4#page4#enu3" name="Search" linkOrder="sv1#area4#page4#enu3#ln11 sv1#area4#page4#enu3#ln12" gr:x="165" gr:y="10" fieldOrder="sv1#area4#page4#enu3#sfld2 sv1#area4#page4#enu3#fld5" entity="ent3">
-      <Link id="sv1#area4#page4#enu3#ln11" name="Search" to="sv1#area4#page4#pwu9" type="normal" validate="true"/>
-      <SelectionField id="sv1#area4#page4#enu3#sfld2" name="Category" type="string"/>
+      <Link id="sv1#area4#page4#enu3#ln11" name="Search" to="sv1#area4#page4#pwu9" type="automatic" validate="true">
+        <LinkParameter id="sv1#area4#page4#enu3#ln11#par110" name="Category_Category" source="sv1#area4#page4#enu3#sfld2" target="sv1#area4#page4#pwu9#su14#acond4"/>
+        <LinkParameter id="sv1#area4#page4#enu3#ln11#par111" name="What are you interesting in?_SearchCondition" source="sv1#area4#page4#enu3#fld5" target="sv1#area4#page4#pwu9#su14#acond5"/>
+      </Link>
+      <SelectionField id="sv1#area4#page4#enu3#sfld2" name="Category" type="integer" attribute="ent3#att32"/>
       <Field id="sv1#area4#page4#enu3#fld5" name="What are you interesting in?" type="string" modifiable="true"/>
       <Link id="sv1#area4#page4#enu3#ln12" name="Reset" to="sv1#area4#opu3" type="normal" validate="true"/>
     </EntryUnit>
@@ -16,8 +19,12 @@
     </SelectorUnit>
     <PowerIndexUnit gr:x="15" gr:y="155" id="sv1#area4#page4#pwu9" name="Book" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att17 ent3#att21 ent3#att23 ent3#att24" blockFactor="8" linkOrder="sv1#area4#page4#pwu9#ln41">
       <Link id="sv1#area4#page4#pwu9#ln41" name="detail" to="sv1#area4#page4#dau2" automaticCoupling="true" type="normal" validate="true"/>
+      <Selector id="sv1#area4#page4#pwu9#su14" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area4#page4#pwu9#su14#acond4" name="Category" predicate="eq" booleanOperator="or" implied="true" attributes="ent3#att32" ignoreCase="false"/>
+        <AttributesCondition id="sv1#area4#page4#pwu9#su14#acond5" name="SearchCondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
+      </Selector>
     </PowerIndexUnit>
-    <DataUnit gr:x="195" gr:y="145" id="sv1#area4#page4#dau2" name="BookDetail" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att23 ent3#att24 ent3#att16 ent3#att19">
+    <DataUnit gr:x="320" gr:y="165" id="sv1#area4#page4#dau2" name="BookDetail" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att23 ent3#att24 ent3#att16 ent3#att19">
       <Selector id="sv1#area4#page4#dau2#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page4#dau2#su13#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
       </Selector>
@@ -27,10 +34,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page4#enu3">
-          <layout:Link link="sv1#area4#page4#enu3#ln11"/>
-          <layout:Link link="sv1#area4#page4#enu3#ln12"/>
           <layout:Field field="sv1#area4#page4#enu3#sfld2"/>
           <layout:Field field="sv1#area4#page4#enu3#fld5"/>
+          <layout:Link link="sv1#area4#page4#enu3#ln11"/>
+          <layout:Link link="sv1#area4#page4#enu3#ln12"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
