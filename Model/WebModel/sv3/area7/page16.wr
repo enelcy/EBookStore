@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page16" name="EditUser" landmark="false" gr:x="0" gr:y="410">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page16" name="Edit User" landmark="false" gr:x="0" gr:y="410">
   <ContentUnits>
     <EntryUnit id="sv3#area7#page16#enu7" name="edituser" linkOrder="sv3#area7#page16#enu7#ln22" customDescriptor="false" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area7#page16#enu7#fld27 sv3#area7#page16#enu7#fld28 sv3#area7#page16#enu7#fld29 sv3#area7#page16#enu7#sfld6 sv3#area7#page16#enu7#fld75 sv3#area7#page16#enu7#fld76 sv3#area7#page16#enu7#fld77 sv3#area7#page16#enu7#fld78 sv3#area7#page16#enu7#fld79 sv3#area7#page16#enu7#msfld1">
       <Field id="sv3#area7#page16#enu7#fld27" name="username" type="string" modifiable="true" preloaded="true"/>

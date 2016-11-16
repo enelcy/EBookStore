@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page19" name="AddUser" landmark="true" gr:x="350" gr:y="335">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page19" name="Add User" landmark="true" gr:x="350" gr:y="335">
   <ContentUnits>
     <EntryUnit id="sv3#area7#page19#enu8" name="adduser" linkOrder="sv3#area7#page19#enu8#ln25" gr:x="0" gr:y="0" entity="User">
       <Link id="sv3#area7#page19#enu8#ln25" name="Add" to="sv3#cru1" type="normal" validate="true">
@@ -31,13 +31,13 @@
           <layout:Link link="sv3#area7#page19#enu8#ln25"/>
           <layout:Field field="sv3#area7#page19#enu8#fld30"/>
           <layout:Field field="sv3#area7#page19#enu8#fld31"/>
-          <layout:Field field="sv3#area7#page19#enu8#sfld7"/>
           <layout:Field field="sv3#area7#page19#enu8#fld32"/>
           <layout:Field field="sv3#area7#page19#enu8#fld80"/>
           <layout:Field field="sv3#area7#page19#enu8#fld81"/>
           <layout:Field field="sv3#area7#page19#enu8#fld82"/>
           <layout:Field field="sv3#area7#page19#enu8#fld83"/>
           <layout:Field field="sv3#area7#page19#enu8#fld84"/>
+          <layout:Field field="sv3#area7#page19#enu8#sfld7"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -51,25 +51,31 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent1" name="Category" duration="persistent" attributeOrder="ent1#att1 ent1#att2" gr:x="45" gr:y="405" db:database="db1" db:table="category">
+  <Entity id="ent1" name="Category" duration="persistent" attributeOrder="ent1#att1 ent1#att2" gr:x="75" gr:y="380" db:database="db1" db:table="category">
     <Attribute id="ent1#att1" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="category" type="string" db:column="category"/>
   </Entity>
-  <Entity gr:x="360" gr:y="345" id="ent3" name="BookInfo" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att21 ent3#att22 ent3#att23 ent3#att24 ent3#att25 ent3#att26 ent3#att32" db:database="db1" db:table="bookinfo">
+  <Entity gr:x="360" gr:y="290" id="ent3" name="BookInfo" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att22 ent3#att23 ent3#att24 ent3#att25 ent3#att26" db:database="db1" db:table="bookinfo">
     <Attribute id="ent3#att15" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att26" name="isRent" type="boolean" key="false" db:column="isrent"/>
     <Attribute id="ent3#att25" name="isSale" type="boolean" key="false" db:column="issale"/>
     <Attribute id="ent3#att24" name="author" type="string" key="false" db:column="author"/>
     <Attribute id="ent3#att23" name="publisher" type="string" key="false" db:column="publisher"/>
     <Attribute id="ent3#att22" name="loginPrice" type="float" key="false" db:column="loginprice"/>
-    <Attribute id="ent3#att21" name="category" type="string" key="false" db:column="category"/>
     <Attribute id="ent3#att20" name="photo" type="blob" contentType="image" key="false" db:column="photo"/>
     <Attribute id="ent3#att19" name="price" type="float" key="false" db:column="price"/>
     <Attribute id="ent3#att18" name="description" type="text" key="false" db:column="description" db:clob="true"/>
     <Attribute id="ent3#att17" name="name" type="string" key="false" db:column="name"/>
     <Attribute id="ent3#att16" name="ISBN" type="string" key="false" db:column="isbn"/>
-    <Attribute id="ent3#att32" name="category_oid" type="integer" db:column="category_oid"/>
   </Entity>
   <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540" username="sql9144540" cryptedPassword="true" password="MjJmOUlMM0NrVg==">
   </db:Database>
+  <Relationship id="rel1" name="BookInfo_Category" sourceEntity="ent3" targetEntity="ent1" db:database="db1" db:table="bookinfo">
+    <RelationshipRole1 id="rel1#role1" name="BookInfoToCategory" maxCard="1">
+      <db:JoinColumn attribute="ent3#att15" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="CategoryToBookInfo" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="category_oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>

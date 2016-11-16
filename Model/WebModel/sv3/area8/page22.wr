@@ -1,42 +1,58 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area8#page22" name="AddBook" landmark="true" gr:x="385" gr:y="210">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area8#page22" name="Add Book" landmark="true" gr:x="325" gr:y="630">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#area8#page22#enu12" name="addbook" entity="ent3" linkOrder="sv3#area8#page22#enu12#ln34">
-      <Field id="sv3#area8#page22#enu12#fld63" name="ISBN" type="string" modifiable="true" attribute="ent3#att16"/>
-      <Field id="sv3#area8#page22#enu12#fld64" name="name" type="string" modifiable="true" attribute="ent3#att17"/>
-      <Field id="sv3#area8#page22#enu12#fld65" name="description" type="text" modifiable="true" attribute="ent3#att18"/>
-      <Field id="sv3#area8#page22#enu12#fld66" name="price" type="float" modifiable="true" attribute="ent3#att19"/>
-      <Field id="sv3#area8#page22#enu12#fld67" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
-      <Field id="sv3#area8#page22#enu12#fld69" name="loginPrice" type="float" modifiable="true" attribute="ent3#att22"/>
-      <Field id="sv3#area8#page22#enu12#fld70" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
-      <Field id="sv3#area8#page22#enu12#fld71" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
-      <Field id="sv3#area8#page22#enu12#fld72" name="isSale" type="boolean" modifiable="true" attribute="ent3#att25"/>
-      <Field id="sv3#area8#page22#enu12#fld73" name="isRent" type="boolean" modifiable="true" attribute="ent3#att26"/>
-      <Field id="sv3#area8#page22#enu12#fld74" name="category_oid" type="integer" modifiable="true" attribute="ent3#att32"/>
-      <Link id="sv3#area8#page22#enu12#ln34" name="add" to="sv3#cru2" automaticCoupling="true" type="normal" validate="true"/>
-      <SelectionField id="sv3#area8#page22#enu12#sfld10" attribute="ent3#att21" type="string" name="category">
-        <Slot id="sv3#area8#page22#enu12#sfld10#slot15" name="categories" label="true" output="true" value="Science Fiction|Romans|Sports|War|Military|Nature|Health"/>
-      </SelectionField>
+    <SelectorUnit gr:x="135" gr:y="0" id="sv3#area8#page22#seu9" name="category" entity="ent1">
+      <Link id="sv3#area8#page22#seu9#ln43" name="Flow43" to="sv3#area8#page22#enu9" type="transport" validate="true">
+        <LinkParameter id="sv3#area8#page22#seu9#ln43#par42" name="category_BookInfoToCategory [label]" source="ent1#att2Array" target="sv3#area8#page22#enu9#sfld8_label"/>
+        <LinkParameter id="sv3#area8#page22#seu9#ln43#par43" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area8#page22#enu9#sfld8_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit gr:x="0" gr:y="5" id="sv3#area8#page22#enu9" name="addbook" entity="ent3" linkOrder="sv3#area8#page22#enu9#ln44">
+      <Field id="sv3#area8#page22#enu9#fld13" name="ISBN" type="string" modifiable="true" attribute="ent3#att16"/>
+      <Field id="sv3#area8#page22#enu9#fld14" name="name" type="string" modifiable="true" attribute="ent3#att17"/>
+      <Field id="sv3#area8#page22#enu9#fld15" name="description" type="text" modifiable="true" attribute="ent3#att18"/>
+      <Field id="sv3#area8#page22#enu9#fld16" name="price" type="float" modifiable="true" attribute="ent3#att19"/>
+      <Field id="sv3#area8#page22#enu9#fld17" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
+      <Field id="sv3#area8#page22#enu9#fld18" name="loginPrice" type="float" modifiable="true" attribute="ent3#att22"/>
+      <Field id="sv3#area8#page22#enu9#fld19" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
+      <Field id="sv3#area8#page22#enu9#fld20" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
+      <Field id="sv3#area8#page22#enu9#fld21" name="isSale" type="boolean" modifiable="true" attribute="ent3#att25"/>
+      <Field id="sv3#area8#page22#enu9#fld22" name="isRent" type="boolean" modifiable="true" attribute="ent3#att26"/>
+      <SelectionField id="sv3#area8#page22#enu9#sfld8" name="BookInfoToCategory" type="string" role="rel1#role1"/>
+      <Link id="sv3#area8#page22#enu9#ln44" name="Add" to="sv3#cru2" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area8#page22#enu12">
-          <layout:Link link="sv3#area8#page22#enu12#ln34"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld63"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld64"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld65"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld66"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld67"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld69"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld70"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld71"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld72"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld73"/>
-          <layout:Field field="sv3#area8#page22#enu12#fld74"/>
-          <layout:Field field="sv3#area8#page22#enu12#sfld10"/>
+        <layout:Unit unitId="sv3#area8#page22#enu9">
+          <layout:Field field="sv3#area8#page22#enu9#fld13"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld14"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld15"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld16"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld17"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld18"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld19"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld20"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld21"/>
+          <layout:Field field="sv3#area8#page22#enu9#fld22"/>
+          <layout:Field field="sv3#area8#page22#enu9#sfld8"/>
+          <layout:Link link="sv3#area8#page22#enu9#ln44"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

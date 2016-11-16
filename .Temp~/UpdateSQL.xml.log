@@ -1,40 +1,27 @@
-[15 Nov 2016 08:49:32] DEBUG Executing SQL script
-[15 Nov 2016 08:49:32] INFO ================================================================================
-[15 Nov 2016 08:49:32] INFO onError= 'stop'
-[15 Nov 2016 08:49:32] INFO autoCommit= 'false'
-[15 Nov 2016 08:49:32] INFO username= 'sql9144540'
-[15 Nov 2016 08:49:32] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\workspace\EBookStore\.Temp~\UpdateSQL.xml'
-[15 Nov 2016 08:49:32] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\workspace\EBookStore\.Temp~\UpdateSQL.xml.log'
-[15 Nov 2016 08:49:32] INFO encoding= ''
-[15 Nov 2016 08:49:32] INFO driverClass= 'com.mysql.jdbc.Driver'
-[15 Nov 2016 08:49:32] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\workspace\EBookStore\.Temp~\UpdateSQL.sql'
-[15 Nov 2016 08:49:32] INFO eventSocketPort= '52366'
-[15 Nov 2016 08:49:32] INFO statementSeparator= ';'
-[15 Nov 2016 08:49:32] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.14.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[15 Nov 2016 08:49:32] INFO password= '22f9IL3CkV'
-[15 Nov 2016 08:49:32] INFO url= 'jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540'
-[15 Nov 2016 08:49:32] INFO ================================================================================
-[15 Nov 2016 08:49:32] INFO Connecting to the Database...
-[15 Nov 2016 08:49:32] INFO Database connection estabilished
-[15 Nov 2016 08:49:32] INFO transaction isolation: 4
-[15 Nov 2016 08:49:32] DEBUG ================================================================================
-[15 Nov 2016 08:49:32] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.14.x64bit\workspace\EBookStore\.Temp~\UpdateSQL.sql
-[15 Nov 2016 08:49:32] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
-[15 Nov 2016 08:49:32] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
-[15 Nov 2016 08:49:32] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), `shippingaddress`  varchar(255), `birthdate`  date, `gender`  varchar(255), `lastname`  varchar(255), `firstname`  varchar(255), primary key (`oid`) )
-[15 Nov 2016 08:49:33] DEBUG Executing statement:    create table `category` ( `oid`  integer  not null, `category`  varchar(255), primary key (`oid`) )
-[15 Nov 2016 08:49:33] DEBUG Executing statement:    create table `bookinfo` ( `oid`  integer  not null, `isrent`  bit, `issale`  bit, `author`  varchar(255), `publisher`  varchar(255), `loginprice`  double precision, `category`  varchar(255), `photo`  varchar(255), `price`  double precision, `description`  longtext, `name`  varchar(255), `isbn`  varchar(255), `category_oid`  integer, primary key (`oid`) )
-[15 Nov 2016 08:49:33] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
-[15 Nov 2016 08:49:33] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
-[15 Nov 2016 08:49:33] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
-[15 Nov 2016 08:49:33] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
-[15 Nov 2016 08:49:33] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
-[15 Nov 2016 08:49:33] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
-[15 Nov 2016 08:49:33] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
-[15 Nov 2016 08:49:33] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
-[15 Nov 2016 08:49:33] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
-[15 Nov 2016 08:49:33] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
-[15 Nov 2016 08:49:33] DEBUG ================================================================================
-[15 Nov 2016 08:49:33] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[15 Nov 2016 08:49:33] INFO Database connection closed
-[15 Nov 2016 08:49:33] DEBUG Total time: 1872 milliseconds
+[16 Nov 2016 00:17:07] DEBUG Executing SQL script
+[16 Nov 2016 00:17:07] INFO ================================================================================
+[16 Nov 2016 00:17:07] INFO onError= 'stop'
+[16 Nov 2016 00:17:07] INFO autoCommit= 'false'
+[16 Nov 2016 00:17:07] INFO username= 'sql9144540'
+[16 Nov 2016 00:17:07] INFO outputPath= 'C:\WebRatio\WebRatio\workspace\EBookStore\.Temp~\UpdateSQL.xml'
+[16 Nov 2016 00:17:07] INFO outputLogPath= 'C:\WebRatio\WebRatio\workspace\EBookStore\.Temp~\UpdateSQL.xml.log'
+[16 Nov 2016 00:17:07] INFO encoding= ''
+[16 Nov 2016 00:17:07] INFO driverClass= 'com.mysql.jdbc.Driver'
+[16 Nov 2016 00:17:07] INFO sqlScript= 'C:\WebRatio\WebRatio\workspace\EBookStore\.Temp~\UpdateSQL.sql'
+[16 Nov 2016 00:17:07] INFO eventSocketPort= '59306'
+[16 Nov 2016 00:17:07] INFO statementSeparator= ';'
+[16 Nov 2016 00:17:07] INFO derby.system.home= 'C:\WebRatio\WebRatio\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[16 Nov 2016 00:17:07] INFO password= '22f9IL3CkV'
+[16 Nov 2016 00:17:07] INFO url= 'jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540'
+[16 Nov 2016 00:17:07] INFO ================================================================================
+[16 Nov 2016 00:17:07] INFO Connecting to the Database...
+[16 Nov 2016 00:17:08] INFO Database connection estabilished
+[16 Nov 2016 00:17:08] INFO transaction isolation: 4
+[16 Nov 2016 00:17:08] DEBUG ================================================================================
+[16 Nov 2016 00:17:08] DEBUG Executing SQL script file: C:\WebRatio\WebRatio\workspace\EBookStore\.Temp~\UpdateSQL.sql
+[16 Nov 2016 00:17:08] DEBUG Executing statement:  alter table `bookinfo`  add column  `category_oid`  integer
+[16 Nov 2016 00:17:08] DEBUG Executing statement:  alter table `bookinfo`   add index fk_bookinfo_category (`category_oid`), add constraint fk_bookinfo_category foreign key (`category_oid`) references `category` (`oid`)
+[16 Nov 2016 00:17:08] DEBUG ================================================================================
+[16 Nov 2016 00:17:08] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[16 Nov 2016 00:17:08] INFO Database connection closed
+[16 Nov 2016 00:17:08] DEBUG Total time: 969 milliseconds

@@ -1,6 +1,6 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" landmarks="sv3#area8 sv3#area7" protected="true" homePage="sv3#page25">
   <OperationUnits>
-    <ModifyUnit id="sv3#mfu2" name="UpdateBook" gr:x="1030" gr:y="0" entity="ent3">
+    <ModifyUnit id="sv3#mfu2" name="UpdateBook" gr:x="1040" gr:y="40" entity="ent3">
       <Selector id="sv3#mfu2#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mfu2#su7#kcond6" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -20,7 +20,7 @@
         <LinkParameter id="sv3#dlu1#kln5#par82" name="Delete fails!_Shown Messages" target="sv3#area7#page18#mssu6.shownMessages" sourceValue="Delete fails!"/>
       </KOLink>
     </DeleteUnit>
-    <DeleteUnit id="sv3#dlu2" name="deletebook" gr:x="930" gr:y="545" entity="ent3">
+    <DeleteUnit id="sv3#dlu2" name="deletebook" gr:x="975" gr:y="680" entity="ent3">
       <Selector id="sv3#dlu2#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu2#su9#kcond8" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
@@ -29,7 +29,7 @@
       </OKLink>
     </DeleteUnit>
     <LogoutUnit id="sv3#lou1" name="Logout" landmark="false" gr:x="480" gr:y="85" siteView="sv1"/>
-    <CreateUnit id="sv3#cru1" name="adduser" gr:x="800" gr:y="580" entity="User">
+    <CreateUnit id="sv3#cru1" name="adduser" gr:x="805" gr:y="710" entity="User">
       <KOLink id="sv3#cru1#kln6" name="KOFlow2" to="sv3#area7#page17#mssu5">
         <LinkParameter id="sv3#cru1#kln6#par96" name="Add fails!_Shown Messages" target="sv3#area7#page17#mssu5.shownMessages" sourceValue="Add fails!"/>
       </KOLink>
@@ -48,10 +48,13 @@
         <LinkParameter id="sv3#mfu3#oln18#par99" name="Update successfully!_Shown Messages" target="sv3#area7#page18#mssu6.shownMessages" sourceValue="Update successfully!"/>
       </OKLink>
     </ModifyUnit>
-    <CreateUnit id="sv3#cru2" name="addbook" gr:x="1215" gr:y="20" entity="ent3">
+    <CreateUnit id="sv3#cru2" name="addbook" gr:x="1220" gr:y="50" entity="ent3">
       <OKLink id="sv3#cru2#oln19" name="OKFlow10" to="sv3#area8#page21#mssu7">
         <LinkParameter id="sv3#cru2#oln19#par100" name="Book added!_Shown Messages" target="sv3#area8#page21#mssu7.shownMessages" sourceValue="Book added!"/>
       </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="1580" gr:y="10" id="sv3#cru4" name="addcategory" entity="ent1">
+      <OKLink id="sv3#cru4#oln2" name="OKFlow2" to="sv3#area8#page7#mssu1"/>
     </CreateUnit>
   </OperationUnits>
 </SiteView>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page20" name="AllUsers" landmark="true" gr:x="200" gr:y="180">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page20" name="All Users" landmark="true" gr:x="200" gr:y="180">
   <ContentUnits>
     <PowerIndexUnit id="sv3#area7#page20#pwu7" name="userlist" linkOrder="sv3#area7#page20#pwu7#ln26 sv3#area7#page20#pwu7#ln27" gr:x="0" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userOID userName password email" maxResults="15">
       <Link id="sv3#area7#page20#pwu7#ln26" name="delete" to="sv3#dlu1" type="normal" automaticCoupling="true" validate="true"/>

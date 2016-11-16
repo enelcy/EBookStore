@@ -1,8 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" linkOrder="sv1#area1#page1#ln39">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att21 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
       <SortAttribute attribute="ent3#att19" order="descending"/>
-      <SortAttribute attribute="ent3#att21" order="ascending"/>
     </PowerIndexUnit>
     <DataUnit gr:x="0" gr:y="115" id="sv1#area1#page1#dau1" name="Details1" entity="User">
       <Selector id="sv1#area1#page1#dau1#su11" defaultPolicy="fill" booleanOperator="and">
@@ -18,12 +17,10 @@
           <layout:Attribute attribute="ent3#att17"/>
           <layout:Attribute attribute="ent3#att18"/>
           <layout:Attribute attribute="ent3#att16"/>
-          <layout:Attribute attribute="ent3#att21"/>
           <layout:Attribute attribute="ent3#att19"/>
           <layout:Attribute attribute="ent3#att23"/>
           <layout:Attribute attribute="ent3#att24"/>
           <layout:Link link="sv1#area1#page1#pwu2ent3#att19"/>
-          <layout:Link link="sv1#area1#page1#pwu2ent3#att21"/>
           <layout:Link link="sv1#area1#page1#pwu2First"/>
           <layout:Link link="sv1#area1#page1#pwu2Previous"/>
           <layout:Link link="sv1#area1#page1#pwu2Block"/>

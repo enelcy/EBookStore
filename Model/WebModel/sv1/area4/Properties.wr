@@ -1,6 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area4" name="Search" defaultPage="sv1#area4#page4" landmark="true" gr:x="390" gr:y="395">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area4" name="Search" defaultPage="sv1#area4#page4" landmark="true" gr:x="390" gr:y="385">
   <OperationUnits>
-    <NoOpOperationUnit id="sv1#area4#opu3" name="Reset Search" gr:x="120" gr:y="0">
+    <NoOpOperationUnit id="sv1#area4#opu3" name="Reset Search" gr:x="180" gr:y="0">
       <OKLink id="sv1#area4#opu3#oln12" name="OKLink13" to="sv1#area4#page4" automaticCoupling="true" gr:bendpoints="-103,0,-68,-210"/>
     </NoOpOperationUnit>
   </OperationUnits>
