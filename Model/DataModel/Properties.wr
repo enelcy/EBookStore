@@ -68,8 +68,7 @@
     <Attribute id="ent3#att17" name="name" type="string" key="false" db:column="name"/>
     <Attribute id="ent3#att16" name="ISBN" type="string" key="false" db:column="isbn"/>
   </Entity>
-  <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540" username="sql9144540" cryptedPassword="true" password="MjJmOUlMM0NrVg==">
-  </db:Database>
+  <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540" username="sql9144540" cryptedPassword="true" password="MjJmOUlMM0NrVg=="/>
   <Relationship id="rel1" name="BookInfo_Category" sourceEntity="ent3" targetEntity="ent1" db:database="db1" db:table="bookinfo">
     <RelationshipRole1 id="rel1#role1" name="BookInfoToCategory" maxCard="1">
       <db:JoinColumn attribute="ent3#att15" name="oid"/>
