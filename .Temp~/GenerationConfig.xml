@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">C:\WebRatio\WebRatio\WebRatio\plugins\com.webratio.commons.libs_7.2.14.201608091213\lib</Property>
-    <Property name="dbConfigPath">C:\Users\Hui\AppData\Local\Temp\WRDBConfig5487730307771419016.xml</Property>
+    <Property name="dbConfigPath">C:\Users\Hui\AppData\Local\Temp\WRDBConfig4842476042195794091.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">C:\WebRatio\WebRatio\WebRatio\configuration\org.eclipse.osgi\bundles\49\1\.cp</Property>
     <Property name="derbySystemHome">C:\WebRatio\WebRatio\workspace\.metadata\.plugins\com.webratio.commons.db\derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">61783</Property>
+    <Property name="eventSocketPort">57399</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201611160309</Property>
+    <Property name="generationTime">201611170118</Property>
     <Property name="helpersPluginDir">C:\WebRatio\WebRatio\WebRatio\plugins\com.webratio.generator.helpers_7.2.14.201608091213</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -24,7 +24,7 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">C:\WebRatio\WebRatio\workspace\EBookStore</Property>
     <Property name="projectName">EBookStore</Property>
-    <Property name="projectPath">C:\Users\Hui\AppData\Local\Temp\Project6345465697962884729.wr</Property>
+    <Property name="projectPath">C:\Users\Hui\AppData\Local\Temp\Project8065230591285304759.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">C:\WebRatio\WebRatio\WebRatio\plugins\com.webratio.ide.ui_7.2.14.201608091213</Property>

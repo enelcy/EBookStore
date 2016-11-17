@@ -28,7 +28,7 @@
         <LinkParameter id="sv3#dlu2#oln16#par83" name="Book deleted!_Shown Messages" target="sv3#area8#page21#mssu7.shownMessages" sourceValue="Book deleted!"/>
       </OKLink>
     </DeleteUnit>
-    <LogoutUnit id="sv3#lou1" name="Logout" landmark="false" gr:x="480" gr:y="85" siteView="sv1"/>
+    <LogoutUnit id="sv3#lou1" name="Logout" landmark="false" gr:x="500" gr:y="75" siteView="sv1"/>
     <CreateUnit id="sv3#cru1" name="adduser" gr:x="805" gr:y="710" entity="User">
       <KOLink id="sv3#cru1#kln6" name="KOFlow2" to="sv3#area7#page17#mssu5">
         <LinkParameter id="sv3#cru1#kln6#par96" name="Add fails!_Shown Messages" target="sv3#area7#page17#mssu5.shownMessages" sourceValue="Add fails!"/>
