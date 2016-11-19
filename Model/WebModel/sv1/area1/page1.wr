@@ -1,15 +1,53 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" linkOrder="sv1#area1#page1#ln39">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
+    <PowerIndexUnit gr:x="30" gr:y="190" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
       <SortAttribute attribute="ent3#att19" order="descending"/>
+      <Selector id="sv1#area1#page1#pwu2#su3" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area1#page1#pwu2#su3#acond3" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
+        <RelationshipRoleCondition id="sv1#area1#page1#pwu2#su3#rcond2" name="Category" role="rel1#role2" predicate="in" implied="true"/>
+      </Selector>
     </PowerIndexUnit>
-    <DataUnit gr:x="0" gr:y="115" id="sv1#area1#page1#dau1" name="Details1" entity="User">
+    <DataUnit gr:x="0" gr:y="350" id="sv1#area1#page1#dau1" name="Details1" entity="User">
       <Selector id="sv1#area1#page1#dau1#su11" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area1#page1#dau1#su11#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
+    <SelectorUnit gr:x="5" gr:y="0" id="sv1#area1#page1#seu1" name="Categories" entity="ent1">
+      <Link id="sv1#area1#page1#seu1#ln1" name="Flow1" to="sv1#area1#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page1#seu1#ln1#par9" name="category_Category [label]" source="ent1#att2Array" target="sv1#area1#page1#enu2#sfld1_label"/>
+        <LinkParameter id="sv1#area1#page1#seu1#ln1#par10" name="oid_Category [output]" source="ent1#att1Array" target="sv1#area1#page1#enu2#sfld1_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit gr:x="225" gr:y="0" id="sv1#area1#page1#enu2" name="Search" fieldOrder="sv1#area1#page1#enu2#sfld1 sv1#area1#page1#enu2#fld4" linkOrder="sv1#area1#page1#enu2#ln4">
+      <Field id="sv1#area1#page1#enu2#fld4" type="string" modifiable="true" name="What are you interesting in?"/>
+      <SelectionField id="sv1#area1#page1#enu2#sfld1" name="Category" type="string" modifiable="true"/>
+      <Link id="sv1#area1#page1#enu2#ln4" name="Search" to="sv1#area1#page1#pwu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page1#enu2#ln4#par12" name="What are you interesting in?_Search" source="sv1#area1#page1#enu2#fld4" target="sv1#area1#page1#pwu2#su3#acond3"/>
+        <LinkParameter id="sv1#area1#page1#enu2#ln4#par13" name="Category_Category [oid]" source="sv1#area1#page1#enu2#sfld1" target="sv1#area1#page1#pwu2#su3#rcond2.ent1#att1"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page1#enu2">
+          <layout:Field field="sv1#area1#page1#enu2#sfld1"/>
+          <layout:Field field="sv1#area1#page1#enu2#fld4"/>
+          <layout:Link link="sv1#area1#page1#enu2#ln4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page1#pwu2">
@@ -28,6 +66,34 @@
           <layout:Link link="sv1#area1#page1#pwu2Last"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
