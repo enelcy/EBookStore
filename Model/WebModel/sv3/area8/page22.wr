@@ -6,17 +6,14 @@
         <LinkParameter id="sv3#area8#page22#seu9#ln43#par43" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area8#page22#enu9#sfld8_output"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit gr:x="0" gr:y="5" id="sv3#area8#page22#enu9" name="addbook" entity="ent3" linkOrder="sv3#area8#page22#enu9#ln44">
+    <EntryUnit gr:x="0" gr:y="5" id="sv3#area8#page22#enu9" name="addbook" entity="ent3" linkOrder="sv3#area8#page22#enu9#ln44" fieldOrder="sv3#area8#page22#enu9#fld13 sv3#area8#page22#enu9#fld14 sv3#area8#page22#enu9#fld15 sv3#area8#page22#enu9#fld16 sv3#area8#page22#enu9#fld17 sv3#area8#page22#enu9#fld19 sv3#area8#page22#enu9#fld20 sv3#area8#page22#enu9#sfld8">
       <Field id="sv3#area8#page22#enu9#fld13" name="ISBN" type="string" modifiable="true" attribute="ent3#att16"/>
       <Field id="sv3#area8#page22#enu9#fld14" name="name" type="string" modifiable="true" attribute="ent3#att17"/>
       <Field id="sv3#area8#page22#enu9#fld15" name="description" type="text" modifiable="true" attribute="ent3#att18"/>
       <Field id="sv3#area8#page22#enu9#fld16" name="price" type="float" modifiable="true" attribute="ent3#att19"/>
       <Field id="sv3#area8#page22#enu9#fld17" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
-      <Field id="sv3#area8#page22#enu9#fld18" name="loginPrice" type="float" modifiable="true" attribute="ent3#att22"/>
       <Field id="sv3#area8#page22#enu9#fld19" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
       <Field id="sv3#area8#page22#enu9#fld20" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
-      <Field id="sv3#area8#page22#enu9#fld21" name="isSale" type="boolean" modifiable="true" attribute="ent3#att25"/>
-      <Field id="sv3#area8#page22#enu9#fld22" name="isRent" type="boolean" modifiable="true" attribute="ent3#att26"/>
       <SelectionField id="sv3#area8#page22#enu9#sfld8" name="BookInfoToCategory" type="string" role="rel1#role1"/>
       <Link id="sv3#area8#page22#enu9#ln44" name="Add" to="sv3#cru2" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
@@ -25,18 +22,15 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area8#page22#enu9">
+          <layout:Link link="sv3#area8#page22#enu9#ln44"/>
           <layout:Field field="sv3#area8#page22#enu9#fld13"/>
           <layout:Field field="sv3#area8#page22#enu9#fld14"/>
           <layout:Field field="sv3#area8#page22#enu9#fld15"/>
           <layout:Field field="sv3#area8#page22#enu9#fld16"/>
           <layout:Field field="sv3#area8#page22#enu9#fld17"/>
-          <layout:Field field="sv3#area8#page22#enu9#fld18"/>
           <layout:Field field="sv3#area8#page22#enu9#fld19"/>
           <layout:Field field="sv3#area8#page22#enu9#fld20"/>
-          <layout:Field field="sv3#area8#page22#enu9#fld21"/>
-          <layout:Field field="sv3#area8#page22#enu9#fld22"/>
           <layout:Field field="sv3#area8#page22#enu9#sfld8"/>
-          <layout:Link link="sv3#area8#page22#enu9#ln44"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

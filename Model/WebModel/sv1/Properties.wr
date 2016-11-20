@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="EBookStore" landmarks="sv1#area1 sv1#page27" homePage="sv1#area1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="EBookStore" landmarks="sv1#area1 sv1#page27" homePage="sv1#area1#page1" layout:frameLayout="WebRatio/Basic">
   <OperationUnits>
     <LoginUnit id="sv1#lgu2" name="Login" landmark="false" secure="false" gr:x="700" gr:y="20">
       <KOLink id="sv1#lgu2#kln8" name="KOFlow1" to="sv1#page27#mssu9">

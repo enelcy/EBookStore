@@ -1,10 +1,9 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="5" gr:y="105" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att27 User#att28 User#att29 User#att30 User#att31" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="5" gr:y="105" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att27 User#att28 User#att29 User#att30" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" key="false" db:column="username"/>
     <Attribute name="password" id="password" type="password" key="false" db:column="password"/>
     <Attribute name="email" id="email" type="string" key="false" db:column="email"/>
-    <Attribute id="User#att31" name="shippingAddress" type="string" db:column="shippingaddress"/>
     <Attribute id="User#att30" name="birthdate" type="date" db:column="birthdate"/>
     <Attribute id="User#att29" name="gender" type="string" db:column="gender"/>
     <Attribute id="User#att28" name="lastName" type="string" db:column="lastname"/>
@@ -55,25 +54,71 @@
     <Attribute id="ent1#att1" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="category" type="string" db:column="category"/>
   </Entity>
-  <Entity gr:x="360" gr:y="290" id="ent3" name="BookInfo" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att22 ent3#att23 ent3#att24 ent3#att25 ent3#att26" db:database="db1" db:table="bookinfo">
+  <Entity gr:x="360" gr:y="315" id="ent3" name="BookInfo" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att23 ent3#att24" db:database="db1" db:table="bookinfo">
     <Attribute id="ent3#att15" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent3#att26" name="isRent" type="boolean" key="false" db:column="isrent"/>
-    <Attribute id="ent3#att25" name="isSale" type="boolean" key="false" db:column="issale"/>
     <Attribute id="ent3#att24" name="author" type="string" key="false" db:column="author"/>
     <Attribute id="ent3#att23" name="publisher" type="string" key="false" db:column="publisher"/>
-    <Attribute id="ent3#att22" name="loginPrice" type="float" key="false" db:column="loginprice"/>
     <Attribute id="ent3#att20" name="photo" type="blob" contentType="image" key="false" db:column="photo"/>
     <Attribute id="ent3#att19" name="price" type="float" key="false" db:column="price"/>
     <Attribute id="ent3#att18" name="description" type="text" key="false" db:column="description" db:clob="true"/>
     <Attribute id="ent3#att17" name="name" type="string" key="false" db:column="name"/>
     <Attribute id="ent3#att16" name="ISBN" type="string" key="false" db:column="isbn"/>
   </Entity>
-  <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540" username="sql9144540" cryptedPassword="true" password="MjJmOUlMM0NrVg=="/>
+  <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540" username="sql9144540" cryptedPassword="true" password="MjJmOUlMM0NrVg==">
+  </db:Database>
   <Relationship id="rel1" name="BookInfo_Category" sourceEntity="ent3" targetEntity="ent1" db:database="db1" db:table="bookinfo">
-    <RelationshipRole1 id="rel1#role1" name="BookInfoToCategory" maxCard="1">
+    <RelationshipRole1 id="rel1#role1" name="BookInfoToCategory" maxCard="1"/>
+    <RelationshipRole2 id="rel1#role2" name="CategoryToBookInfo" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="680" gr:y="350" id="ent2" name="Inventory" duration="persistent" attributeOrder="ent2#att3 ent2#att5 ent2#att6 ent2#att7 ent2#att8" db:database="db1" db:table="inventory">
+    <Attribute id="ent2#att3" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent2#att8" name="Rent" type="integer" db:column="rent"/>
+    <Attribute id="ent2#att7" name="Rent_Inventory" type="integer" db:column="rent_inventory"/>
+    <Attribute id="ent2#att6" name="Sold" type="integer" db:column="sold"/>
+    <Attribute id="ent2#att5" name="Sale_Inventory" type="integer" db:column="sale_inventory"/>
+  </Entity>
+  <Relationship id="rel3" name="BookInfo_Inventory" sourceEntity="ent3" targetEntity="ent2" db:database="db1" db:table="inventory">
+    <RelationshipRole1 id="rel3#role5" name="BookInfoToInventory" maxCard="1">
+      <db:JoinColumn attribute="ent3#att15" name="bookinfo_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="InventoryToBookInfo" maxCard="1">
+      <db:JoinColumn attribute="ent2#att3" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="75" gr:y="545" id="ent4" name="Order" duration="persistent" attributeOrder="ent4#att9 ent4#att11 ent4#att13 ent4#att12 ent4#att14 ent4#att21 ent4#att22 ent4#att25" db:database="db1" db:table="order">
+    <Attribute id="ent4#att9" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att25" name="totalAccount" type="float" db:column="totalaccount"/>
+    <Attribute id="ent4#att22" name="totalQuantity" type="integer" db:column="totalquantity"/>
+    <Attribute id="ent4#att21" name="payinfo" type="string" db:column="payinfo"/>
+    <Attribute id="ent4#att14" name="payCardType" type="string" db:column="paycardtype"/>
+    <Attribute id="ent4#att12" name="shippingAddress" type="string" db:column="shippingaddress"/>
+    <Attribute id="ent4#att13" name="paymentWay" type="string" db:column="paymentway"/>
+    <Attribute id="ent4#att11" name="user" type="string" db:column="user"/>
+  </Entity>
+  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38" db:database="db1" db:table="orderitem">
+    <Attribute id="ent5#att10" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att36" name="price" type="float" key="false" db:column="price"/>
+    <Attribute id="ent5#att35" name="quantity" type="integer" key="false" db:column="quantity"/>
+    <Attribute id="ent5#att34" name="to" type="date" key="false" db:column="to"/>
+    <Attribute id="ent5#att33" name="from" type="date" key="false" db:column="from"/>
+    <Attribute id="ent5#att32" name="type" type="string" key="false" db:column="type"/>
+    <Attribute id="ent5#att26" name="ISBN" type="string" key="false" db:column="isbn"/>
+    <Attribute id="ent5#att37" name="isSucess" type="boolean" db:column="issucess" key="false"/>
+    <Attribute id="ent5#att38" name="declineReason" type="string" db:column="declinereason"/>
+  </Entity>
+  <Relationship id="rel5" name="Order_OrderItem" sourceEntity="ent4" targetEntity="ent5" db:database="db1" db:table="orderitem">
+    <RelationshipRole1 id="rel5#role9" name="OrderToOrderItem" maxCard="N">
+      <db:JoinColumn attribute="ent4#att9" name="order_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="OrderItemToOrder" maxCard="1">
+      <db:JoinColumn attribute="ent5#att10" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6" name="BookinfoCategory" db:database="db1" db:table="bookinfo" sourceEntity="ent3" targetEntity="ent1">
+    <RelationshipRole1 id="rel6#role11" name="BookinfoToCategory" maxCard="1">
       <db:JoinColumn attribute="ent3#att15" name="oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="CategoryToBookInfo" maxCard="N">
+    <RelationshipRole2 id="rel6#role12" name="CategoryToBookinfo" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="category_oid"/>
     </RelationshipRole2>
   </Relationship>

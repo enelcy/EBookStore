@@ -21,7 +21,7 @@
       <Field id="sv3#area7#page19#enu8#fld81" name="lastName" type="string" modifiable="true" attribute="User#att28"/>
       <Field id="sv3#area7#page19#enu8#fld82" name="gender" type="string" modifiable="true" attribute="User#att29"/>
       <Field id="sv3#area7#page19#enu8#fld83" name="birthdate" type="date" modifiable="true" attribute="User#att30"/>
-      <Field id="sv3#area7#page19#enu8#fld84" name="shippingAddress" type="string" modifiable="true" attribute="User#att31"/>
+      <Field id="sv3#area7#page19#enu8#fld84" name="shippingAddress" type="string" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

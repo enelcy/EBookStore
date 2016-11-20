@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" landmarks="sv3#area8 sv3#area7" protected="true" homePage="sv3#page25">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="admin" landmarks="sv3#area8 sv3#area7" protected="true" homePage="sv3#page25" layout:frameLayout="WebRatio/Basic">
   <OperationUnits>
     <ModifyUnit id="sv3#mfu2" name="UpdateBook" gr:x="1040" gr:y="40" entity="ent3">
       <Selector id="sv3#mfu2#su7" defaultPolicy="fill" booleanOperator="and">
