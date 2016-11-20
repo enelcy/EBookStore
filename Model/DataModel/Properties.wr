@@ -91,7 +91,7 @@
     <Attribute id="ent4#att13" name="paymentWay" type="string" db:column="paymentway"/>
     <Attribute id="ent4#att11" name="user" type="string" db:column="user"/>
   </Entity>
-  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38" db:database="db1" db:table="orderitem">
+  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38" db:database="db1" db:table="orderitem">
     <Attribute id="ent5#att10" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att36" name="price" type="float" key="false" db:column="price"/>
     <Attribute id="ent5#att35" name="quantity" type="integer" key="false" db:column="quantity"/>
@@ -100,7 +100,8 @@
     <Attribute id="ent5#att32" name="type" type="string" key="false" db:column="type"/>
     <Attribute id="ent5#att26" name="ISBN" type="string" key="false" db:column="isbn"/>
     <Attribute id="ent5#att37" name="isSucess" type="boolean" db:column="issucess" key="false"/>
-    <Attribute id="ent5#att38" name="declineReason" type="string" db:column="declinereason"/>
+    <Attribute id="ent5#att38" name="declineReason" type="string" db:column="declinereason" key="false"/>
+    <Attribute id="ent5#att40" name="bookName" type="string" db:column="bookname"/>
   </Entity>
   <Relationship id="rel5" name="Order_OrderItem" sourceEntity="ent4" targetEntity="ent5" db:database="db1" db:table="orderitem">
     <RelationshipRole1 id="rel5#role9" name="OrderToOrderItem" maxCard="N">
