@@ -4,7 +4,7 @@
       <SortAttribute attribute="ent3#att19" order="descending"/>
       <Selector id="sv1#area1#page1#pwu2#su3" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page1#pwu2#su3#acond3" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
-        <RelationshipRoleCondition id="sv1#area1#page1#pwu2#su3#rcond2" name="Category" role="rel1#role2" predicate="in" implied="true"/>
+        <RelationshipRoleCondition id="sv1#area1#page1#pwu2#su3#rcond2" name="Category" predicate="in" implied="true" role="rel7#role14"/>
       </Selector>
     </PowerIndexUnit>
     <DataUnit gr:x="0" gr:y="350" id="sv1#area1#page1#dau1" name="Details1" entity="User">
@@ -23,7 +23,7 @@
       <SelectionField id="sv1#area1#page1#enu2#sfld1" name="Category" type="string" modifiable="true"/>
       <Link id="sv1#area1#page1#enu2#ln4" name="Search" to="sv1#area1#page1#pwu2" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page1#enu2#ln4#par12" name="What are you interesting in?_Search" source="sv1#area1#page1#enu2#fld4" target="sv1#area1#page1#pwu2#su3#acond3"/>
-        <LinkParameter id="sv1#area1#page1#enu2#ln4#par13" name="Category_Category [oid]" source="sv1#area1#page1#enu2#sfld1" target="sv1#area1#page1#pwu2#su3#rcond2.ent1#att1"/>
+        <LinkParameter id="sv1#area1#page1#enu2#ln4#par16" name="Category_Category [oid]" source="sv1#area1#page1#enu2#sfld1" target="sv1#area1#page1#pwu2#su3#rcond2.ent1#att1"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

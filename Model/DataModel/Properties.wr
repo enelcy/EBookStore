@@ -66,10 +66,6 @@
   </Entity>
   <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9144540" username="sql9144540" cryptedPassword="true" password="MjJmOUlMM0NrVg==">
   </db:Database>
-  <Relationship id="rel1" name="BookInfo_Category" sourceEntity="ent3" targetEntity="ent1" db:database="db1" db:table="bookinfo">
-    <RelationshipRole1 id="rel1#role1" name="BookInfoToCategory" maxCard="1"/>
-    <RelationshipRole2 id="rel1#role2" name="CategoryToBookInfo" maxCard="N"/>
-  </Relationship>
   <Entity gr:x="680" gr:y="350" id="ent2" name="Inventory" duration="persistent" attributeOrder="ent2#att3 ent2#att5 ent2#att6 ent2#att7 ent2#att8" db:database="db1" db:table="inventory">
     <Attribute id="ent2#att3" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att8" name="Rent" type="integer" db:column="rent"/>
@@ -114,11 +110,11 @@
       <db:JoinColumn attribute="ent5#att10" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel6" name="BookinfoCategory" db:database="db1" db:table="bookinfo" sourceEntity="ent3" targetEntity="ent1">
-    <RelationshipRole1 id="rel6#role11" name="BookinfoToCategory" maxCard="1">
+  <Relationship id="rel7" name="BookinfoCategory" db:database="db1" db:table="bookinfo" sourceEntity="ent3" targetEntity="ent1">
+    <RelationshipRole1 id="rel7#role13" name="BookinfoToCategory" maxCard="1">
       <db:JoinColumn attribute="ent3#att15" name="oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel6#role12" name="CategoryToBookinfo" maxCard="N">
+    <RelationshipRole2 id="rel7#role14" name="CategoryToBookinfo" maxCard="N">
       <db:JoinColumn attribute="ent1#att1" name="category_oid"/>
     </RelationshipRole2>
   </Relationship>

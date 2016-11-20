@@ -4,7 +4,7 @@
       <Link id="sv3#area8#page23#pwu8#ln31" name="delete" to="sv3#dlu2" type="normal" automaticCoupling="true" validate="true"/>
       <Selector id="sv3#area8#page23#pwu8#su2" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area8#page23#pwu8#su2#acond1" name="author is" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att24" ignoreCase="true"/>
-        <RelationshipRoleCondition id="sv3#area8#page23#pwu8#su2#rcond1" name="category is" role="rel1#role2" predicate="in" implied="true"/>
+        <RelationshipRoleCondition id="sv3#area8#page23#pwu8#su2#rcond1" name="category is" predicate="in" implied="true" role="rel7#role14"/>
         <AttributesCondition id="sv3#area8#page23#pwu8#su2#acond7" name="book name is" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att17" ignoreCase="true"/>
       </Selector>
       <Link id="sv3#area8#page23#pwu8#ln46" name="update" to="sv3#area8#page24#enu10" automaticCoupling="true" type="normal" validate="true"/>
@@ -15,14 +15,15 @@
         <LinkParameter id="sv3#area8#page23#seu12#ln49#par47" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area8#page23#enu11#sfld10_output"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit gr:x="270" gr:y="15" id="sv3#area8#page23#enu11" name="Search Book" linkOrder="sv3#area8#page23#enu11#ln50">
+    <EntryUnit gr:x="270" gr:y="15" id="sv3#area8#page23#enu11" name="Search Book" linkOrder="sv3#area8#page23#enu11#ln50" fieldOrder="sv3#area8#page23#enu11#fld39 sv3#area8#page23#enu11#fld40 sv3#area8#page23#enu11#sfld10">
       <Field id="sv3#area8#page23#enu11#fld39" name="name" type="string" modifiable="true"/>
       <Field id="sv3#area8#page23#enu11#fld40" name="author" type="string" modifiable="true"/>
       <SelectionField id="sv3#area8#page23#enu11#sfld10" name="BookInfoToCategory" type="string"/>
       <Link id="sv3#area8#page23#enu11#ln50" name="Filter" to="sv3#area8#page23#pwu8" type="normal" validate="true">
         <LinkParameter id="sv3#area8#page23#enu11#ln50#par48" name="author_author" source="sv3#area8#page23#enu11#fld40" target="sv3#area8#page23#pwu8#su2#acond1"/>
-        <LinkParameter id="sv3#area8#page23#enu11#ln50#par49" name="BookInfoToCategory_category [oid]" source="sv3#area8#page23#enu11#sfld10" target="sv3#area8#page23#pwu8#su2#rcond1.ent1#att1"/>
         <LinkParameter id="sv3#area8#page23#enu11#ln50#par50" name="name_name" source="sv3#area8#page23#enu11#fld39" target="sv3#area8#page23#pwu8#su2#acond7"/>
+        <LinkParameter id="sv3#area8#page23#enu11#ln50#par15" name="BookInfoToCategory_current oid" target="sv3#area8#page23#pwu8.current.ent3#att15" blank="true"/>
+        <LinkParameter id="sv3#area8#page23#enu11#ln50#par17" name="BookInfoToCategory_category is [oid]" source="sv3#area8#page23#enu11#sfld10" target="sv3#area8#page23#pwu8#su2#rcond1.ent1#att1"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

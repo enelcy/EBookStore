@@ -8,7 +8,7 @@
       <Field id="sv3#area8#page24#enu10#fld33" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
       <Field id="sv3#area8#page24#enu10#fld35" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
       <Field id="sv3#area8#page24#enu10#fld36" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
-      <SelectionField id="sv3#area8#page24#enu10#sfld9" name="BookInfoToCategory" type="string" role="rel1#role1"/>
+      <SelectionField id="sv3#area8#page24#enu10#sfld9" name="BookInfoToCategory" type="string"/>
       <Link id="sv3#area8#page24#enu10#ln47" name="update" to="sv3#mfu2" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
     <SelectorUnit gr:x="0" gr:y="0" id="sv3#area8#page24#seu10" name="category" entity="ent1">

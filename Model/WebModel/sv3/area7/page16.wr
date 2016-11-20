@@ -1,10 +1,10 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page16" name="Edit User" landmark="false" gr:x="0" gr:y="410">
   <ContentUnits>
-    <EntryUnit id="sv3#area7#page16#enu7" name="edituser" linkOrder="sv3#area7#page16#enu7#ln22" customDescriptor="false" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area7#page16#enu7#fld27 sv3#area7#page16#enu7#fld28 sv3#area7#page16#enu7#fld29 sv3#area7#page16#enu7#sfld6 sv3#area7#page16#enu7#fld75 sv3#area7#page16#enu7#fld76 sv3#area7#page16#enu7#fld77 sv3#area7#page16#enu7#fld78 sv3#area7#page16#enu7#fld79 sv3#area7#page16#enu7#msfld1">
+    <EntryUnit id="sv3#area7#page16#enu7" name="edituser" linkOrder="sv3#area7#page16#enu7#ln22" customDescriptor="false" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area7#page16#enu7#fld27 sv3#area7#page16#enu7#fld28 sv3#area7#page16#enu7#fld29 sv3#area7#page16#enu7#sfld6 sv3#area7#page16#enu7#fld75 sv3#area7#page16#enu7#fld76 sv3#area7#page16#enu7#fld77 sv3#area7#page16#enu7#fld78 sv3#area7#page16#enu7#msfld1">
       <Field id="sv3#area7#page16#enu7#fld27" name="username" type="string" modifiable="true" preloaded="true"/>
       <Field id="sv3#area7#page16#enu7#fld28" name="password" type="string" modifiable="true" preloaded="true"/>
       <Field id="sv3#area7#page16#enu7#fld29" name="email" type="string" modifiable="true" preloaded="true"/>
-      <SelectionField id="sv3#area7#page16#enu7#sfld6" name="group" type="string" role="User2DefaultGroup">
+      <SelectionField id="sv3#area7#page16#enu7#sfld6" name="group" type="string" role="User2DefaultGroup" slotOrder="sv3#area7#page16#enu7#sfld6#slot9 sv3#area7#page16#enu7#sfld6#slot10">
         <Slot id="sv3#area7#page16#enu7#sfld6#slot9" name="name" label="true" output="false" value="admin|customer"/>
         <Slot id="sv3#area7#page16#enu7#sfld6#slot10" name="value" label="false" output="true" value="1|2"/>
       </SelectionField>
@@ -21,7 +21,6 @@
       <Field id="sv3#area7#page16#enu7#fld76" name="lastName" type="string" modifiable="true" attribute="User#att28"/>
       <Field id="sv3#area7#page16#enu7#fld77" name="gender" type="string" modifiable="true" attribute="User#att29"/>
       <Field id="sv3#area7#page16#enu7#fld78" name="birthdate" type="date" modifiable="true" attribute="User#att30"/>
-      <Field id="sv3#area7#page16#enu7#fld79" name="shippingAddress" type="string" modifiable="true"/>
       <MultiSelectionField id="sv3#area7#page16#enu7#msfld1" name="groups" type="string" role="User2Group"/>
     </EntryUnit>
   </ContentUnits>
@@ -38,7 +37,6 @@
           <layout:Field field="sv3#area7#page16#enu7#fld76"/>
           <layout:Field field="sv3#area7#page16#enu7#fld77"/>
           <layout:Field field="sv3#area7#page16#enu7#fld78"/>
-          <layout:Field field="sv3#area7#page16#enu7#fld79"/>
           <layout:Field field="sv3#area7#page16#enu7#msfld1"/>
         </layout:Unit>
       </layout:Cell>

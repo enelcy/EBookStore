@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area7#page19" name="Add User" landmark="true" gr:x="350" gr:y="335">
   <ContentUnits>
-    <EntryUnit id="sv3#area7#page19#enu8" name="adduser" linkOrder="sv3#area7#page19#enu8#ln25" gr:x="0" gr:y="0" entity="User">
+    <EntryUnit id="sv3#area7#page19#enu8" name="adduser" linkOrder="sv3#area7#page19#enu8#ln25" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area7#page19#enu8#fld30 sv3#area7#page19#enu8#fld31 sv3#area7#page19#enu8#sfld7 sv3#area7#page19#enu8#fld32 sv3#area7#page19#enu8#fld80 sv3#area7#page19#enu8#fld81 sv3#area7#page19#enu8#fld82 sv3#area7#page19#enu8#fld83">
       <Link id="sv3#area7#page19#enu8#ln25" name="Add" to="sv3#cru1" type="normal" validate="true">
         <LinkParameter id="sv3#area7#page19#enu8#ln25#par69" name="Key [oid]_oid" source="key.userOID" target="sv3#cru1.userOID"/>
         <LinkParameter id="sv3#area7#page19#enu8#ln25#par70" name="User Object_User Object" source="entityBean" target="sv3#cru1.entityBeans"/>
@@ -12,7 +12,7 @@
       </Link>
       <Field id="sv3#area7#page19#enu8#fld30" name="username" type="string" modifiable="true"/>
       <Field id="sv3#area7#page19#enu8#fld31" name="password" type="string" modifiable="true"/>
-      <SelectionField id="sv3#area7#page19#enu8#sfld7" name="group" type="integer" preselectValue="1">
+      <SelectionField id="sv3#area7#page19#enu8#sfld7" name="group" type="integer" preselectValue="1" slotOrder="sv3#area7#page19#enu8#sfld7#slot11 sv3#area7#page19#enu8#sfld7#slot12">
         <Slot id="sv3#area7#page19#enu8#sfld7#slot11" name="group" label="true" output="false" value="admin|custormer"/>
         <Slot id="sv3#area7#page19#enu8#sfld7#slot12" name="groupvalue" label="false" output="true" value="1|2"/>
       </SelectionField>
@@ -21,7 +21,6 @@
       <Field id="sv3#area7#page19#enu8#fld81" name="lastName" type="string" modifiable="true" attribute="User#att28"/>
       <Field id="sv3#area7#page19#enu8#fld82" name="gender" type="string" modifiable="true" attribute="User#att29"/>
       <Field id="sv3#area7#page19#enu8#fld83" name="birthdate" type="date" modifiable="true" attribute="User#att30"/>
-      <Field id="sv3#area7#page19#enu8#fld84" name="shippingAddress" type="string" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -31,13 +30,12 @@
           <layout:Link link="sv3#area7#page19#enu8#ln25"/>
           <layout:Field field="sv3#area7#page19#enu8#fld30"/>
           <layout:Field field="sv3#area7#page19#enu8#fld31"/>
+          <layout:Field field="sv3#area7#page19#enu8#sfld7"/>
           <layout:Field field="sv3#area7#page19#enu8#fld32"/>
           <layout:Field field="sv3#area7#page19#enu8#fld80"/>
           <layout:Field field="sv3#area7#page19#enu8#fld81"/>
           <layout:Field field="sv3#area7#page19#enu8#fld82"/>
           <layout:Field field="sv3#area7#page19#enu8#fld83"/>
-          <layout:Field field="sv3#area7#page19#enu8#fld84"/>
-          <layout:Field field="sv3#area7#page19#enu8#sfld7"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

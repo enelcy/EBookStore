@@ -14,7 +14,7 @@
       <Field id="sv3#area8#page22#enu9#fld17" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
       <Field id="sv3#area8#page22#enu9#fld19" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
       <Field id="sv3#area8#page22#enu9#fld20" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
-      <SelectionField id="sv3#area8#page22#enu9#sfld8" name="BookInfoToCategory" type="string" role="rel1#role1"/>
+      <SelectionField id="sv3#area8#page22#enu9#sfld8" name="BookInfoToCategory" type="string"/>
       <Link id="sv3#area8#page22#enu9#ln44" name="Add" to="sv3#cru2" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
   </ContentUnits>
