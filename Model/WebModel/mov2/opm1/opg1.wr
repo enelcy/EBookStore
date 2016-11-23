@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="295" gr:y="230" id="mov2#opm1#opg1" name="Cart" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="155" gr:y="0" id="mov2#opm1#opg1#cru3" name="Create order lineItem" entity="ent5" bulk="true">
+      <OKLink id="mov2#opm1#opg1#cru3#oln8" name="OKFlow8" to="mov2#opm1#okcu1"/>
+    </CreateUnit>
+    <SelectorUnit gr:x="0" gr:y="185" id="mov2#opm1#opg1#seu3" name="Selected order" entity="ent4">
+      <OKLink id="mov2#opm1#opg1#seu3#oln3" name="OKFlow3" to="mov2#opm1#opg1#inn1">
+        <LinkParameter id="mov2#opm1#opg1#seu3#oln3#par28" name="oid_Input" source="ent4#att9Array" target="mov2#opm1#opg1#inn1.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="200" gr:y="205" id="mov2#opm1#opg1#inn1" name="Oder Exists?">
+      <OKLink id="mov2#opm1#opg1#inn1#oln5" name="OKFlow5" to="mov2#opm1#opg1#cru3">
+        <LinkParameter id="mov2#opm1#opg1#inn1#oln5#par29" name="Input Value_Order.oid(OrderItemToOrder)" source="inputValue" target="mov2#opm1#opg1#cru3.rel5#role10.ent4#att9"/>
+      </OKLink>
+      <KOLink id="mov2#opm1#opg1#inn1#kln1" name="KOFlow1" to="mov2#opm1#opg1#tmu1"/>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="500" gr:y="195" id="mov2#opm1#opg1#cru5" name="Create Order" entity="ent4">
+      <OKLink id="mov2#opm1#opg1#cru5#oln7" name="OKFlow7" to="mov2#opm1#opg1#cru3">
+        <LinkParameter id="mov2#opm1#opg1#cru5#oln7#par32" name="oid_Order.oid(OrderItemToOrder)" source="ent4#att9Array" target="mov2#opm1#opg1#cru3.rel5#role10.ent4#att9"/>
+      </OKLink>
+    </CreateUnit>
+    <TimeUnit gr:x="370" gr:y="205" id="mov2#opm1#opg1#tmu1" name="Time1">
+      <OKLink id="mov2#opm1#opg1#tmu1#oln6" name="OKFlow6" to="mov2#opm1#opg1#cru5">
+        <LinkParameter id="mov2#opm1#opg1#tmu1#oln6#par30" name="Current/Input Timestamp_date" source="currentTimestamp" target="mov2#opm1#opg1#cru5.ent4#att41"/>
+      </OKLink>
+    </TimeUnit>
+  </OperationUnits>
+</OperationGroup>

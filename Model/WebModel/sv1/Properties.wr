@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="EBookStore" landmarks="sv1#area1 sv1#page27" homePage="sv1#area1#page1" layout:frameLayout="WebRatio/Basic">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="EBookStore" landmarks="sv1#area1 sv1#page27 sv1#area2" homePage="sv1#area1#page1" layout:frameLayout="WebRatio/Basic">
   <OperationUnits>
     <LoginUnit id="sv1#lgu2" name="Login" landmark="false" secure="false" gr:x="700" gr:y="20">
       <KOLink id="sv1#lgu2#kln8" name="KOFlow1" to="sv1#page27#mssu9">
@@ -9,5 +9,6 @@
     <GetUnit gr:x="-95" gr:y="445" id="sv1#gtu1" name="Get user" contextParameters="UserCtxParam" linkOrder="sv1#gtu1#ln40">
       <Link id="sv1#gtu1#ln40" name="Flow40" to="sv1#area1#page1#dau1" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
+    <ModuleInstanceUnit gr:x="1095" gr:y="600" id="sv1#miu2" moduleId="mov2#opm1" action="true"/>
   </OperationUnits>
 </SiteView>
