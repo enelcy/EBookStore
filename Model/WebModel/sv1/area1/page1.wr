@@ -1,19 +1,19 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" linkOrder="sv1#area1#page1#ln39 sv1#area1#page1#ln91">
   <ContentUnits>
-    <PowerIndexUnit gr:x="30" gr:y="190" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
+    <PowerIndexUnit gr:x="35" gr:y="145" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
       <SortAttribute attribute="ent3#att19" order="descending"/>
       <Selector id="sv1#area1#page1#pwu2#su3" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page1#pwu2#su3#acond3" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
         <RelationshipRoleCondition id="sv1#area1#page1#pwu2#su3#rcond2" name="Category" predicate="in" implied="true" role="rel7#role14"/>
       </Selector>
     </PowerIndexUnit>
-    <SelectorUnit gr:x="5" gr:y="0" id="sv1#area1#page1#seu1" name="Categories" entity="ent1">
+    <SelectorUnit gr:x="0" gr:y="0" id="sv1#area1#page1#seu1" name="Categories" entity="ent1">
       <Link id="sv1#area1#page1#seu1#ln1" name="Flow1" to="sv1#area1#page1#enu2" type="transport" validate="true">
         <LinkParameter id="sv1#area1#page1#seu1#ln1#par9" name="category_Category [label]" source="ent1#att2Array" target="sv1#area1#page1#enu2#sfld1_label"/>
         <LinkParameter id="sv1#area1#page1#seu1#ln1#par10" name="oid_Category [output]" source="ent1#att1Array" target="sv1#area1#page1#enu2#sfld1_output"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit gr:x="225" gr:y="0" id="sv1#area1#page1#enu2" name="Search" fieldOrder="sv1#area1#page1#enu2#sfld1 sv1#area1#page1#enu2#fld4" linkOrder="sv1#area1#page1#enu2#ln4">
+    <EntryUnit gr:x="235" gr:y="10" id="sv1#area1#page1#enu2" name="Search" fieldOrder="sv1#area1#page1#enu2#sfld1 sv1#area1#page1#enu2#fld4" linkOrder="sv1#area1#page1#enu2#ln4">
       <Field id="sv1#area1#page1#enu2#fld4" type="string" modifiable="true" name="What are you interesting in?"/>
       <SelectionField id="sv1#area1#page1#enu2#sfld1" name="Category" type="string" modifiable="true"/>
       <Link id="sv1#area1#page1#enu2#ln4" name="Search" to="sv1#area1#page1#pwu2" type="normal" validate="true">
@@ -21,7 +21,7 @@
         <LinkParameter id="sv1#area1#page1#enu2#ln4#par16" name="Category_Category [oid]" source="sv1#area1#page1#enu2#sfld1" target="sv1#area1#page1#pwu2#su3#rcond2.ent1#att1"/>
       </Link>
     </EntryUnit>
-    <QueryUnit gr:x="135" gr:y="365" id="sv1#area1#page1#qu1" name="Query1" mode="select" language="SQL" db="db1">
+    <QueryUnit gr:x="100" gr:y="335" id="sv1#area1#page1#qu1" name="Query1" mode="select" language="SQL" db="db1">
       <QueryText xml:space="preserve">select b.name,b.photo,b.author,b.oid,b.publisher,b.ISBN from bookinfo b, inventory i where b.oid = i.bookinfo_oid and i.sale_inventory &gt;0</QueryText>
       <QueryOutput id="sv1#area1#page1#qu1#qo1" name="ISBN" type="string"/>
       <QueryOutput id="sv1#area1#page1#qu1#qo2" name="name" type="string"/>
@@ -127,6 +127,20 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page1#qu1"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
