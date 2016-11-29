@@ -1,0 +1,64 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page15" name="Sign up" gr:x="470" gr:y="535">
+  <ContentUnits>
+    <EntryUnit id="sv2#page15#enu15" name="adduser" linkOrder="sv2#page15#enu15#ln61" gr:x="0" gr:y="0" entity="ent8">
+      <Field id="sv2#page15#enu15#fld18" name="userName" type="string" modifiable="true">
+        <VRules>
+          <CollectionValidationRule id="sv2#page15#enu15#fld18#clc1" name="uniqueUserName" predicate="notIn" entity="User" attribute="userName" errorMessage="This user name has been registered!"/>
+          <CollectionValidationRule id="sv2#page15#enu15#fld18#clc2" name="uniqueUserName2" predicate="notIn" entity="ent6" attribute="ent6#att31" errorMessage="This user name has been registered!"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page15#enu15#fld21" name="password" type="password" modifiable="true"/>
+      <Field id="sv2#page15#enu15#fld22" name="email" type="string" modifiable="true">
+        <VRules>
+          <EMailValidationRule id="sv2#page15#enu15#fld22#email1" name="email"/>
+          <CollectionValidationRule id="sv2#page15#enu15#fld22#clc3" name="uniqueEmail" predicate="notIn" entity="ent6" errorMessage="Email has been registed!"/>
+          <CollectionValidationRule id="sv2#page15#enu15#fld22#clc4" name="uniqueEmail2" predicate="notIn" entity="User" attribute="email" errorMessage="Email has been registed!"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page15#enu15#fld34" name="firstName" type="string" modifiable="true"/>
+      <Field id="sv2#page15#enu15#fld37" name="lastName" type="string" modifiable="true"/>
+      <Field id="sv2#page15#enu15#fld38" name="birthdate" type="date" modifiable="true"/>
+      <SelectionField id="sv2#page15#enu15#sfld4" name="gender" type="string" slotOrder="sv2#page15#enu15#sfld4#slot1">
+        <Slot id="sv2#page15#enu15#sfld4#slot1" name="gender" label="true" output="true" value="male|female"/>
+      </SelectionField>
+      <Link id="sv2#page15#enu15#ln61" name="Sign up" to="sv2#cru6" type="normal" validate="true">
+        <LinkParameter id="sv2#page15#enu15#ln61#par122" name="UnconfirmedUser Object_UnconfirmedUser Object" source="entityBean" target="sv2#cru6.entityBeans"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par183" name="birthdate_birthdate" source="sv2#page15#enu15#fld38" target="sv2#cru6.ent8#att53"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par184" name="email_email" source="sv2#page15#enu15#fld22" target="sv2#cru6.ent8#att57"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par185" name="firstName_firstname" source="sv2#page15#enu15#fld34" target="sv2#cru6.ent8#att56"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par186" name="gender_gender" source="sv2#page15#enu15#sfld4" target="sv2#cru6.ent8#att54"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par187" name="lastName_lastname" source="sv2#page15#enu15#fld37" target="sv2#cru6.ent8#att55"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par188" name="Key [oid]_oid" source="key.ent8#att52" target="sv2#cru6.ent8#att52"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par189" name="password_password" source="sv2#page15#enu15#fld21" target="sv2#cru6.ent8#att58"/>
+        <LinkParameter id="sv2#page15#enu15#ln61#par190" name="userName_username" source="sv2#page15#enu15#fld18" target="sv2#cru6.ent8#att59"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page15#enu15">
+          <layout:Field field="sv2#page15#enu15#fld18"/>
+          <layout:Field field="sv2#page15#enu15#fld21"/>
+          <layout:Field field="sv2#page15#enu15#fld22"/>
+          <layout:Field field="sv2#page15#enu15#fld34"/>
+          <layout:Field field="sv2#page15#enu15#fld37"/>
+          <layout:Field field="sv2#page15#enu15#fld38"/>
+          <layout:Field field="sv2#page15#enu15#sfld4"/>
+          <layout:Link link="sv2#page15#enu15#ln61"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

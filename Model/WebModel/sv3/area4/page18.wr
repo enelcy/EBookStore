@@ -1,0 +1,106 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area4#page18" name="Book List" landmark="true" gr:x="0" gr:y="330">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area4#page18#pwu6" name="booklist" linkOrder="sv3#area4#page18#pwu6#ln64 sv3#area4#page18#pwu6#ln65" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" maxResults="15" entity="ent3" displayAttributes="ent3#att20 ent3#att16 ent3#att17 ent3#att23 ent3#att24 ent3#att19">
+      <Link id="sv3#area4#page18#pwu6#ln64" name="delete" to="sv3#dlu6" type="normal" automaticCoupling="true" validate="true"/>
+      <Selector id="sv3#area4#page18#pwu6#su21" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area4#page18#pwu6#su21#acond9" name="author is" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att24" ignoreCase="true"/>
+        <RelationshipRoleCondition id="sv3#area4#page18#pwu6#su21#rcond14" name="category is" predicate="in" implied="true" role="rel7#role14"/>
+        <AttributesCondition id="sv3#area4#page18#pwu6#su21#acond10" name="book name is" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att17" ignoreCase="true"/>
+      </Selector>
+      <Link id="sv3#area4#page18#pwu6#ln65" name="update" to="sv3#area4#page21#enu18" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+    <SelectorUnit id="sv3#area4#page18#seu7" name="category" gr:x="415" gr:y="0" entity="ent1">
+      <Link id="sv3#area4#page18#seu7#ln66" name="Flow49" to="sv3#area4#page18#enu16" type="transport" validate="true">
+        <LinkParameter id="sv3#area4#page18#seu7#ln66#par125" name="category_BookInfoToCategory [label]" source="ent1#att2Array" target="sv3#area4#page18#enu16#sfld5_label"/>
+        <LinkParameter id="sv3#area4#page18#seu7#ln66#par126" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area4#page18#enu16#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area4#page18#enu16" name="Search Book" linkOrder="sv3#area4#page18#enu16#ln67" gr:x="270" gr:y="15" fieldOrder="sv3#area4#page18#enu16#fld39 sv3#area4#page18#enu16#fld40 sv3#area4#page18#enu16#sfld5">
+      <Field id="sv3#area4#page18#enu16#fld39" name="name" type="string" modifiable="true"/>
+      <Field id="sv3#area4#page18#enu16#fld40" name="author" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area4#page18#enu16#sfld5" name="BookInfoToCategory" type="string"/>
+      <Link id="sv3#area4#page18#enu16#ln67" name="Filter" to="sv3#area4#page18#pwu6" type="normal" validate="true">
+        <LinkParameter id="sv3#area4#page18#enu16#ln67#par127" name="author_author" source="sv3#area4#page18#enu16#fld40" target="sv3#area4#page18#pwu6#su21#acond9"/>
+        <LinkParameter id="sv3#area4#page18#enu16#ln67#par128" name="name_name" source="sv3#area4#page18#enu16#fld39" target="sv3#area4#page18#pwu6#su21#acond10"/>
+        <LinkParameter id="sv3#area4#page18#enu16#ln67#par129" name="BookInfoToCategory_current oid" target="sv3#area4#page18#pwu6.current.ent3#att15" blank="true"/>
+        <LinkParameter id="sv3#area4#page18#enu16#ln67#par130" name="BookInfoToCategory_category is [oid]" source="sv3#area4#page18#enu16#sfld5" target="sv3#area4#page18#pwu6#su21#rcond14.ent1#att1"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#page18#pwu6">
+          <layout:Link link="sv3#area4#page18#pwu6#ln64"/>
+          <layout:Link link="sv3#area4#page18#pwu6#ln65"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#page18#enu16">
+          <layout:Field field="sv3#area4#page18#enu16#fld39"/>
+          <layout:Field field="sv3#area4#page18#enu16#fld40"/>
+          <layout:Field field="sv3#area4#page18#enu16#sfld5"/>
+          <layout:Link link="sv3#area4#page18#enu16#ln67"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

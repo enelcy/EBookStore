@@ -144,7 +144,7 @@
     <RelationshipRole1 id="rel2#role3" name="UserToCart" maxCard="1">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="CartToUser" maxCard="N">
+    <RelationshipRole2 id="rel2#role4" name="CartToUser" maxCard="1">
       <db:JoinColumn attribute="ent6#att31" name="oid"/>
     </RelationshipRole2>
   </Relationship>
@@ -156,4 +156,14 @@
       <db:JoinColumn attribute="ent7#att43" name="oid"/>
     </RelationshipRole2>
   </Relationship>
+  <Entity id="ent8" name="Unconfirmeduser" db:database="db1" duration="persistent" db:table="unconfirmeduser" gr:x="760" gr:y="615">
+    <Attribute id="ent8#att52" name="oid" db:column="oid" type="integer" key="true"/>
+    <Attribute id="ent8#att53" name="birthdate" db:column="birthdate" type="date" key="false"/>
+    <Attribute id="ent8#att54" name="gender" db:column="gender" type="string" key="false"/>
+    <Attribute id="ent8#att55" name="lastname" db:column="lastname" type="string" key="false"/>
+    <Attribute id="ent8#att56" name="firstname" db:column="firstname" type="string" key="false"/>
+    <Attribute id="ent8#att57" name="email" db:column="email" type="string" key="false"/>
+    <Attribute id="ent8#att58" name="password" db:column="password" type="string" key="false"/>
+    <Attribute id="ent8#att59" name="username" db:column="username" type="string" key="false"/>
+  </Entity>
 </DataModel>

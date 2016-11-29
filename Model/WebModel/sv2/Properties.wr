@@ -1,0 +1,13 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Vistor" landmarks="sv2#area3 sv2#page13" layout:style="EbookStyle" layout:pageLayout="EbookStyle/Basic" layout:frameLayout="EbookStyle/Basic" homePage="sv2#area3#page11">
+  <OperationUnits>
+    <CreateUnit id="sv2#cru6" name="addComfirmUser" gr:x="980" gr:y="500" entity="ent8">
+      <KOLink id="sv2#cru6#kln3" name="OK" to="sv2#page14#mssu4">
+        <LinkParameter id="sv2#cru6#kln3#par111" name="Add user failed!_Shown Messages" target="sv2#page14#mssu4.shownMessages" sourceValue="Add user failed!"/>
+      </KOLink>
+      <OKLink id="sv2#cru6#oln12" name="OKFlow11" to="sv2#page12#mssu2">
+        <LinkParameter id="sv2#cru6#oln12#par112" name="Signup successfully, please wait for our processing._Shown Messages" target="sv2#page12#mssu2.shownMessages" sourceValue="Signup successfully, please wait for our processing."/>
+      </OKLink>
+    </CreateUnit>
+    <LogoutUnit id="sv2#lou3" name="Logout" protected="true" gr:x="440" gr:y="170" siteView="sv1"/>
+  </OperationUnits>
+</SiteView>

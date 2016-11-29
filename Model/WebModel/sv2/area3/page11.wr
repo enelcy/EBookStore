@@ -1,0 +1,142 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#page11" name="Home" linkOrder="sv2#area3#page11#ln56 sv2#area3#page11#ln57" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="sv2#area3#page11#pwu5" name="Book List" gr:x="30" gr:y="190" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
+      <SortAttribute attribute="ent3#att19" order="descending"/>
+      <Selector id="sv2#area3#page11#pwu5#su18" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area3#page11#pwu5#su18#acond8" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
+        <RelationshipRoleCondition id="sv2#area3#page11#pwu5#su18#rcond13" name="Category" predicate="in" implied="true" role="rel7#role14"/>
+      </Selector>
+    </PowerIndexUnit>
+    <DataUnit id="sv2#area3#page11#dau4" name="Details1" gr:x="0" gr:y="350" entity="User">
+      <Selector id="sv2#area3#page11#dau4#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area3#page11#dau4#su19#kcond13" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit id="sv2#area3#page11#seu6" name="Categories" gr:x="5" gr:y="0" entity="ent1">
+      <Link id="sv2#area3#page11#seu6#ln54" name="Flow1" to="sv2#area3#page11#enu6" type="transport" validate="true">
+        <LinkParameter id="sv2#area3#page11#seu6#ln54#par107" name="category_Category [label]" source="ent1#att2Array" target="sv2#area3#page11#enu6#sfld3_label"/>
+        <LinkParameter id="sv2#area3#page11#seu6#ln54#par108" name="oid_Category [output]" source="ent1#att1Array" target="sv2#area3#page11#enu6#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv2#area3#page11#enu6" name="Search" linkOrder="sv2#area3#page11#enu6#ln55" gr:x="225" gr:y="0" fieldOrder="sv2#area3#page11#enu6#sfld3 sv2#area3#page11#enu6#fld10">
+      <Field id="sv2#area3#page11#enu6#fld10" name="What are you interesting in?" type="string" modifiable="true"/>
+      <SelectionField id="sv2#area3#page11#enu6#sfld3" name="Category" type="string" modifiable="true"/>
+      <Link id="sv2#area3#page11#enu6#ln55" name="Search" to="sv2#area3#page11#pwu5" type="normal" validate="true">
+        <LinkParameter id="sv2#area3#page11#enu6#ln55#par109" name="What are you interesting in?_Search" source="sv2#area3#page11#enu6#fld10" target="sv2#area3#page11#pwu5#su18#acond8"/>
+        <LinkParameter id="sv2#area3#page11#enu6#ln55#par110" name="Category_Category [oid]" source="sv2#area3#page11#enu6#sfld3" target="sv2#area3#page11#pwu5#su18#rcond13.ent1#att1"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page11#enu6">
+          <layout:Field field="sv2#area3#page11#enu6#sfld3"/>
+          <layout:Field field="sv2#area3#page11#enu6#fld10"/>
+          <layout:Link link="sv2#area3#page11#enu6#ln55"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page11#pwu5">
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Link link="sv2#area3#page11#pwu5ent3#att19"/>
+          <layout:Link link="sv2#area3#page11#pwu5First"/>
+          <layout:Link link="sv2#area3#page11#pwu5Previous"/>
+          <layout:Link link="sv2#area3#page11#pwu5Block"/>
+          <layout:Link link="sv2#area3#page11#pwu5Next"/>
+          <layout:Link link="sv2#area3#page11#pwu5Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page11#dau4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#area3#page11#ln56" name="Logout" to="sv2#lou3" type="normal" automaticCoupling="true" validate="true"/>
+  <Link id="sv2#area3#page11#ln57" name="I am not a user, click here to sign up." to="sv2#page15" type="normal" automaticCoupling="true" validate="true"/>
+</Page>
