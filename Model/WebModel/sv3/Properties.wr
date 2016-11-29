@@ -36,7 +36,7 @@
         <LinkParameter id="sv3#dlu6#oln20#par178" name="Book deleted!_Shown Messages" target="sv3#area4#page16#mssu5.shownMessages" sourceValue="Book deleted!"/>
       </OKLink>
     </DeleteUnit>
-    <LogoutUnit id="sv3#lou4" name="Logout" landmark="false" gr:x="500" gr:y="85" siteView="sv1"/>
+    <LogoutUnit id="sv3#lou4" name="Logout" landmark="false" gr:x="675" gr:y="130" siteView="sv2"/>
     <ModifyUnit id="sv3#mfu6" name="updateuser" gr:x="0" gr:y="440" entity="User">
       <Selector id="sv3#mfu6#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mfu6#su26#kcond18" name="KeyCondition10" predicate="in" implied="false"/>

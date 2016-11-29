@@ -8,14 +8,13 @@
         <LinkParameter id="sv1#page3#dau2#ln51#par95" name="oid_CartID [oid]" source="data.ent6#att31" target="sv1#page3#pwu4#su12#rcond7.ent7#att43"/>
       </Link>
     </DataUnit>
-    <PowerIndexUnit gr:x="155" gr:y="150" id="sv1#page3#pwu4" name="CartItems" sortable="true" checkable="true" useCountQuery="false" entity="ent7" linkOrder="sv1#page3#pwu4#ln11 sv1#page3#pwu4#ln53" displayAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
+    <PowerIndexUnit gr:x="155" gr:y="150" id="sv1#page3#pwu4" name="CartItems" sortable="true" checkable="true" useCountQuery="false" entity="ent7" linkOrder="sv1#page3#pwu4#ln11" displayAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
       <Link id="sv1#page3#pwu4#ln11" name="delete" to="sv1#dlu3" type="normal" validate="true">
         <LinkParameter id="sv1#page3#pwu4#ln11#par22" name="oid_KeyCondition3 [oid]" source="data[].ent7#att43" target="sv1#dlu3#su6#kcond3.ent7#att43"/>
       </Link>
       <Selector id="sv1#page3#pwu4#su12" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page3#pwu4#su12#rcond7" name="CartID" role="rel4#role8.rel4#role7" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv1#page3#pwu4#ln53" name="Place Order" to="sv1#page6" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
     <GetUnit gr:x="0" gr:y="15" id="sv1#page3#gtu7" name="LoginUserID" contextParameters="UserCtxParam">
       <Link id="sv1#page3#gtu7#ln52" name="Flow52" to="sv1#page3#dau2" type="transport" validate="true">
@@ -54,7 +53,6 @@
           <layout:Attribute attribute="ent7#att50"/>
           <layout:Attribute attribute="ent7#att51"/>
           <layout:Link link="sv1#page3#pwu4#ln11"/>
-          <layout:Link link="sv1#page3#pwu4#ln53"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -84,4 +82,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv1#page3#ln87" name="Place Order" to="sv1#page6" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

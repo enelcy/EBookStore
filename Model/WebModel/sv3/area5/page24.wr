@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page24" name="Add User" landmark="true" gr:x="350" gr:y="335">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page24" name="Add User" landmark="true" gr:x="350" gr:y="335" linkOrder="sv3#area5#page24#ln89" layout:style="EbookStyle">
   <ContentUnits>
     <EntryUnit id="sv3#area5#page24#enu21" name="adduser" linkOrder="sv3#area5#page24#enu21#ln78" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area5#page24#enu21#fld57 sv3#area5#page24#enu21#fld58 sv3#area5#page24#enu21#sfld8 sv3#area5#page24#enu21#fld59 sv3#area5#page24#enu21#fld60 sv3#area5#page24#enu21#fld61 sv3#area5#page24#enu21#fld62 sv3#area5#page24#enu21#fld63">
       <Link id="sv3#area5#page24#enu21#ln78" name="Add" to="sv3#cru12" type="normal" validate="true">
@@ -51,4 +51,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv3#area5#page24#ln89" name="Flow89" to="sv3#lou4" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

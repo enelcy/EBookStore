@@ -1,0 +1,10 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="185" gr:y="195" id="mov2#opm2" name="Order">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm2#icu2" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#opm2#icu2#icp5" name="Input Port Parameter5"/>
+      <InputCollectorParameter id="mov2#opm2#icu2#icp6" name="Input Port Parameter6"/>
+      <InputCollectorParameter id="mov2#opm2#icu2#icp7" name="Input Port Parameter7"/>
+      <InputCollectorParameter id="mov2#opm2#icu2#icp8" name="Input Port Parameter8"/>
+    </InputCollectorUnit>
+  </OperationUnits>
+</OperationModule>

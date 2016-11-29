@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" linkOrder="sv1#area1#page1#ln39">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" linkOrder="sv1#area1#page1#ln39 sv1#area1#page1#ln91">
   <ContentUnits>
     <PowerIndexUnit gr:x="30" gr:y="190" id="sv1#area1#page1#pwu2" name="Book List" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
       <SortAttribute attribute="ent3#att19" order="descending"/>
@@ -7,11 +7,6 @@
         <RelationshipRoleCondition id="sv1#area1#page1#pwu2#su3#rcond2" name="Category" predicate="in" implied="true" role="rel7#role14"/>
       </Selector>
     </PowerIndexUnit>
-    <DataUnit gr:x="0" gr:y="350" id="sv1#area1#page1#dau1" name="Details1" entity="User">
-      <Selector id="sv1#area1#page1#dau1#su11" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#area1#page1#dau1#su11#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
-      </Selector>
-    </DataUnit>
     <SelectorUnit gr:x="5" gr:y="0" id="sv1#area1#page1#seu1" name="Categories" entity="ent1">
       <Link id="sv1#area1#page1#seu1#ln1" name="Flow1" to="sv1#area1#page1#enu2" type="transport" validate="true">
         <LinkParameter id="sv1#area1#page1#seu1#ln1#par9" name="category_Category [label]" source="ent1#att2Array" target="sv1#area1#page1#enu2#sfld1_label"/>
@@ -115,9 +110,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page1#dau1"/>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -162,12 +155,5 @@
     </layout:Row>
   </layout:Grid>
   <Link id="sv1#area1#page1#ln39" name="Logout" to="sv1#lou2" automaticCoupling="true" type="normal" validate="true"/>
-  <layout:CustomLocation name="Top">
-    <layout:Grid containerType="cell">
-      <layout:Row>
-        <layout:Cell/>
-      </layout:Row>
-    </layout:Grid>
-  </layout:CustomLocation>
-  <Link id="sv1#area1#page1#ln14" name="My cart" to="sv1#page3" type="normal" automaticCoupling="true" validate="true"/>
+  <Link id="sv1#area1#page1#ln91" name="My Cart" to="sv1#page3" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

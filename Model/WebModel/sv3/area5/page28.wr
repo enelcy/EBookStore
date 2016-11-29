@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page28" name="All Users" landmark="true" gr:x="200" gr:y="180">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page28" name="All Users" landmark="true" gr:x="200" gr:y="180" linkOrder="sv3#area5#page28#ln88" layout:style="EbookStyle">
   <ContentUnits>
     <PowerIndexUnit id="sv3#area5#page28#pwu8" name="userlist" linkOrder="sv3#area5#page28#pwu8#ln81 sv3#area5#page28#pwu8#ln82" gr:x="0" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userOID userName password email" maxResults="15">
       <Link id="sv3#area5#page28#pwu8#ln81" name="delete" to="sv3#dlu5" type="normal" automaticCoupling="true" validate="true"/>
@@ -55,4 +55,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv3#area5#page28#ln88" name="Flow88" to="sv3#lou4" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

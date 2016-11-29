@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="965" gr:y="930" id="sv1#page6" name="Place Order">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="925" gr:y="940" id="sv1#page6" name="Place Order">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page6#enu5" name="OrderInfo" entity="ent4" fieldOrder="sv1#page6#enu5#fld2 sv1#page6#enu5#fld6 sv1#page6#enu5#fld7 sv1#page6#enu5#fld9">
       <Field id="sv1#page6#enu5#fld9" name="totalQuantity" type="integer"/>
