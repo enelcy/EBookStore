@@ -9,6 +9,19 @@
     <GetUnit gr:x="-95" gr:y="445" id="sv1#gtu1" name="Get user" contextParameters="UserCtxParam" linkOrder="sv1#gtu1#ln40">
       <Link id="sv1#gtu1#ln40" name="Flow40" to="sv1#area1#page1#dau1" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <ModuleInstanceUnit gr:x="1095" gr:y="600" id="sv1#miu2" moduleId="mov2#opm1" action="true"/>
+    <ModuleInstanceUnit gr:x="625" gr:y="980" id="sv1#miu2" moduleId="mov2#opm1" action="true">
+      <OKLink id="sv1#miu2#oln9" name="OKFlow9" to="sv1#page3" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <DeleteUnit gr:x="1255" gr:y="560" id="sv1#dlu3" name="Delete Items" entity="ent7">
+      <Selector id="sv1#dlu3#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#dlu3#su6#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#dlu3#oln11" name="OKFlow11" to="sv1#page3" automaticCoupling="true"/>
+    </DeleteUnit>
+    <GetUnit id="sv1#gtu2" name="Get user" gr:x="530" gr:y="855" contextParameters="UserCtxParam">
+      <Link id="sv1#gtu2#ln30" name="Flow30" to="sv1#miu2" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu2#ln30#par23" name="UserCtxParam.oid_UserID" source="sv1#gtu2.UserCtxParam" target="sv1#miu2.mov2#opm1#icu1#icp4"/>
+      </Link>
+    </GetUnit>
   </OperationUnits>
 </SiteView>

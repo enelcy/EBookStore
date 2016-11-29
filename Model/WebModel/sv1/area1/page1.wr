@@ -26,6 +26,14 @@
         <LinkParameter id="sv1#area1#page1#enu2#ln4#par16" name="Category_Category [oid]" source="sv1#area1#page1#enu2#sfld1" target="sv1#area1#page1#pwu2#su3#rcond2.ent1#att1"/>
       </Link>
     </EntryUnit>
+    <QueryUnit gr:x="135" gr:y="365" id="sv1#area1#page1#qu1" name="Query1" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">select b.name,b.photo,b.author,b.oid,b.publisher,b.ISBN from bookinfo b, inventory i where b.oid = i.bookinfo_oid and i.sale_inventory &gt;0</QueryText>
+      <QueryOutput id="sv1#area1#page1#qu1#qo1" name="ISBN" type="string"/>
+      <QueryOutput id="sv1#area1#page1#qu1#qo2" name="name" type="string"/>
+      <QueryOutput id="sv1#area1#page1#qu1#qo3" name="author" type="string"/>
+      <QueryOutput id="sv1#area1#page1#qu1#qo4" name="oid"/>
+      <QueryInput id="sv1#area1#page1#qu1#qi2" name="photo" required="true"/>
+    </QueryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -123,6 +131,22 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page1#qu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
@@ -138,4 +162,12 @@
     </layout:Row>
   </layout:Grid>
   <Link id="sv1#area1#page1#ln39" name="Logout" to="sv1#lou2" automaticCoupling="true" type="normal" validate="true"/>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <Link id="sv1#area1#page1#ln14" name="My cart" to="sv1#page3" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

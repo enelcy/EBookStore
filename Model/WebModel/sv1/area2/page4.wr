@@ -19,7 +19,7 @@
         <AttributesCondition id="sv1#area2#page4#pwu3#su4#acond4" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
         <RelationshipRoleCondition id="sv1#area2#page4#pwu3#su4#rcond3" name="Category" predicate="in" implied="true" role="rel7#role14"/>
       </Selector>
-      <Link id="sv1#area2#page4#pwu3#ln13" name="Add to Cart" to="sv1#area2#page9#dau6" type="normal" validate="true" newWindow="false" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowResizable="true" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowShowEffect="Effect.Grow">
+      <Link id="sv1#area2#page4#pwu3#ln13" name="Add to Cart" to="sv1#area2#page9#dau6" type="normal" validate="true" newWindow="false" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowResizable="true" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxOpenWaitingDialog="false">
         <LinkParameter id="sv1#area2#page4#pwu3#ln13#par24" name="oid_KeyCondition2 [oid]" source="data[].ent3#att15" target="sv1#area2#page9#dau6#su13#kcond5.ent3#att15"/>
       </Link>
     </PowerIndexUnit>

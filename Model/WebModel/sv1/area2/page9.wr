@@ -1,7 +1,36 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page9" name="Prepare cart" gr:x="390" gr:y="95" ignoreMasterPage="true" layout:pageLayout="WRDefault/Empty">
   <layout:Grid>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page9#dau6">
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area2#page9#enu12">
+          <layout:Field field="sv1#area2#page9#enu12#fld8"/>
+          <layout:Link link="sv1#area2#page9#enu12#ln17"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -16,7 +45,7 @@
     </layout:Row>
   </layout:Grid>
   <ContentUnits>
-    <DataUnit id="sv1#area2#page9#dau6" name="Selected book" gr:x="0" gr:y="0" entity="ent3">
+    <DataUnit id="sv1#area2#page9#dau6" name="Selected book" gr:x="0" gr:y="0" entity="ent3" displayAll="true">
       <Selector id="sv1#area2#page9#dau6#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area2#page9#dau6#su13#kcond5" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -27,7 +56,7 @@
     </DataUnit>
     <EntryUnit id="sv1#area2#page9#enu12" name="Quantity" gr:x="30" gr:y="140" fieldOrder="sv1#area2#page9#enu12#fld8" linkOrder="sv1#area2#page9#enu12#ln17">
       <Field id="sv1#area2#page9#enu12#fld8" name="Quantity" type="integer" modifiable="true"/>
-      <Link id="sv1#area2#page9#enu12#ln17" name="Flow17" to="sv1#miu2" type="normal" validate="true">
+      <Link id="sv1#area2#page9#enu12#ln17" name="Add" to="sv1#miu2" type="normal" validate="true">
         <LinkParameter id="sv1#area2#page9#enu12#ln17#par33" name="Quantity_Quantity" source="sv1#area2#page9#enu12#fld8" target="sv1#miu2.mov2#opm1#icu1#icp2"/>
       </Link>
     </EntryUnit>
