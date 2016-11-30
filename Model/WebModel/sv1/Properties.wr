@@ -1,18 +1,24 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Memeber" landmarks="sv1#area1 sv1#area2" homePage="sv1#area1#page1" layout:frameLayout="EbookStyle/Basic" protected="true" layout:style="EbookStyle">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Memeber" landmarks="sv1#area2 sv1#page33" homePage="sv1#area2#page4" layout:frameLayout="EbookStyle/Basic" protected="true" layout:style="EbookStyle">
   <OperationUnits>
-    <LogoutUnit gr:x="450" gr:y="55" id="sv1#lou2" name="Logout" siteView="sv2" protected="false"/>
-    <ModuleInstanceUnit gr:x="625" gr:y="980" id="sv1#miu2" moduleId="mov2#opm1" action="true">
+    <LogoutUnit gr:x="-400" gr:y="540" id="sv1#lou2" name="Logout" siteView="sv2" protected="false"/>
+    <ModuleInstanceUnit gr:x="310" gr:y="205" id="sv1#miu2" moduleId="mov2#opm1" action="true">
       <OKLink id="sv1#miu2#oln9" name="OKFlow9" to="sv1#page3" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <DeleteUnit gr:x="1255" gr:y="560" id="sv1#dlu3" name="Delete Items" entity="ent7">
+    <DeleteUnit gr:x="-5" gr:y="605" id="sv1#dlu3" name="Delete Items" entity="ent7">
       <Selector id="sv1#dlu3#su6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#dlu3#su6#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv1#dlu3#oln11" name="OKFlow11" to="sv1#page3" automaticCoupling="true"/>
     </DeleteUnit>
-    <GetUnit id="sv1#gtu2" name="Get user" gr:x="530" gr:y="855" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#gtu2" name="Get user" gr:x="315" gr:y="25" contextParameters="UserCtxParam">
       <Link id="sv1#gtu2#ln30" name="Flow30" to="sv1#miu2" type="transport" validate="true">
         <LinkParameter id="sv1#gtu2#ln30#par23" name="UserCtxParam.oid_UserID" source="sv1#gtu2.UserCtxParam" target="sv1#miu2.mov2#opm1#icu1#icp4"/>
+      </Link>
+    </GetUnit>
+    <ModuleInstanceUnit gr:x="505" gr:y="1065" id="sv1#miu1" action="true" name="PlaceOrder" moduleId="mov2#opm2"/>
+    <GetUnit id="sv1#gtu12" name="Get user" gr:x="610" gr:y="835" contextParameters="UserCtxParam">
+      <Link id="sv1#gtu12#ln109" name="Flow30" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu12#ln109#par214" name="UserCtxParam.oid_UserID" source="sv1#gtu12.UserCtxParam" target="sv1#miu1.mov2#opm2#icu2#icp13"/>
       </Link>
     </GetUnit>
   </OperationUnits>

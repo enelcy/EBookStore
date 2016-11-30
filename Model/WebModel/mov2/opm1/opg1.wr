@@ -8,7 +8,7 @@
         <LinkParameter id="mov2#opm1#opg1#seu3#oln3#par28" name="oid_Input" source="ent4#att9Array" target="mov2#opm1#opg1#inn1.isnotnull"/>
       </OKLink>
       <Selector id="mov2#opm1#opg1#seu3#su14" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov2#opm1#opg1#seu3#su14#rcond6" name="UserID" predicate="in" implied="false" role="rel2#role4.rel2#role3"/>
+        <RelationshipRoleCondition id="mov2#opm1#opg1#seu3#su14#rcond6" name="UserID" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
     </SelectorUnit>
     <IsNotNullUnit gr:x="220" gr:y="205" id="mov2#opm1#opg1#inn1" name="Cart Exists?">

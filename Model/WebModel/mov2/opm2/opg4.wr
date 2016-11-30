@@ -1,0 +1,30 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="420" gr:y="110" id="mov2#opm2#opg4" name="PlaceOrder" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="0" id="mov2#opm2#opg4#cru13" name="Order" entity="ent4" linkOrder="mov2#opm2#opg4#cru13#ln116">
+      <OKLink id="mov2#opm2#opg4#cru13#oln24" name="OKFlow24" to="mov2#opm2#opg4#seu11" automaticCoupling="true"/>
+      <Link id="mov2#opm2#opg4#cru13#ln116" name="Flow116" to="mov2#opm2#opg4#cru14" automaticCoupling="true" type="transport" validate="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="305" gr:y="160" id="mov2#opm2#opg4#cru14" name="Create14" entity="ent5">
+      <OKLink id="mov2#opm2#opg4#cru14#oln27" name="OKFlow26" to="mov2#opm2#okcu2"/>
+    </CreateUnit>
+    <TimeUnit gr:x="125" gr:y="0" id="mov2#opm2#opg4#tmu2" name="CreateDate">
+      <Link id="mov2#opm2#opg4#tmu2#ln111" name="Flow111" to="mov2#opm2#opg4#cru13" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#opg4#tmu2#ln111#par215" name="Current/Input Date_date" source="currentDate" target="mov2#opm2#opg4#cru13.ent4#att41"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit gr:x="120" gr:y="150" id="mov2#opm2#opg4#seu11" name="Selector11" entity="ent7" distinctAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
+      <Selector id="mov2#opm2#opg4#seu11#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#opg4#seu11#su31#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm2#opg4#seu11#oln25" name="OKFlow25" to="mov2#opm2#opg4#cru14">
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par230" name="Name_bookName" source="ent7#att46Array" target="mov2#opm2#opg4#cru14.ent5#att40"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par231" name="FromDate_from" source="ent7#att49Array" target="mov2#opm2#opg4#cru14.ent5#att33"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par232" name="ISBN_ISBN" source="ent7#att45Array" target="mov2#opm2#opg4#cru14.ent5#att26"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par233" name="oid_oid" source="ent7#att43Array" target="mov2#opm2#opg4#cru14.ent5#att10"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par234" name="Price_price" source="ent7#att48Array" target="mov2#opm2#opg4#cru14.ent5#att36"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par235" name="Quantity_quantity" source="ent7#att47Array" target="mov2#opm2#opg4#cru14.ent5#att35"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par236" name="ToDate_to" source="ent7#att50Array" target="mov2#opm2#opg4#cru14.ent5#att34"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationGroup>

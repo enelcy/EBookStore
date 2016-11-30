@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page4" name="buy">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page4" name="Home">
   <ContentUnits>
     <SelectorUnit gr:x="0" gr:y="30" id="sv1#area2#page4#seu2" name="Categories" entity="ent1">
       <Link id="sv1#area2#page4#seu2#ln7" name="Flow7" to="sv1#area2#page4#enu3" type="transport" validate="true">
@@ -68,4 +68,6 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv1#area2#page4#ln118" name="Logout" to="sv1#lou2" type="normal" automaticCoupling="true" validate="true"/>
+  <Link id="sv1#area2#page4#ln119" name="My Cart" to="sv1#page3" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

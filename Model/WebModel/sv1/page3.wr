@@ -1,24 +1,30 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="750" gr:y="500" id="sv1#page3" name="Cart" secure="false" ignoreMasterPage="false" layout:pageLayout="WebRatio/Basic">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="160" gr:y="525" id="sv1#page3" name="Cart" secure="false" ignoreMasterPage="false" layout:pageLayout="WebRatio/Basic">
   <ContentUnits>
     <DataUnit gr:x="190" gr:y="0" id="sv1#page3#dau2" name="Cart" entity="ent6" displayAll="true">
       <Selector id="sv1#page3#dau2#su15" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv1#page3#dau2#su15#rcond10" name="RoleCondition10" predicate="in" implied="false" role="rel2#role4.rel2#role3"/>
+        <RelationshipRoleCondition id="sv1#page3#dau2#su15#rcond10" name="UserId" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
       <Link id="sv1#page3#dau2#ln51" name="Flow51" to="sv1#page3#pwu4" type="transport" validate="true">
-        <LinkParameter id="sv1#page3#dau2#ln51#par95" name="oid_CartID [oid]" source="data.ent6#att31" target="sv1#page3#pwu4#su12#rcond7.ent7#att43"/>
+        <LinkParameter id="sv1#page3#dau2#ln51#par203" name="oid_CartID [oid]" source="data.ent6#att31" target="sv1#page3#pwu4#su12#rcond7.ent6#att31"/>
       </Link>
     </DataUnit>
-    <PowerIndexUnit gr:x="155" gr:y="150" id="sv1#page3#pwu4" name="CartItems" sortable="true" checkable="true" useCountQuery="false" entity="ent7" linkOrder="sv1#page3#pwu4#ln11" displayAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
+    <PowerIndexUnit gr:x="155" gr:y="150" id="sv1#page3#pwu4" name="CartItems" sortable="true" checkable="true" useCountQuery="false" entity="ent7" linkOrder="sv1#page3#pwu4#ln11 sv1#page3#pwu4#ln101" displayAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
       <Link id="sv1#page3#pwu4#ln11" name="delete" to="sv1#dlu3" type="normal" validate="true">
         <LinkParameter id="sv1#page3#pwu4#ln11#par22" name="oid_KeyCondition3 [oid]" source="data[].ent7#att43" target="sv1#dlu3#su6#kcond3.ent7#att43"/>
       </Link>
       <Selector id="sv1#page3#pwu4#su12" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv1#page3#pwu4#su12#rcond7" name="CartID" role="rel4#role8.rel4#role7" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv1#page3#pwu4#su12#rcond7" name="CartID" role="rel4#role7" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv1#page3#pwu4#ln101" name="Place Order" to="sv1#page6#mciu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page3#pwu4#ln101#par222" name="Checked oid_KeyCondition22 [oid]" source="ent7#att43Checked" target="sv1#page6#mciu1#su30#kcond22.ent7#att43"/>
+      </Link>
+      <Link id="sv1#page3#pwu4#ln115" name="Flow115" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#pwu4#ln115#par223" name="Checked oid_Items" source="ent7#att43Checked" target="sv1#miu1.mov2#opm2#icu2#icp14"/>
+      </Link>
     </PowerIndexUnit>
     <GetUnit gr:x="0" gr:y="15" id="sv1#page3#gtu7" name="LoginUserID" contextParameters="UserCtxParam">
       <Link id="sv1#page3#gtu7#ln52" name="Flow52" to="sv1#page3#dau2" type="transport" validate="true">
-        <LinkParameter id="sv1#page3#gtu7#ln52#par105" name="UserCtxParam.oid_RoleCondition10 [oid]" source="sv1#page3#gtu7.UserCtxParam" target="sv1#page3#dau2#su15#rcond10.ent6#att31"/>
+        <LinkParameter id="sv1#page3#gtu7#ln52#par202" name="UserCtxParam.oid_UserId [oid]" source="sv1#page3#gtu7.UserCtxParam" target="sv1#page3#dau2#su15#rcond10.userOID"/>
       </Link>
     </GetUnit>
   </ContentUnits>
@@ -28,6 +34,7 @@
         <layout:Unit unitId="sv1#page3#dau2">
           <layout:Attribute attribute="ent6#att39"/>
           <layout:Attribute attribute="ent6#att42"/>
+          <layout:Attribute attribute="ent6#att60"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -53,6 +60,7 @@
           <layout:Attribute attribute="ent7#att50"/>
           <layout:Attribute attribute="ent7#att51"/>
           <layout:Link link="sv1#page3#pwu4#ln11"/>
+          <layout:Link link="sv1#page3#pwu4#ln101"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -82,5 +90,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv1#page3#ln87" name="Place Order" to="sv1#page6" type="normal" automaticCoupling="true" validate="true"/>
 </Page>
