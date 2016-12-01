@@ -1,0 +1,95 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page39" name="Rent" gr:x="245" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv1#area7#page39#enu29" name="Search" linkOrder="sv1#area7#page39#enu29#ln143" gr:x="230" gr:y="15" fieldOrder="sv1#area7#page39#enu29#sfld16 sv1#area7#page39#enu29#fld80">
+      <Field id="sv1#area7#page39#enu29#fld80" type="string" modifiable="true"/>
+      <SelectionField id="sv1#area7#page39#enu29#sfld16" name="Category" type="string" modifiable="true"/>
+      <Link id="sv1#area7#page39#enu29#ln143" name="Search" to="sv1#area7#page39#pwu15" type="normal" validate="true">
+        <LinkParameter id="sv1#area7#page39#enu29#ln143#par275" name="Category_Category [oid]" source="sv1#area7#page39#enu29#sfld16" target="sv1#area7#page39#pwu15#su36#rcond19.ent1#att1"/>
+        <LinkParameter id="sv1#area7#page39#enu29#ln143#par276" name="What you are interesting in?_Search" source="sv1#area7#page39#enu29#fld80" target="sv1#area7#page39#pwu15#su36#acond15"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv1#area7#page39#seu15" name="Categories" gr:x="0" gr:y="0" entity="ent1">
+      <Link id="sv1#area7#page39#seu15#ln144" name="Flow7" to="sv1#area7#page39#enu29" type="transport" validate="true">
+        <LinkParameter id="sv1#area7#page39#seu15#ln144#par277" name="category_Category [label]" source="ent1#att2Array" target="sv1#area7#page39#enu29#sfld16_label"/>
+        <LinkParameter id="sv1#area7#page39#seu15#ln144#par278" name="oid_Category [output]" source="ent1#att1Array" target="sv1#area7#page39#enu29#sfld16_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="sv1#area7#page39#pwu15" name="Book list" linkOrder="sv1#area7#page39#pwu15#ln145" gr:x="35" gr:y="295" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att24 ent3#att23 ent3#att65">
+      <Selector id="sv1#area7#page39#pwu15#su36" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area7#page39#pwu15#su36#acond15" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
+        <RelationshipRoleCondition id="sv1#area7#page39#pwu15#su36#rcond19" name="Category" predicate="in" implied="true" role="rel7#role14"/>
+        <RelationshipRoleCondition id="sv1#area7#page39#pwu15#su36#rcond25" name="Inventory" predicate="in" implied="false" role="rel3#role6"/>
+      </Selector>
+      <Link id="sv1#area7#page39#pwu15#ln145" name="Rent" to="sv1#area7#page40#dau9" type="normal" validate="true" newWindow="false" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowResizable="true" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxOpenWaitingDialog="false">
+        <LinkParameter id="sv1#area7#page39#pwu15#ln145#par279" name="oid_KeyCondition2 [oid]" source="data[].ent3#att15" target="sv1#area7#page40#dau9#su37#kcond25.ent3#att15"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit gr:x="35" gr:y="145" id="sv1#area7#page39#seu18" name="Select Inventory" entity="ent2" distinctAttributes="ent2#att3">
+      <Selector id="sv1#area7#page39#seu18#su46" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area7#page39#seu18#su46#acond20" name="AttCondition20" predicate="gt" booleanOperator="or" implied="false" attributes="ent2#att7" value="0"/>
+      </Selector>
+      <Link id="sv1#area7#page39#seu18#ln163" name="Flow163" to="sv1#area7#page39#pwu15" type="transport" validate="true">
+        <LinkParameter id="sv1#area7#page39#seu18#ln163#par312" name="oid_Inventory [oid]" source="ent2#att3Array" target="sv1#area7#page39#pwu15#su36#rcond25.ent2#att3"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page39#enu29">
+          <layout:Field field="sv1#area7#page39#enu29#sfld16"/>
+          <layout:Field field="sv1#area7#page39#enu29#fld80"/>
+          <layout:Link link="sv1#area7#page39#enu29#ln143"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page39#pwu15">
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att65"/>
+          <layout:Link link="sv1#area7#page39#pwu15#ln145"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

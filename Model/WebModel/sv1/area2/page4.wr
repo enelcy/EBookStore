@@ -1,12 +1,12 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page4" name="Home">
   <ContentUnits>
-    <SelectorUnit gr:x="0" gr:y="30" id="sv1#area2#page4#seu2" name="Categories" entity="ent1">
+    <SelectorUnit gr:x="0" gr:y="0" id="sv1#area2#page4#seu2" name="Categories" entity="ent1">
       <Link id="sv1#area2#page4#seu2#ln7" name="Flow7" to="sv1#area2#page4#enu3" type="transport" validate="true">
         <LinkParameter id="sv1#area2#page4#seu2#ln7#par18" name="category_Category [label]" source="ent1#att2Array" target="sv1#area2#page4#enu3#sfld2_label"/>
         <LinkParameter id="sv1#area2#page4#seu2#ln7#par19" name="oid_Category [output]" source="ent1#att1Array" target="sv1#area2#page4#enu3#sfld2_output"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit gr:x="180" gr:y="25" id="sv1#area2#page4#enu3" name="Search" fieldOrder="sv1#area2#page4#enu3#sfld2 sv1#area2#page4#enu3#fld5" linkOrder="sv1#area2#page4#enu3#ln8">
+    <EntryUnit gr:x="220" gr:y="20" id="sv1#area2#page4#enu3" name="Search" fieldOrder="sv1#area2#page4#enu3#sfld2 sv1#area2#page4#enu3#fld5" linkOrder="sv1#area2#page4#enu3#ln8">
       <Field id="sv1#area2#page4#enu3#fld5" name="What you are interesting in?" type="string" modifiable="true"/>
       <SelectionField id="sv1#area2#page4#enu3#sfld2" name="Category" type="string" modifiable="true"/>
       <Link id="sv1#area2#page4#enu3#ln8" name="Search" to="sv1#area2#page4#pwu3" type="normal" validate="true">
@@ -14,15 +14,22 @@
         <LinkParameter id="sv1#area2#page4#enu3#ln8#par21" name="What you are interesting in?_Search" source="sv1#area2#page4#enu3#fld5" target="sv1#area2#page4#pwu3#su4#acond4"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit gr:x="50" gr:y="170" id="sv1#area2#page4#pwu3" name="Book list" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att17 ent3#att19 ent3#att23 ent3#att24" linkOrder="sv1#area2#page4#pwu3#ln13">
+    <PowerIndexUnit gr:x="40" gr:y="270" id="sv1#area2#page4#pwu3" name="Book list" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att24 ent3#att23 ent3#att19" linkOrder="sv1#area2#page4#pwu3#ln13">
       <Selector id="sv1#area2#page4#pwu3#su4" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area2#page4#pwu3#su4#acond4" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
         <RelationshipRoleCondition id="sv1#area2#page4#pwu3#su4#rcond3" name="Category" predicate="in" implied="true" role="rel7#role14"/>
+        <RelationshipRoleCondition id="sv1#area2#page4#pwu3#su4#rcond26" name="Inventory" predicate="in" implied="false" role="rel3#role6"/>
       </Selector>
       <Link id="sv1#area2#page4#pwu3#ln13" name="Add to Cart" to="sv1#area2#page9#dau6" type="normal" validate="true" newWindow="false" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowResizable="true" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxOpenWaitingDialog="false">
         <LinkParameter id="sv1#area2#page4#pwu3#ln13#par24" name="oid_KeyCondition2 [oid]" source="data[].ent3#att15" target="sv1#area2#page9#dau6#su13#kcond5.ent3#att15"/>
       </Link>
     </PowerIndexUnit>
+    <SelectorUnit gr:x="10" gr:y="110" id="sv1#area2#page4#seu19" name="Select Inventory" entity="ent2">
+      <Selector id="sv1#area2#page4#seu19#su47" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area2#page4#seu19#su47#acond21" name="AttCondition21" predicate="gt" booleanOperator="or" implied="false" attributes="ent2#att5" value="0"/>
+      </Selector>
+      <Link id="sv1#area2#page4#seu19#ln164" name="Flow164" to="sv1#area2#page4#pwu3" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -48,13 +55,28 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area2#page4#pwu3">
+          <layout:Attribute attribute="ent3#att20"/>
           <layout:Attribute attribute="ent3#att17"/>
-          <layout:Attribute attribute="ent3#att19"/>
-          <layout:Attribute attribute="ent3#att23"/>
           <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att19"/>
           <layout:Link link="sv1#area2#page4#pwu3#ln13"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

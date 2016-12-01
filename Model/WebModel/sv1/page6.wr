@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="175" gr:y="905" id="sv1#page6" name="Place Order" linkOrder="sv1#page6#ln120">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="55" gr:y="1125" id="sv1#page6" name="Place Order" linkOrder="sv1#page6#ln120">
   <ContentUnits>
-    <EntryUnit id="sv1#page6#enu24" name="Payment Information" gr:x="0" gr:y="115" entity="ent4" fieldOrder="sv1#page6#enu24#sfld12 sv1#page6#enu24#sfld13 sv1#page6#enu24#fld72 sv1#page6#enu24#fld74" linkOrder="sv1#page6#enu24#ln108">
+    <EntryUnit id="sv1#page6#enu24" name="Payment Information" gr:x="100" gr:y="120" entity="ent4" fieldOrder="sv1#page6#enu24#sfld12 sv1#page6#enu24#sfld13 sv1#page6#enu24#fld72 sv1#page6#enu24#fld74" linkOrder="sv1#page6#enu24#ln108">
       <Field id="sv1#page6#enu24#fld72" name="Shipping Address" type="string" modifiable="true" attribute="ent4#att12"/>
       <Field id="sv1#page6#enu24#fld74" name="Card Number" type="string" modifiable="true" attribute="ent4#att21" hidden="false"/>
       <SelectionField id="sv1#page6#enu24#sfld12" attribute="ent4#att13" type="string" name="Payment Type" slotOrder="sv1#page6#enu24#sfld12#slot9" preselectValue="Pay Online" ajaxEventEnabled="false" ajaxEventIndicator="true">
@@ -16,16 +16,20 @@
         <LinkParameter id="sv1#page6#enu24#ln108#par212" name="Shipping Address_ShippingAddress" source="sv1#page6#enu24#fld72" target="sv1#miu1.mov2#opm2#icu2#icp5"/>
       </Link>
     </EntryUnit>
-    <MultiChoiceIndexUnit gr:x="10" gr:y="0" id="sv1#page6#mciu1" name="OrderDetailList" entity="ent7" displayAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
-      <Selector id="sv1#page6#mciu1#su30" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#page6#mciu1#su30#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
+    <PowerIndexUnit gr:x="0" gr:y="10" id="sv1#page6#pwu16" name="OrderDetail" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="ent7#att43 ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
+      <Selector id="sv1#page6#pwu16#su38" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page6#pwu16#su38#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
-    </MultiChoiceIndexUnit>
+      <Link id="sv1#page6#pwu16#ln149" name="Flow115" to="sv1#miu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page6#pwu16#ln149#par286" name="Checked oid_Items" source="ent7#att43Array" target="sv1#miu1.mov2#opm2#icu2#icp14"/>
+      </Link>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page6#mciu1" styleClass="PlaceOrderCss">
+        <layout:Unit unitId="sv1#page6#pwu16">
+          <layout:Attribute attribute="ent7#att43"/>
           <layout:Attribute attribute="ent7#att45"/>
           <layout:Attribute attribute="ent7#att46"/>
           <layout:Attribute attribute="ent7#att47"/>
@@ -33,7 +37,6 @@
           <layout:Attribute attribute="ent7#att49"/>
           <layout:Attribute attribute="ent7#att50"/>
           <layout:Attribute attribute="ent7#att51"/>
-          <layout:LayoutParameter name="select-all" value="true" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

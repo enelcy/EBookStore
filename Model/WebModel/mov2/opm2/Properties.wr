@@ -7,8 +7,9 @@
       <InputCollectorParameter id="mov2#opm2#icu2#icp12" name="CardNumber"/>
       <InputCollectorParameter id="mov2#opm2#icu2#icp13" name="UserID"/>
       <InputCollectorParameter id="mov2#opm2#icu2#icp14" name="Items"/>
-      <Link id="mov2#opm2#icu2#ln113" name="Flow113" to="mov2#opm2#opg4#seu11" type="transport" validate="true">
-        <LinkParameter id="mov2#opm2#icu2#ln113#par229" name="Items_KeyCondition23 [oid]" source="mov2#opm2#icu2#icp14" target="mov2#opm2#opg4#seu11#su31#kcond23.ent7#att43"/>
+      <Link id="mov2#opm2#icu2#ln113" name="Flow113" to="mov2#opm2#opg4#lpu1" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#icu2#ln113#par288" name="Items_Input Array" source="mov2#opm2#icu2#icp14" target="mov2#opm2#opg4#lpu1.array"/>
+        <LinkParameter id="mov2#opm2#icu2#ln113#par296" name="Items_Iteration Count" source="mov2#opm2#icu2#icp14" target="mov2#opm2#opg4#lpu1.iterationCount"/>
       </Link>
       <OKLink id="mov2#opm2#icu2#oln23" name="OKFlow23" to="mov2#opm2#opg4#cru13">
         <LinkParameter id="mov2#opm2#icu2#oln23#par224" name="CardType_payCardType" source="mov2#opm2#icu2#icp11" target="mov2#opm2#opg4#cru13.ent4#att14"/>

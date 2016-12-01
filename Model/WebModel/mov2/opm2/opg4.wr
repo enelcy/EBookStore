@@ -1,30 +1,44 @@
-<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="420" gr:y="110" id="mov2#opm2#opg4" name="PlaceOrder" transaction="true">
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="285" gr:y="-20" id="mov2#opm2#opg4" name="PlaceOrder" transaction="true">
   <OperationUnits>
     <CreateUnit gr:x="0" gr:y="0" id="mov2#opm2#opg4#cru13" name="Order" entity="ent4" linkOrder="mov2#opm2#opg4#cru13#ln116">
-      <OKLink id="mov2#opm2#opg4#cru13#oln24" name="OKFlow24" to="mov2#opm2#opg4#seu11" automaticCoupling="true"/>
+      <OKLink id="mov2#opm2#opg4#cru13#oln24" name="OKFlow24" to="mov2#opm2#opg4#lpu1" automaticCoupling="true"/>
       <Link id="mov2#opm2#opg4#cru13#ln116" name="Flow116" to="mov2#opm2#opg4#cru14" automaticCoupling="true" type="transport" validate="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="305" gr:y="160" id="mov2#opm2#opg4#cru14" name="Create14" entity="ent5">
-      <OKLink id="mov2#opm2#opg4#cru14#oln27" name="OKFlow26" to="mov2#opm2#okcu2"/>
+    <CreateUnit gr:x="425" gr:y="500" id="mov2#opm2#opg4#cru14" name="CreateOrderItem" entity="ent5">
+      <OKLink id="mov2#opm2#opg4#cru14#oln36" name="OKFlow36" to="mov2#opm2#opg4#dlu7" automaticCoupling="true"/>
     </CreateUnit>
-    <TimeUnit gr:x="125" gr:y="0" id="mov2#opm2#opg4#tmu2" name="CreateDate">
+    <TimeUnit gr:x="180" gr:y="15" id="mov2#opm2#opg4#tmu2" name="CreateDate">
       <Link id="mov2#opm2#opg4#tmu2#ln111" name="Flow111" to="mov2#opm2#opg4#cru13" type="transport" validate="true">
         <LinkParameter id="mov2#opm2#opg4#tmu2#ln111#par215" name="Current/Input Date_date" source="currentDate" target="mov2#opm2#opg4#cru13.ent4#att41"/>
       </Link>
     </TimeUnit>
-    <SelectorUnit gr:x="120" gr:y="150" id="mov2#opm2#opg4#seu11" name="Selector11" entity="ent7" distinctAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
+    <SelectorUnit gr:x="5" gr:y="480" id="mov2#opm2#opg4#seu11" name="Selector11" entity="ent7" distinctAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
       <Selector id="mov2#opm2#opg4#seu11#su31" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#opg4#seu11#su31#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov2#opm2#opg4#seu11#oln25" name="OKFlow25" to="mov2#opm2#opg4#cru14">
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par230" name="Name_bookName" source="ent7#att46Array" target="mov2#opm2#opg4#cru14.ent5#att40"/>
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par231" name="FromDate_from" source="ent7#att49Array" target="mov2#opm2#opg4#cru14.ent5#att33"/>
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par232" name="ISBN_ISBN" source="ent7#att45Array" target="mov2#opm2#opg4#cru14.ent5#att26"/>
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par233" name="oid_oid" source="ent7#att43Array" target="mov2#opm2#opg4#cru14.ent5#att10"/>
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par234" name="Price_price" source="ent7#att48Array" target="mov2#opm2#opg4#cru14.ent5#att36"/>
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par235" name="Quantity_quantity" source="ent7#att47Array" target="mov2#opm2#opg4#cru14.ent5#att35"/>
-        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par236" name="ToDate_to" source="ent7#att50Array" target="mov2#opm2#opg4#cru14.ent5#att34"/>
+      <OKLink id="mov2#opm2#opg4#seu11#oln25" name="OKFlow25" to="mov2#opm2#opg4#cru14" gr:bendpoints="127,-30,-138,65">
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par290" name="Name_bookName" source="ent7#att46Array" target="mov2#opm2#opg4#cru14.ent5#att40"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par291" name="FromDate_from" source="ent7#att49Array" target="mov2#opm2#opg4#cru14.ent5#att33"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par292" name="ISBN_ISBN" source="ent7#att45Array" target="mov2#opm2#opg4#cru14.ent5#att26"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par293" name="Price_price" source="ent7#att48Array" target="mov2#opm2#opg4#cru14.ent5#att36"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par294" name="Quantity_quantity" source="ent7#att47Array" target="mov2#opm2#opg4#cru14.ent5#att35"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par295" name="ToDate_to" source="ent7#att50Array" target="mov2#opm2#opg4#cru14.ent5#att34"/>
       </OKLink>
     </SelectorUnit>
+    <LoopUnit gr:x="0" gr:y="245" id="mov2#opm2#opg4#lpu1" name="LoopOrderItems">
+      <OKLink id="mov2#opm2#opg4#lpu1#oln35" name="OKFlow35" to="mov2#opm2#opg4#seu11" code="next">
+        <LinkParameter id="mov2#opm2#opg4#lpu1#oln35#par289" name="Next Element_KeyCondition23 [oid]" source="next" target="mov2#opm2#opg4#seu11#su31#kcond23.ent7#att43"/>
+      </OKLink>
+      <Link id="mov2#opm2#opg4#lpu1#ln154" name="Flow154" to="mov2#opm2#opg4#dlu7" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#opg4#lpu1#ln154#par297" name="Next Element_KeyCondition27 [oid]" source="next" target="mov2#opm2#opg4#dlu7#su39#kcond27.ent7#att43"/>
+      </Link>
+      <OKLink id="mov2#opm2#opg4#lpu1#oln46" name="OKFlow46" to="mov2#opm2#okcu2" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <DeleteUnit gr:x="435" gr:y="330" id="mov2#opm2#opg4#dlu7" name="DeleteCartItem" entity="ent7">
+      <Selector id="mov2#opm2#opg4#dlu7#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#opg4#dlu7#su39#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm2#opg4#dlu7#oln38" name="OKFlow38" to="mov2#opm2#opg4#lpu1" automaticCoupling="true" gr:bendpoints="-186,12,184,17"/>
+    </DeleteUnit>
   </OperationUnits>
 </OperationGroup>

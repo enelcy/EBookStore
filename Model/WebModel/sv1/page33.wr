@@ -1,11 +1,24 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-405" gr:y="955" id="sv1#page33" name="My Order" landmark="true" linkOrder="sv1#page33#ln121">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-625" gr:y="810" id="sv1#page33" name="My Order" landmark="true" linkOrder="sv1#page33#ln121">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page33#pwu11" name="Order" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="sv1#page33#pwu11#ln117" displayAttributes="ent4#att13 ent4#att12 ent4#att14 ent4#att21 ent4#att41">
-      <Link id="sv1#page33#pwu11#ln117" name="Order Detail" to="sv1#page33#pwu12" type="normal" validate="true">
-        <LinkParameter id="sv1#page33#pwu11#ln117#par237" name="oid_current oid" source="data[].ent4#att9" target="sv1#page33#pwu12.current.ent5#att10"/>
+      <Link id="sv1#page33#pwu11#ln117" name="Order Detail" to="sv1#page33#pwu12" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv1#page33#pwu11#ln117#par237" name="oid_current oid" target="sv1#page33#pwu12.current.ent5#att10" blank="true"/>
+        <LinkParameter id="sv1#page33#pwu11#ln117#par307" name="oid_OrderID [oid]" source="data[].ent4#att9" target="sv1#page33#pwu12#su45#rcond23.ent4#att9"/>
       </Link>
+      <Selector id="sv1#page33#pwu11#su40" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page33#pwu11#su40#acond19" name="UserID" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att11"/>
+      </Selector>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="180" gr:y="0" id="sv1#page33#pwu12" name="Order Items" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38 ent5#att4"/>
+    <PowerIndexUnit gr:x="180" gr:y="0" id="sv1#page33#pwu12" name="Order Items" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38 ent5#att4">
+      <Selector id="sv1#page33#pwu12#su45" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page33#pwu12#su45#rcond23" name="OrderID" role="rel5#role9" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+    <GetUnit gr:x="5" gr:y="145" id="sv1#page33#gtu15" name="GetLoginUser" contextParameters="UserCtxParam">
+      <Link id="sv1#page33#gtu15#ln161" name="Flow161" to="sv1#page33#pwu11" type="transport" validate="true">
+        <LinkParameter id="sv1#page33#gtu15#ln161#par306" name="UserCtxParam.oid_UserID" source="sv1#page33#gtu15.UserCtxParam" target="sv1#page33#pwu11#su40#acond19"/>
+      </Link>
+    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -46,6 +59,20 @@
           <layout:Attribute attribute="ent5#att4"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,0 +1,31 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#opm4#opg5" name="Cart" transaction="true" gr:x="295" gr:y="230">
+  <OperationUnits>
+    <CreateUnit id="mov2#opm4#opg5#cru15" name="Create Cart Items" gr:x="155" gr:y="0" entity="ent7" bulk="true">
+      <OKLink id="mov2#opm4#opg5#cru15#oln29" name="OKFlow8" to="mov2#opm4#okcu3"/>
+    </CreateUnit>
+    <SelectorUnit id="mov2#opm4#opg5#seu13" name="Current User's Cart" gr:x="0" gr:y="185" entity="ent6">
+      <OKLink id="mov2#opm4#opg5#seu13#oln30" name="OKFlow3" to="mov2#opm4#opg5#inn2">
+        <LinkParameter id="mov2#opm4#opg5#seu13#oln30#par260" name="oid_Input" source="ent4#att9Array" target="mov2#opm4#opg5#inn2.isnotnull"/>
+      </OKLink>
+      <Selector id="mov2#opm4#opg5#seu13#su34" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm4#opg5#seu13#su34#rcond17" name="UserID" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov2#opm4#opg5#inn2" name="Cart Exists?" gr:x="220" gr:y="205">
+      <OKLink id="mov2#opm4#opg5#inn2#oln31" name="OKFlow5" to="mov2#opm4#opg5#cru15">
+        <LinkParameter id="mov2#opm4#opg5#inn2#oln31#par261" name="Input Value_Cart.oid(CartItemsToCart)" source="inputValue" target="mov2#opm4#opg5#cru15.rel4#role8.ent6#att31"/>
+      </OKLink>
+      <KOLink id="mov2#opm4#opg5#inn2#kln7" name="KOFlow1" to="mov2#opm4#opg5#tmu3"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2#opm4#opg5#cru16" name="Create Cart" gr:x="500" gr:y="195" entity="ent6">
+      <OKLink id="mov2#opm4#opg5#cru16#oln32" name="OKFlow7" to="mov2#opm4#opg5#cru15">
+        <LinkParameter id="mov2#opm4#opg5#cru16#oln32#par262" name="oid_Cart.oid(CartItemsToCart)" source="ent6#att31Array" target="mov2#opm4#opg5#cru15.rel4#role8.ent6#att31"/>
+      </OKLink>
+    </CreateUnit>
+    <TimeUnit id="mov2#opm4#opg5#tmu3" name="Time1" gr:x="370" gr:y="205">
+      <OKLink id="mov2#opm4#opg5#tmu3#oln33" name="OKFlow6" to="mov2#opm4#opg5#cru16">
+        <LinkParameter id="mov2#opm4#opg5#tmu3#oln33#par263" name="Current/Input Date_UpdateDate" source="currentDate" target="mov2#opm4#opg5#cru16.ent6#att39"/>
+      </OKLink>
+    </TimeUnit>
+  </OperationUnits>
+</OperationGroup>

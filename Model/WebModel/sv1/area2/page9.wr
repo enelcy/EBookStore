@@ -1,15 +1,15 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page9" name="Prepare cart" gr:x="390" gr:y="95" ignoreMasterPage="true" layout:pageLayout="WRDefault/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page9" name="Prepare cart" gr:x="380" gr:y="195" ignoreMasterPage="true" layout:pageLayout="WRDefault/Empty">
   <layout:Grid>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area2#page9#dau6">
-          <layout:Attribute attribute="ent3#att24"/>
-          <layout:Attribute attribute="ent3#att23"/>
-          <layout:Attribute attribute="ent3#att20"/>
-          <layout:Attribute attribute="ent3#att19"/>
-          <layout:Attribute attribute="ent3#att18"/>
-          <layout:Attribute attribute="ent3#att17"/>
           <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -45,7 +45,7 @@
     </layout:Row>
   </layout:Grid>
   <ContentUnits>
-    <DataUnit id="sv1#area2#page9#dau6" name="Selected book" gr:x="0" gr:y="0" entity="ent3" displayAll="true">
+    <DataUnit id="sv1#area2#page9#dau6" name="Selected book" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att23 ent3#att24">
       <Selector id="sv1#area2#page9#dau6#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area2#page9#dau6#su13#kcond5" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
