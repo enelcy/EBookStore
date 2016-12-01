@@ -54,7 +54,7 @@
     <Attribute id="ent1#att1" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="category" type="string" db:column="category"/>
   </Entity>
-  <Entity gr:x="360" gr:y="315" id="ent3" name="BookInfo" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att23 ent3#att24" db:database="db1" db:table="bookinfo">
+  <Entity gr:x="360" gr:y="315" id="ent3" name="BookInfo" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18 ent3#att19 ent3#att20 ent3#att23 ent3#att24 ent3#att65" db:database="db1" db:table="bookinfo">
     <Attribute id="ent3#att15" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att24" name="author" type="string" key="false" db:column="author"/>
     <Attribute id="ent3#att23" name="publisher" type="string" key="false" db:column="publisher"/>
@@ -63,6 +63,7 @@
     <Attribute id="ent3#att18" name="description" type="text" key="false" db:column="description" db:clob="true"/>
     <Attribute id="ent3#att17" name="name" type="string" key="false" db:column="name"/>
     <Attribute id="ent3#att16" name="ISBN" type="string" key="false" db:column="isbn"/>
+    <Attribute id="ent3#att65" name="rentprice" type="float" db:column="rentprice"/>
   </Entity>
   <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://localhost:3306/ebookstore" username="sql4133540" password="MTIzcXdlIUAjUVdF" cryptedPassword="true">
   </db:Database>
@@ -131,17 +132,18 @@
     </Attribute>
     <Attribute id="ent6#att60" name="totalamount" db:column="totalamount" type="float" key="false"/>
   </Entity>
-  <Entity gr:x="920" gr:y="175" id="ent7" name="CartItems" duration="persistent" attributeOrder="ent7#att43 ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51" db:database="db1" db:table="cartitems">
+  <Entity gr:x="920" gr:y="175" id="ent7" name="CartItems" duration="persistent" attributeOrder="ent7#att43 ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51 ent7#att66" db:database="db1" db:table="cartitems">
     <Attribute id="ent7#att43" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent7#att51" name="Total" type="float" derivationQuery="calculated::Self.ent7#att48 * Self.ent7#att47" db:table="cartitems_total_view" db:column="der_attr" storageType="file">
+    <Attribute id="ent7#att51" name="Total" type="float" derivationQuery="calculated::Self.ent7#att48 * Self.ent7#att47" db:table="cartitems_total_view" db:column="der_attr" storageType="file" key="false">
       <db:JoinColumn attribute="ent7#att43" name="oid"/>
     </Attribute>
-    <Attribute id="ent7#att50" name="ToDate" type="date" db:column="todate"/>
-    <Attribute id="ent7#att49" name="FromDate" type="date" db:column="fromdate"/>
-    <Attribute id="ent7#att48" name="Price" type="float" db:column="price"/>
-    <Attribute id="ent7#att47" name="Quantity" type="integer" db:column="quantity"/>
-    <Attribute id="ent7#att46" name="Name" type="string" db:column="name"/>
-    <Attribute id="ent7#att45" name="ISBN" type="string" db:column="isbn"/>
+    <Attribute id="ent7#att50" name="ToDate" type="date" db:column="todate" key="false"/>
+    <Attribute id="ent7#att49" name="FromDate" type="date" db:column="fromdate" key="false"/>
+    <Attribute id="ent7#att48" name="Price" type="float" db:column="price" key="false"/>
+    <Attribute id="ent7#att47" name="Quantity" type="integer" db:column="quantity" key="false"/>
+    <Attribute id="ent7#att46" name="Name" type="string" db:column="name" key="false"/>
+    <Attribute id="ent7#att45" name="ISBN" type="string" db:column="isbn" key="false"/>
+    <Attribute id="ent7#att66" name="Type" type="string" db:column="type"/>
   </Entity>
   <Relationship id="rel2" name="User_Cart" sourceEntity="User" targetEntity="ent6" db:database="db1" db:table="cart">
     <RelationshipRole1 id="rel2#role3" name="UserToCart" maxCard="1">
