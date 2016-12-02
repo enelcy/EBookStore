@@ -56,10 +56,15 @@
       </Link>
     </DataUnit>
     <EntryUnit id="sv1#area2#page9#enu12" name="Quantity" gr:x="30" gr:y="140" fieldOrder="sv1#area2#page9#enu12#fld8" linkOrder="sv1#area2#page9#enu12#ln17">
-      <Field id="sv1#area2#page9#enu12#fld8" name="Quantity" type="integer" modifiable="true"/>
+      <Field id="sv1#area2#page9#enu12#fld8" name="Quantity" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area2#page9#enu12#fld8#mnd1" name="Mandatory1" errorMessage="Mandatory field"/>
+        </VRules>
+      </Field>
       <Link id="sv1#area2#page9#enu12#ln17" name="Add" to="sv1#miu2" type="normal" validate="true">
         <LinkParameter id="sv1#area2#page9#enu12#ln17#par33" name="Quantity_Quantity" source="sv1#area2#page9#enu12#fld8" target="sv1#miu2.mov2#opm1#icu1#icp2"/>
       </Link>
+      <VRules/>
     </EntryUnit>
   </ContentUnits>
 </Page>

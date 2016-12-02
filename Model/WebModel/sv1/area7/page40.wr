@@ -58,14 +58,29 @@
       </Link>
     </DataUnit>
     <EntryUnit id="sv1#area7#page40#enu30" name="Rent Date" linkOrder="sv1#area7#page40#enu30#ln147" gr:x="15" gr:y="140" fieldOrder="sv1#area7#page40#enu30#fld81 sv1#area7#page40#enu30#fld82 sv1#area7#page40#enu30#fld83">
-      <Field id="sv1#area7#page40#enu30#fld81" name="From" type="date" modifiable="true"/>
-      <Field id="sv1#area7#page40#enu30#fld82" name="To" type="date" modifiable="true"/>
+      <Field id="sv1#area7#page40#enu30#fld81" name="From" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld81#mnd3" name="Mandatory3" errorMessage="Mandatory field"/>
+          <CompareValidationRule id="sv1#area7#page40#enu30#fld81#cmp1" name="Compare1" predicate="gt" value="today()" errorMessage="Rent date must be greater than today."/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area7#page40#enu30#fld82" name="To" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld82#mnd4" name="Mandatory4" errorMessage="Mandatory field"/>
+          <CompareValidationRule id="sv1#area7#page40#enu30#fld82#cmp2" name="Compare2" predicate="gt" valueField="sv1#area7#page40#enu30#fld81" errorMessage="Return date must be greater than rent date."/>
+        </VRules>
+      </Field>
       <Link id="sv1#area7#page40#enu30#ln147" name="Add" to="sv1#miu3" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page40#enu30#ln147#par282" name="From_From" source="sv1#area7#page40#enu30#fld81" target="sv1#miu3.mov2#opm4#icu4#icp16"/>
         <LinkParameter id="sv1#area7#page40#enu30#ln147#par283" name="To_To" source="sv1#area7#page40#enu30#fld82" target="sv1#miu3.mov2#opm4#icu4#icp19"/>
         <LinkParameter id="sv1#area7#page40#enu30#ln147#par319" name="Quantity_Quantity" source="sv1#area7#page40#enu30#fld83" target="sv1#miu3.mov2#opm4#icu4#icp20"/>
       </Link>
-      <Field id="sv1#area7#page40#enu30#fld83" name="Quantity" type="integer" modifiable="true"/>
+      <Field id="sv1#area7#page40#enu30#fld83" name="Quantity" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld83#mnd2" name="Mandatory2" errorMessage="Mandatory field"/>
+        </VRules>
+      </Field>
+      <VRules/>
     </EntryUnit>
   </ContentUnits>
 </Page>
