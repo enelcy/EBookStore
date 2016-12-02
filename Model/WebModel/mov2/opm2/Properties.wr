@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="185" gr:y="195" id="mov2#opm2" name="Order">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="185" gr:y="195" id="mov2#opm2" name="Place Order">
   <OperationUnits>
     <InputCollectorUnit id="mov2#opm2#icu2" gr:x="30" gr:y="70">
       <InputCollectorParameter id="mov2#opm2#icu2#icp5" name="ShippingAddress"/>

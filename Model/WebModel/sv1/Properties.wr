@@ -15,8 +15,9 @@
         <LinkParameter id="sv1#gtu2#ln30#par23" name="UserCtxParam.oid_UserID" source="sv1#gtu2.UserCtxParam" target="sv1#miu2.mov2#opm1#icu1#icp4"/>
       </Link>
     </GetUnit>
-    <ModuleInstanceUnit gr:x="-265" gr:y="1190" id="sv1#miu1" action="true" name="PlaceOrder" moduleId="mov2#opm2">
-      <OKLink id="sv1#miu1#oln39" name="OKFlow39" to="sv1#page33" automaticCoupling="true"/>
+    <ModuleInstanceUnit gr:x="-265" gr:y="1190" id="sv1#miu1" action="true" name="Place Order" moduleId="mov2#opm2">
+      <OKLink id="sv1#miu1#oln39" name="OKFlow39" to="sv1#page41" automaticCoupling="true"/>
+      <KOLink id="sv1#miu1#kln10" name="KOFlow10" to="sv1#page42" automaticCoupling="true"/>
     </ModuleInstanceUnit>
     <GetUnit id="sv1#gtu12" name="Get user" gr:x="-210" gr:y="1015" contextParameters="UserCtxParam">
       <Link id="sv1#gtu12#ln109" name="Flow30" to="sv1#miu1" type="transport" validate="true">

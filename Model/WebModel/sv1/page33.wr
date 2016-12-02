@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-625" gr:y="810" id="sv1#page33" name="My Order" landmark="true" linkOrder="sv1#page33#ln121">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page33#pwu11" name="Order" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="sv1#page33#pwu11#ln117" displayAttributes="ent4#att13 ent4#att12 ent4#att14 ent4#att21 ent4#att41">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page33#pwu11" name="Order" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="sv1#page33#pwu11#ln117" displayAttributes="ent4#att13 ent4#att12 ent4#att14 ent4#att21 ent4#att41 ent4#att63">
       <Link id="sv1#page33#pwu11#ln117" name="Order Detail" to="sv1#page33#pwu12" type="normal" validate="true" ajaxEnabled="true">
         <LinkParameter id="sv1#page33#pwu11#ln117#par237" name="oid_current oid" target="sv1#page33#pwu12.current.ent5#att10" blank="true"/>
         <LinkParameter id="sv1#page33#pwu11#ln117#par307" name="oid_OrderID [oid]" source="data[].ent4#att9" target="sv1#page33#pwu12#su45#rcond23.ent4#att9"/>
@@ -30,6 +30,7 @@
           <layout:Attribute attribute="ent4#att14"/>
           <layout:Attribute attribute="ent4#att21"/>
           <layout:Attribute attribute="ent4#att41"/>
+          <layout:Attribute attribute="ent4#att63"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

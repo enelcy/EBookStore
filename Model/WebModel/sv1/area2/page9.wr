@@ -52,6 +52,7 @@
       <Link id="sv1#area2#page9#dau6#ln16" name="Flow16" to="sv1#miu2" type="transport" validate="true">
         <LinkParameter id="sv1#area2#page9#dau6#ln16#par34" name="price_Price" source="data.ent3#att19" target="sv1#miu2.mov2#opm1#icu1#icp3"/>
         <LinkParameter id="sv1#area2#page9#dau6#ln16#par35" name="name_Book" source="data.ent3#att17" target="sv1#miu2.mov2#opm1#icu1#icp1"/>
+        <LinkParameter id="sv1#area2#page9#dau6#ln16#par317" name="ISBN_ISBN" source="data.ent3#att16" target="sv1#miu2.mov2#opm1#icu1#icp22"/>
       </Link>
     </DataUnit>
     <EntryUnit id="sv1#area2#page9#enu12" name="Quantity" gr:x="30" gr:y="140" fieldOrder="sv1#area2#page9#enu12#fld8" linkOrder="sv1#area2#page9#enu12#ln17">

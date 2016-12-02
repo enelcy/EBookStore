@@ -14,7 +14,7 @@
         <LinkParameter id="sv1#area7#page39#seu15#ln144#par278" name="oid_Category [output]" source="ent1#att1Array" target="sv1#area7#page39#enu29#sfld16_output"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit id="sv1#area7#page39#pwu15" name="Book list" linkOrder="sv1#area7#page39#pwu15#ln145" gr:x="35" gr:y="295" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att24 ent3#att23 ent3#att65">
+    <PowerIndexUnit id="sv1#area7#page39#pwu15" name="Book list" linkOrder="sv1#area7#page39#pwu15#ln145" gr:x="35" gr:y="295" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att17 ent3#att20 ent3#att24 ent3#att23 ent3#att16 ent3#att18 ent3#att65">
       <Selector id="sv1#area7#page39#pwu15#su36" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area7#page39#pwu15#su36#acond15" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
         <RelationshipRoleCondition id="sv1#area7#page39#pwu15#su36#rcond19" name="Category" predicate="in" implied="true" role="rel7#role14"/>
@@ -57,12 +57,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area7#page39#pwu15">
-          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Link link="sv1#area7#page39#pwu15#ln145"/>
           <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att20"/>
           <layout:Attribute attribute="ent3#att24"/>
           <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att18"/>
           <layout:Attribute attribute="ent3#att65"/>
-          <layout:Link link="sv1#area7#page39#pwu15#ln145"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

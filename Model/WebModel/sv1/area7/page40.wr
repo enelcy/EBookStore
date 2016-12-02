@@ -5,10 +5,10 @@
         <layout:Unit unitId="sv1#area7#page40#dau9">
           <layout:Attribute attribute="ent3#att16"/>
           <layout:Attribute attribute="ent3#att17"/>
-          <layout:Attribute attribute="ent3#att18"/>
           <layout:Attribute attribute="ent3#att20"/>
-          <layout:Attribute attribute="ent3#att23"/>
           <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att18"/>
           <layout:Attribute attribute="ent3#att65"/>
         </layout:Unit>
       </layout:Cell>
@@ -27,9 +27,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area7#page40#enu30">
+          <layout:Link link="sv1#area7#page40#enu30#ln147"/>
           <layout:Field field="sv1#area7#page40#enu30#fld81"/>
           <layout:Field field="sv1#area7#page40#enu30#fld82"/>
-          <layout:Link link="sv1#area7#page40#enu30#ln147"/>
+          <layout:Field field="sv1#area7#page40#enu30#fld83"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -46,22 +47,25 @@
     </layout:Row>
   </layout:Grid>
   <ContentUnits>
-    <DataUnit id="sv1#area7#page40#dau9" name="Selected rent book" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att16 ent3#att17 ent3#att18 ent3#att20 ent3#att23 ent3#att24 ent3#att65">
+    <DataUnit id="sv1#area7#page40#dau9" name="Selected rent book" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att16 ent3#att17 ent3#att20 ent3#att24 ent3#att23 ent3#att18 ent3#att65">
       <Selector id="sv1#area7#page40#dau9#su37" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area7#page40#dau9#su37#kcond25" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#area7#page40#dau9#ln146" name="Flow139" to="sv1#miu3" type="transport" validate="true">
         <LinkParameter id="sv1#area7#page40#dau9#ln146#par280" name="name_Book" source="data.ent3#att17" target="sv1#miu3.mov2#opm4#icu4#icp17"/>
         <LinkParameter id="sv1#area7#page40#dau9#ln146#par281" name="price_Price" source="data.ent3#att65" target="sv1#miu3.mov2#opm4#icu4#icp15"/>
+        <LinkParameter id="sv1#area7#page40#dau9#ln146#par316" name="ISBN_ISBN" source="data.ent3#att16" target="sv1#miu3.mov2#opm4#icu4#icp21"/>
       </Link>
     </DataUnit>
-    <EntryUnit id="sv1#area7#page40#enu30" name="Rent Date" linkOrder="sv1#area7#page40#enu30#ln147" gr:x="15" gr:y="140" fieldOrder="sv1#area7#page40#enu30#fld81 sv1#area7#page40#enu30#fld82">
+    <EntryUnit id="sv1#area7#page40#enu30" name="Rent Date" linkOrder="sv1#area7#page40#enu30#ln147" gr:x="15" gr:y="140" fieldOrder="sv1#area7#page40#enu30#fld81 sv1#area7#page40#enu30#fld82 sv1#area7#page40#enu30#fld83">
       <Field id="sv1#area7#page40#enu30#fld81" name="From" type="date" modifiable="true"/>
       <Field id="sv1#area7#page40#enu30#fld82" name="To" type="date" modifiable="true"/>
       <Link id="sv1#area7#page40#enu30#ln147" name="Add" to="sv1#miu3" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page40#enu30#ln147#par282" name="From_From" source="sv1#area7#page40#enu30#fld81" target="sv1#miu3.mov2#opm4#icu4#icp16"/>
         <LinkParameter id="sv1#area7#page40#enu30#ln147#par283" name="To_To" source="sv1#area7#page40#enu30#fld82" target="sv1#miu3.mov2#opm4#icu4#icp19"/>
+        <LinkParameter id="sv1#area7#page40#enu30#ln147#par319" name="Quantity_Quantity" source="sv1#area7#page40#enu30#fld83" target="sv1#miu3.mov2#opm4#icu4#icp20"/>
       </Link>
+      <Field id="sv1#area7#page40#enu30#fld83" name="Quantity" type="integer" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
 </Page>
