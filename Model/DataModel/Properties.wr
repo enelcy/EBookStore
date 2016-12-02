@@ -95,7 +95,7 @@
     </Attribute>
     <Attribute id="ent4#att64" name="billingaddress" db:column="billingaddress" type="string" key="false"/>
   </Entity>
-  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38 ent5#att4 ent5#att68" db:database="db1" db:table="orderitem">
+  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69" db:database="db1" db:table="orderitem">
     <Attribute id="ent5#att10" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att36" name="price" type="float" key="false" db:column="price"/>
     <Attribute id="ent5#att35" name="quantity" type="integer" key="false" db:column="quantity"/>
@@ -103,13 +103,13 @@
     <Attribute id="ent5#att33" name="from" type="date" key="false" db:column="from"/>
     <Attribute id="ent5#att32" name="type" type="string" key="false" db:column="type"/>
     <Attribute id="ent5#att26" name="ISBN" type="string" key="false" db:column="isbn"/>
-    <Attribute id="ent5#att37" name="isSucess" type="boolean" db:column="issucess" key="false"/>
     <Attribute id="ent5#att38" name="declineReason" type="string" db:column="declinereason" key="false"/>
     <Attribute id="ent5#att40" name="bookName" type="string" db:column="bookname" key="false"/>
     <Attribute id="ent5#att4" name="ItemTotalAmount" type="float" storageType="file" derivationQuery="calculated::Self.ent5#att36 * Self.ent5#att35 *  ( Self.ent5#att34 - Self.ent5#att33 )" db:table="orderitem_itemtotalamount_view" db:column="der_attr" key="false">
       <db:JoinColumn attribute="ent5#att10" name="oid"/>
     </Attribute>
-    <Attribute id="ent5#att68" name="RentDays" type="integer" derivationQuery="simpleCalculated::Self.ent5#att34 - Self.ent5#att33"/>
+    <Attribute id="ent5#att68" name="RentDays" type="integer" derivationQuery="simpleCalculated::Self.ent5#att34 - Self.ent5#att33" key="false"/>
+    <Attribute id="ent5#att69" name="Status" type="string" db:column="status"/>
   </Entity>
   <Relationship id="rel5" name="Order_OrderItem" sourceEntity="ent4" targetEntity="ent5" db:database="db1" db:table="orderitem">
     <RelationshipRole1 id="rel5#role9" name="OrderToOrderItem" maxCard="N">
