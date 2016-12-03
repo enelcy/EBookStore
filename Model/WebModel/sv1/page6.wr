@@ -10,9 +10,7 @@
       </SelectionField>
       <SelectionField id="sv1#page6#enu24#sfld13" attribute="ent4#att14" type="string" name="Card Type" slotOrder="sv1#page6#enu24#sfld13#slot10">
         <Slot id="sv1#page6#enu24#sfld13#slot10" name="CardType" label="true" output="true" value="Visa|Master|AmericaExpress"/>
-        <VRules>
-          <MandatoryValidationRule id="sv1#page6#enu24#sfld13#mnd5" name="Mandatory5"/>
-        </VRules>
+        <VRules/>
       </SelectionField>
       <Link id="sv1#page6#enu24#ln108" name="Submit" to="sv1#miu1" type="normal" validate="true">
         <LinkParameter id="sv1#page6#enu24#ln108#par209" name="Card Number_CardNumber" source="sv1#page6#enu24#fld74" target="sv1#miu1.mov2#opm2#icu2#icp12"/>

@@ -7,11 +7,6 @@
     <CreateUnit gr:x="445" gr:y="490" id="mov2#opm2#opg4#cru14" name="CreateOrderItem" entity="ent5">
       <OKLink id="mov2#opm2#opg4#cru14#oln36" name="OKFlow36" to="mov2#opm2#opg4#dlu7" automaticCoupling="true"/>
     </CreateUnit>
-    <TimeUnit gr:x="0" gr:y="0" id="mov2#opm2#opg4#tmu2" name="CreateDate">
-      <Link id="mov2#opm2#opg4#tmu2#ln111" name="Flow111" to="mov2#opm2#opg4#cru13" type="transport" validate="true">
-        <LinkParameter id="mov2#opm2#opg4#tmu2#ln111#par215" name="Current/Input Date_date" source="currentDate" target="mov2#opm2#opg4#cru13.ent4#att41"/>
-      </Link>
-    </TimeUnit>
     <SelectorUnit gr:x="25" gr:y="470" id="mov2#opm2#opg4#seu11" name="Selector11" entity="ent7" distinctAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51 ent7#att66">
       <Selector id="mov2#opm2#opg4#seu11#su31" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#opg4#seu11#su31#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
@@ -24,6 +19,7 @@
         <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par294" name="Quantity_quantity" source="ent7#att47Array" target="mov2#opm2#opg4#cru14.ent5#att35"/>
         <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par295" name="ToDate_to" source="ent7#att50Array" target="mov2#opm2#opg4#cru14.ent5#att34"/>
         <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par318" name="Type_type" source="ent7#att66Array" target="mov2#opm2#opg4#cru14.ent5#att32"/>
+        <LinkParameter id="mov2#opm2#opg4#seu11#oln25#par320" name="Processing_Status" sourceValue="Processing" target="mov2#opm2#opg4#cru14.ent5#att69"/>
       </OKLink>
     </SelectorUnit>
     <LoopUnit gr:x="20" gr:y="235" id="mov2#opm2#opg4#lpu1" name="LoopOrderItems">

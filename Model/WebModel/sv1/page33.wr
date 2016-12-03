@@ -9,7 +9,7 @@
         <AttributesCondition id="sv1#page33#pwu11#su40#acond19" name="UserID" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att11"/>
       </Selector>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="180" gr:y="0" id="sv1#page33#pwu12" name="Order Items" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38 ent5#att4">
+    <PowerIndexUnit gr:x="180" gr:y="0" id="sv1#page33#pwu12" name="Order Items" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69">
       <Selector id="sv1#page33#pwu12#su45" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page33#pwu12#su45#rcond23" name="OrderID" role="rel5#role9" predicate="in" implied="false"/>
       </Selector>
@@ -55,9 +55,10 @@
           <layout:Attribute attribute="ent5#att34"/>
           <layout:Attribute attribute="ent5#att35"/>
           <layout:Attribute attribute="ent5#att36"/>
-          <layout:Attribute attribute="ent5#att37"/>
           <layout:Attribute attribute="ent5#att38"/>
           <layout:Attribute attribute="ent5#att4"/>
+          <layout:Attribute attribute="ent5#att68"/>
+          <layout:Attribute attribute="ent5#att69"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

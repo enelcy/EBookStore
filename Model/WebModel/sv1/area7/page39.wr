@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page39" name="Rent" gr:x="245" gr:y="0">
   <ContentUnits>
     <EntryUnit id="sv1#area7#page39#enu29" name="Search" linkOrder="sv1#area7#page39#enu29#ln143" gr:x="230" gr:y="15" fieldOrder="sv1#area7#page39#enu29#sfld16 sv1#area7#page39#enu29#fld80">
-      <Field id="sv1#area7#page39#enu29#fld80" type="string" modifiable="true"/>
+      <Field id="sv1#area7#page39#enu29#fld80" type="string" modifiable="true" name="What are you interesting in?"/>
       <SelectionField id="sv1#area7#page39#enu29#sfld16" name="Category" type="string" modifiable="true"/>
       <Link id="sv1#area7#page39#enu29#ln143" name="Search" to="sv1#area7#page39#pwu15" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page39#enu29#ln143#par275" name="Category_Category [oid]" source="sv1#area7#page39#enu29#sfld16" target="sv1#area7#page39#pwu15#su36#rcond19.ent1#att1"/>
