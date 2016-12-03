@@ -12,7 +12,7 @@ INSERT INTO `group` (`oid`, `GROUPNAME`, `MODULE_OID`) VALUES (2, 'member', 2);
 
 -- ---------- POPUPLATE TABLE `USER` ----------
 INSERT INTO `user` (`oid`, `USERNAME`, `PASSWORD`, `EMAIL`, `GROUP_OID`) VALUES (1, 'manager', 'manager', 'manager@gmail.com', 1);
-INSERT INTO `user` (`oid`, `USERNAME`, `PASSWORD`, `EMAIL`, `GROUP_OID`) VALUES (2, 'test', 'test', 'test@gmail.com', 1);
+INSERT INTO `user` (`oid`, `USERNAME`, `PASSWORD`, `EMAIL`, `GROUP_OID`) VALUES (2, 'test', 'test', 'test@gmail.com', 2);
 
 -- ---------- POPUPLATE TABLE `USER_GROUP` ----------
 INSERT INTO `user_group` (`USER_OID`, `GROUP_OID`) VALUES (1, 1);
