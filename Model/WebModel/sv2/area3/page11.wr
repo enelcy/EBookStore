@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#page11" name="Home" linkOrder="sv2#area3#page11#ln56 sv2#area3#page11#ln57" gr:x="0" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area3#page11" name="Home" linkOrder="sv2#area3#page11#ln56" gr:x="0" gr:y="0" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
-    <PowerIndexUnit id="sv2#area3#page11#pwu5" name="Book List" gr:x="30" gr:y="190" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att18 ent3#att16 ent3#att19 ent3#att23 ent3#att24" blockFactor="5">
+    <PowerIndexUnit id="sv2#area3#page11#pwu5" name="Book List" gr:x="30" gr:y="190" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att24 ent3#att23 ent3#att16 ent3#att18 ent3#att19" blockFactor="5">
       <SortAttribute attribute="ent3#att19" order="descending"/>
       <Selector id="sv2#area3#page11#pwu5#su18" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area3#page11#pwu5#su18#acond8" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
@@ -51,19 +51,19 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area3#page11#pwu5">
-          <layout:Attribute attribute="ent3#att20"/>
-          <layout:Attribute attribute="ent3#att17"/>
-          <layout:Attribute attribute="ent3#att18"/>
-          <layout:Attribute attribute="ent3#att16"/>
-          <layout:Attribute attribute="ent3#att19"/>
-          <layout:Attribute attribute="ent3#att23"/>
-          <layout:Attribute attribute="ent3#att24"/>
           <layout:Link link="sv2#area3#page11#pwu5ent3#att19"/>
           <layout:Link link="sv2#area3#page11#pwu5First"/>
           <layout:Link link="sv2#area3#page11#pwu5Previous"/>
           <layout:Link link="sv2#area3#page11#pwu5Block"/>
           <layout:Link link="sv2#area3#page11#pwu5Next"/>
           <layout:Link link="sv2#area3#page11#pwu5Last"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att19"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -138,5 +138,4 @@
     </layout:Row>
   </layout:Grid>
   <Link id="sv2#area3#page11#ln56" name="Logout" to="sv2#lou3" type="normal" automaticCoupling="true" validate="true"/>
-  <Link id="sv2#area3#page11#ln57" name="I am not a user, click here to sign up." to="sv2#page15" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

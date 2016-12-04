@@ -1,60 +1,48 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="admin" protected="true" layout:frameLayout="WebRatio/Basic" landmarks="sv3#area4 sv3#area5" homePage="sv3#page32">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="admin" protected="true" layout:frameLayout="WebRatio/Basic" landmarks="sv3#area8 sv3#area9 sv3#area6 sv3#lou1" homePage="sv3#page29">
   <OperationUnits>
-    <CreateUnit id="sv3#cru9" name="addcategory" gr:x="1580" gr:y="20" entity="ent1">
-      <OKLink id="sv3#cru9#oln14" name="OKFlow2" to="sv3#area4#page17#mssu6"/>
-    </CreateUnit>
-    <CreateUnit id="sv3#cru11" name="addbook" gr:x="1220" gr:y="60" entity="ent3">
-      <OKLink id="sv3#cru11#oln17" name="OKFlow10" to="sv3#area4#page16#mssu5">
-        <LinkParameter id="sv3#cru11#oln17#par174" name="Book added!_Shown Messages" target="sv3#area4#page16#mssu5.shownMessages" sourceValue="Book added!"/>
-      </OKLink>
-    </CreateUnit>
-    <DeleteUnit id="sv3#dlu5" name="deleteuser" gr:x="240" gr:y="530" entity="User">
-      <Selector id="sv3#dlu5#su23" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#dlu5#su23#kcond15" name="KeyCondition11" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv3#dlu5#oln18" name="OKFlow8" to="sv3#area5#page31#mssu10">
-        <LinkParameter id="sv3#dlu5#oln18#par175" name="Deleted!_Shown Messages" target="sv3#area5#page31#mssu10.shownMessages" sourceValue="Deleted!"/>
-      </OKLink>
-      <KOLink id="sv3#dlu5#kln4" name="KOFlow4" to="sv3#area5#page31#mssu10" gr:bendpoints="-116,79,114,-46">
-        <LinkParameter id="sv3#dlu5#kln4#par176" name="Delete fails!_Shown Messages" target="sv3#area5#page31#mssu10.shownMessages" sourceValue="Delete fails!"/>
+    <CreateUnit id="sv3#cru1" name="adduser" gr:x="875" gr:y="810" entity="User">
+      <KOLink id="sv3#cru1#kln8" name="KOFlow2" to="sv3#area9#page28#mssu10">
+        <LinkParameter id="sv3#cru1#kln8#par1" name="Add fails!_Shown Messages" target="sv3#area9#page28#mssu10.shownMessages" sourceValue="Add fails!"/>
       </KOLink>
-    </DeleteUnit>
-    <ModifyUnit id="sv3#mfu5" name="UpdateBook" gr:x="815" gr:y="60" entity="ent3">
-      <Selector id="sv3#mfu5#su24" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#mfu5#su24#kcond16" name="KeyCondition2" predicate="in" implied="false"/>
+      <OKLink id="sv3#cru1#oln2" name="OKFlow9" to="sv3#area9#page25#mssu9">
+        <LinkParameter id="sv3#cru1#oln2#par2" name="User added!_Shown Messages" target="sv3#area9#page25#mssu9.shownMessages" sourceValue="User added!"/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit id="sv3#mfu1" name="UpdateBook" gr:x="900" gr:y="355" entity="ent3">
+      <Selector id="sv3#mfu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu1#su2#kcond1" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv3#mfu5#oln19" name="OKFlow1" to="sv3#area4#page16#mssu5">
-        <Property id="sv3#mfu5#oln19#prop4" name="SuccessMsg" value="Item updated"/>
-        <LinkParameter id="sv3#mfu5#oln19#par177" name="Book updated!_Shown Messages" target="sv3#area4#page16#mssu5.shownMessages" sourceValue="Book updated!"/>
+      <OKLink id="sv3#mfu1#oln11" name="OKFlow1" to="sv3#area8#page8#mssu1">
+        <Property id="sv3#mfu1#oln11#prop1" name="SuccessMsg" value="Item updated"/>
+        <LinkParameter id="sv3#mfu1#oln11#par5" name="Book updated!_Shown Messages" target="sv3#area8#page8#mssu1.shownMessages" sourceValue="Book updated!"/>
       </OKLink>
     </ModifyUnit>
-    <DeleteUnit id="sv3#dlu6" name="deletebook" gr:x="975" gr:y="690" entity="ent3">
-      <Selector id="sv3#dlu6#su25" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#dlu6#su25#kcond17" name="KeyCondition13" predicate="in" implied="false"/>
+    <LogoutUnit id="sv3#lou1" name="Logout" landmark="true" gr:x="600" gr:y="310" siteView="sv2"/>
+    <CreateUnit id="sv3#cru4" name="addcategory" gr:x="2070" gr:y="340" entity="ent1">
+      <OKLink id="sv3#cru4#oln13" name="OKFlow2" to="sv3#area8#page21#mssu7"/>
+    </CreateUnit>
+    <ModifyUnit id="sv3#mfu7" name="updateuser" gr:x="0" gr:y="800" entity="User">
+      <Selector id="sv3#mfu7#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu7#su16#kcond8" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv3#dlu6#oln20" name="OKFlow11" to="sv3#area4#page16#mssu5">
-        <LinkParameter id="sv3#dlu6#oln20#par178" name="Book deleted!_Shown Messages" target="sv3#area4#page16#mssu5.shownMessages" sourceValue="Book deleted!"/>
-      </OKLink>
-    </DeleteUnit>
-    <LogoutUnit id="sv3#lou4" name="Logout" landmark="false" gr:x="675" gr:y="130" siteView="sv2"/>
-    <ModifyUnit id="sv3#mfu6" name="updateuser" gr:x="0" gr:y="440" entity="User">
-      <Selector id="sv3#mfu6#su26" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#mfu6#su26#kcond18" name="KeyCondition10" predicate="in" implied="false"/>
-      </Selector>
-      <KOLink id="sv3#mfu6#kln5" name="KOFlow3" to="sv3#area5#page31#mssu10">
-        <LinkParameter id="sv3#mfu6#kln5#par179" name="Edit fails!_Shown Messages" target="sv3#area5#page31#mssu10.shownMessages" sourceValue="Edit fails!"/>
+      <KOLink id="sv3#mfu7#kln14" name="KOFlow3" to="sv3#area9#page25#mssu9">
+        <LinkParameter id="sv3#mfu7#kln14#par95" name="Edit fails!_Shown Messages" target="sv3#area9#page25#mssu9.shownMessages" sourceValue="Edit fails!"/>
       </KOLink>
-      <OKLink id="sv3#mfu6#oln21" name="OKFlow7" to="sv3#area5#page31#mssu10" gr:bendpoints="238,-24,-207,81">
-        <LinkParameter id="sv3#mfu6#oln21#par180" name="Update successfully!_Shown Messages" target="sv3#area5#page31#mssu10.shownMessages" sourceValue="Update successfully!"/>
+      <OKLink id="sv3#mfu7#oln19" name="OKFlow7" to="sv3#area9#page25#mssu9" gr:bendpoints="238,-24,-207,81">
+        <LinkParameter id="sv3#mfu7#oln19#par96" name="Update successfully!_Shown Messages" target="sv3#area9#page25#mssu9.shownMessages" sourceValue="Update successfully!"/>
       </OKLink>
     </ModifyUnit>
-    <CreateUnit id="sv3#cru12" name="adduser" gr:x="775" gr:y="710" entity="User">
-      <KOLink id="sv3#cru12#kln6" name="KOFlow2" to="sv3#area5#page29#mssu8">
-        <LinkParameter id="sv3#cru12#kln6#par181" name="Add fails!_Shown Messages" target="sv3#area5#page29#mssu8.shownMessages" sourceValue="Add fails!"/>
-      </KOLink>
-      <OKLink id="sv3#cru12#oln22" name="OKFlow9" to="sv3#area5#page31#mssu10">
-        <LinkParameter id="sv3#cru12#oln22#par182" name="User added!_Shown Messages" target="sv3#area5#page31#mssu10.shownMessages" sourceValue="User added!"/>
+    <DeleteUnit id="sv3#dlu2" name="deleteuser" gr:x="225" gr:y="880" entity="User">
+      <Selector id="sv3#dlu2#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu2#su17#kcond9" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#dlu2#oln20" name="OKFlow8" to="sv3#area9#page25#mssu9">
+        <LinkParameter id="sv3#dlu2#oln20#par97" name="Deleted!_Shown Messages" target="sv3#area9#page25#mssu9.shownMessages" sourceValue="Deleted!"/>
       </OKLink>
-    </CreateUnit>
+      <KOLink id="sv3#dlu2#kln15" name="KOFlow4" to="sv3#area9#page25#mssu9" gr:bendpoints="-116,79,114,-46">
+        <LinkParameter id="sv3#dlu2#kln15#par98" name="Delete fails!_Shown Messages" target="sv3#area9#page25#mssu9.shownMessages" sourceValue="Delete fails!"/>
+      </KOLink>
+    </DeleteUnit>
   </OperationUnits>
+  <layout:LayoutParameter name="theme" value="compact" type="page"/>
 </SiteView>

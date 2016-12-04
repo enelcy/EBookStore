@@ -22,7 +22,7 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page33#pwu11">
           <layout:Link link="sv1#page33#pwu11#ln117"/>
           <layout:Attribute attribute="ent4#att13"/>
@@ -38,15 +38,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page33#pwu12">
           <layout:Attribute attribute="ent5#att40"/>
           <layout:Attribute attribute="ent5#att26"/>
@@ -61,6 +53,14 @@
           <layout:Attribute attribute="ent5#att69"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

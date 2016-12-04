@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="240" gr:y="495" id="sv1#page3" name="Cart" secure="false" ignoreMasterPage="false" layout:pageLayout="WebRatio/Basic">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="240" gr:y="495" id="sv1#page3" name="My Cart" secure="false" ignoreMasterPage="false" layout:pageLayout="WebRatio/Basic" landmark="true">
   <ContentUnits>
     <DataUnit gr:x="190" gr:y="0" id="sv1#page3#dau2" name="Cart" entity="ent6" displayAttributes="ent6#att42">
       <Selector id="sv1#page3#dau2#su15" defaultPolicy="fill" booleanOperator="and">

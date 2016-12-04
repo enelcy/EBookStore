@@ -14,7 +14,7 @@
         <LinkParameter id="sv1#area2#page4#enu3#ln8#par21" name="What you are interesting in?_Search" source="sv1#area2#page4#enu3#fld5" target="sv1#area2#page4#pwu3#su4#acond4"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit gr:x="40" gr:y="270" id="sv1#area2#page4#pwu3" name="Book list" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att24 ent3#att23 ent3#att16 ent3#att18 ent3#att19" linkOrder="sv1#area2#page4#pwu3#ln13">
+    <PowerIndexUnit gr:x="40" gr:y="270" id="sv1#area2#page4#pwu3" name="Book list" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att17 ent3#att24 ent3#att23 ent3#att16 ent3#att18 ent3#att19" linkOrder="sv1#area2#page4#pwu3#ln13" blockFactor="5">
       <Selector id="sv1#area2#page4#pwu3#su4" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area2#page4#pwu3#su4#acond4" name="Search" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24"/>
         <RelationshipRoleCondition id="sv1#area2#page4#pwu3#su4#rcond3" name="Category" predicate="in" implied="true" role="rel7#role14"/>
@@ -55,7 +55,6 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area2#page4#pwu3">
-          <layout:Link link="sv1#area2#page4#pwu3#ln13"/>
           <layout:Attribute attribute="ent3#att20"/>
           <layout:Attribute attribute="ent3#att17"/>
           <layout:Attribute attribute="ent3#att24"/>
@@ -63,6 +62,12 @@
           <layout:Attribute attribute="ent3#att16"/>
           <layout:Attribute attribute="ent3#att18"/>
           <layout:Attribute attribute="ent3#att19"/>
+          <layout:Link link="sv1#area2#page4#pwu3#ln13"/>
+          <layout:Link link="sv1#area2#page4#pwu3First"/>
+          <layout:Link link="sv1#area2#page4#pwu3Previous"/>
+          <layout:Link link="sv1#area2#page4#pwu3Block"/>
+          <layout:Link link="sv1#area2#page4#pwu3Next"/>
+          <layout:Link link="sv1#area2#page4#pwu3Last"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

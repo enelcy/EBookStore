@@ -1,14 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area4#page16" name="Msg" gr:x="275" gr:y="170">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area8#page8" name="Msg" gr:x="370" gr:y="510">
   <ContentUnits>
-    <MultiMessageUnit id="sv3#area4#page16#mssu5" name="msg" linkOrder="sv3#area4#page16#mssu5#ln62" gr:x="0" gr:y="0">
-      <Link id="sv3#area4#page16#mssu5#ln62" name="OK" to="sv3#area4#page18" type="normal" automaticCoupling="true" validate="true"/>
+    <MultiMessageUnit id="sv3#area8#page8#mssu1" name="msg" linkOrder="sv3#area8#page8#mssu1#ln6" gr:x="0" gr:y="0">
+      <Link id="sv3#area8#page8#mssu1#ln6" name="OK" to="sv3#area8#page17" type="normal" automaticCoupling="true" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area4#page16#mssu5">
-          <layout:Link link="sv3#area4#page16#mssu5#ln62"/>
+        <layout:Unit unitId="sv3#area8#page8#mssu1">
+          <layout:Link link="sv3#area8#page8#mssu1#ln6"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

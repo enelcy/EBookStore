@@ -1,0 +1,99 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area6#page2" name="Order List" landmark="true" gr:x="0" gr:y="5">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area6#page2#pwu1" name="orders" linkOrder="sv3#area6#page2#pwu1#ln1 sv3#area6#page2#pwu1#ln2" gr:x="210" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att11 ent4#att13 ent4#att41">
+      <Link id="sv3#area6#page2#pwu1#ln1" name="Check" to="sv3#area6#page1#dau1" type="normal" automaticCoupling="true" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowResizable="true" ajaxWindowAutoResizing="true" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <Link id="sv3#area6#page2#pwu1#ln2" name="OrderItems" to="sv3#area6#page2#pwu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page2#pwu1#ln2#par6" name="oid_orderid [oid]" source="data[].ent4#att9" target="sv3#area6#page2#pwu2#su5#rcond1.ent4#att9"/>
+        <LinkParameter id="sv3#area6#page2#pwu1#ln2#par7" name="Rent_type" target="sv3#area6#page2#pwu2#su5#acond7" blank="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit id="sv3#area6#page2#pwu2" name="Itemlist" gr:x="240" gr:y="145" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att35 ent5#att36 ent5#att69 ent5#att33 ent5#att34">
+      <Selector id="sv3#area6#page2#pwu2#su5" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area6#page2#pwu2#su5#rcond1" name="orderid" role="rel5#role9" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+    <SelectorUnit id="sv3#area6#page2#seu1" name="BookInfo" gr:x="0" gr:y="150" entity="ent3" distinctAttributes="ent3#att20">
+      <Selector id="sv3#area6#page2#seu1#su7" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page2#seu1#su7#acond2" name="AttCondition9" predicate="eq" booleanOperator="or" implied="false"/>
+      </Selector>
+      <Link id="sv3#area6#page2#seu1#ln3" name="Flow25" to="sv3#area6#page2#pwu2" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page2#pwu1">
+          <layout:Attribute attribute="ent4#att11"/>
+          <layout:Attribute attribute="ent4#att13"/>
+          <layout:Attribute attribute="ent4#att41"/>
+          <layout:Link link="sv3#area6#page2#pwu1#ln1"/>
+          <layout:Link link="sv3#area6#page2#pwu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page2#pwu2">
+          <layout:Attribute attribute="ent5#att40"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att32"/>
+          <layout:Attribute attribute="ent5#att35"/>
+          <layout:Attribute attribute="ent5#att36"/>
+          <layout:Attribute attribute="ent5#att69"/>
+          <layout:Attribute attribute="ent5#att33"/>
+          <layout:Attribute attribute="ent5#att34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

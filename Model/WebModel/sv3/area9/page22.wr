@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area9#page22" name="Edit User" landmark="false" gr:x="0" gr:y="410">
+  <ContentUnits>
+    <EntryUnit id="sv3#area9#page22#enu10" name="edituser" linkOrder="sv3#area9#page22#enu10#ln34" customDescriptor="false" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area9#page22#enu10#fld36 sv3#area9#page22#enu10#fld39 sv3#area9#page22#enu10#fld40 sv3#area9#page22#enu10#sfld7 sv3#area9#page22#enu10#fld41 sv3#area9#page22#enu10#fld42 sv3#area9#page22#enu10#fld43 sv3#area9#page22#enu10#fld44 sv3#area9#page22#enu10#msfld1">
+      <Field id="sv3#area9#page22#enu10#fld36" name="username" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area9#page22#enu10#fld39" name="password" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area9#page22#enu10#fld40" name="email" type="string" modifiable="true" preloaded="true"/>
+      <SelectionField id="sv3#area9#page22#enu10#sfld7" name="group" type="string" role="User2DefaultGroup" slotOrder="sv3#area9#page22#enu10#sfld7#slot6 sv3#area9#page22#enu10#sfld7#slot7">
+        <Slot id="sv3#area9#page22#enu10#sfld7#slot6" name="name" label="true" output="false" value="admin|customer"/>
+        <Slot id="sv3#area9#page22#enu10#sfld7#slot7" name="value" label="false" output="true" value="1|2"/>
+      </SelectionField>
+      <Link id="sv3#area9#page22#enu10#ln34" name="update" to="sv3#mfu7" type="normal" validate="true">
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par68" name="email_email" source="sv3#area9#page22#enu10#fld40" target="sv3#mfu7.email"/>
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par69" name="group_Group.oid(defaultGroup)" source="sv3#area9#page22#enu10#sfld7" target="sv3#mfu7.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par70" name="group_Group.oid(groups)" source="sv3#area9#page22#enu10#sfld7" target="sv3#mfu7.User2Group.groupOID"/>
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par71" name="Key [oid]_KeyCondition10 [oid]" source="key.userOID" target="sv3#mfu7#su16#kcond8.userOID"/>
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par72" name="password_password" source="sv3#area9#page22#enu10#fld39" target="sv3#mfu7.password"/>
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par73" name="User Object_User Object" source="entityBean" target="sv3#mfu7.entityBeans"/>
+        <LinkParameter id="sv3#area9#page22#enu10#ln34#par74" name="username_userName" source="sv3#area9#page22#enu10#fld36" target="sv3#mfu7.userName"/>
+      </Link>
+      <Field id="sv3#area9#page22#enu10#fld41" name="firstName" type="string" modifiable="true" attribute="User#att27"/>
+      <Field id="sv3#area9#page22#enu10#fld42" name="lastName" type="string" modifiable="true" attribute="User#att28"/>
+      <Field id="sv3#area9#page22#enu10#fld43" name="gender" type="string" modifiable="true" attribute="User#att29"/>
+      <Field id="sv3#area9#page22#enu10#fld44" name="birthdate" type="date" modifiable="true" attribute="User#att30"/>
+      <MultiSelectionField id="sv3#area9#page22#enu10#msfld1" name="groups" type="string" role="User2Group"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area9#page22#enu10">
+          <layout:Link link="sv3#area9#page22#enu10#ln34"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld36"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld39"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld40"/>
+          <layout:Field field="sv3#area9#page22#enu10#sfld7"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld41"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld42"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld43"/>
+          <layout:Field field="sv3#area9#page22#enu10#fld44"/>
+          <layout:Field field="sv3#area9#page22#enu10#msfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

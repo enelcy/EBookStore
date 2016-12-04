@@ -65,8 +65,7 @@
     <Attribute id="ent3#att16" name="ISBN" type="string" key="false" db:column="isbn"/>
     <Attribute id="ent3#att65" name="rentprice" type="float" db:column="rentprice"/>
   </Entity>
-  <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://localhost:3306/ebookstore" username="sql4133540" password="MTIzcXdlIUAjUVdF" cryptedPassword="true">
-  </db:Database>
+  <db:Database id="db1" name="EBookDB" type="MySQL" url="jdbc:mysql://localhost:3306/ebookstore" username="sql4133540" password="MTIzcXdlIUAjUVdF" cryptedPassword="true"/>
   <Entity gr:x="680" gr:y="350" id="ent2" name="Inventory" duration="persistent" attributeOrder="ent2#att3 ent2#att5 ent2#att6 ent2#att7 ent2#att8" db:database="db1" db:table="inventory">
     <Attribute id="ent2#att3" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att8" name="Rent" type="integer" db:column="rent"/>

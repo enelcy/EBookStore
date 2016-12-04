@@ -1,7 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page9" name="Prepare cart" gr:x="380" gr:y="195" ignoreMasterPage="true" layout:pageLayout="WRDefault/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page9" name="Prepare cart" gr:x="380" gr:y="195" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Bootstrap">
   <layout:Grid>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell/>
+      <layout:Cell colspan="10">
         <layout:Unit unitId="sv1#area2#page9#dau6">
           <layout:Attribute attribute="ent3#att16"/>
           <layout:Attribute attribute="ent3#att17"/>
@@ -22,16 +23,15 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell/>
+      <layout:Cell colspan="10">
         <layout:Unit unitId="sv1#area2#page9#enu12">
           <layout:Field field="sv1#area2#page9#enu12#fld8"/>
           <layout:Link link="sv1#area2#page9#enu12#ln17"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

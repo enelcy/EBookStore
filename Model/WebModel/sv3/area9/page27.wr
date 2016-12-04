@@ -1,0 +1,55 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area9#page27" name="Add User" linkOrder="sv3#area9#page27#ln43" landmark="true" layout:style="EbookStyle" gr:x="350" gr:y="335">
+  <ContentUnits>
+    <EntryUnit id="sv3#area9#page27#enu11" name="adduser" linkOrder="sv3#area9#page27#enu11#ln42" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area9#page27#enu11#fld45 sv3#area9#page27#enu11#fld46 sv3#area9#page27#enu11#sfld8 sv3#area9#page27#enu11#fld47 sv3#area9#page27#enu11#fld48 sv3#area9#page27#enu11#fld49 sv3#area9#page27#enu11#fld50 sv3#area9#page27#enu11#fld51">
+      <Link id="sv3#area9#page27#enu11#ln42" name="Add" to="sv3#cru1" type="normal" validate="true">
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par88" name="Key [oid]_oid" source="key.userOID" target="sv3#cru1.userOID"/>
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par89" name="User Object_User Object" source="entityBean" target="sv3#cru1.entityBeans"/>
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par90" name="email_email" source="sv3#area9#page27#enu11#fld47" target="sv3#cru1.email"/>
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par91" name="group_Group.oid(defaultGroup)" source="sv3#area9#page27#enu11#sfld8" target="sv3#cru1.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par92" name="group_Group.oid(groups)" source="sv3#area9#page27#enu11#sfld8" target="sv3#cru1.User2Group.groupOID"/>
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par93" name="password_password" source="sv3#area9#page27#enu11#fld46" target="sv3#cru1.password"/>
+        <LinkParameter id="sv3#area9#page27#enu11#ln42#par94" name="username_userName" source="sv3#area9#page27#enu11#fld45" target="sv3#cru1.userName"/>
+      </Link>
+      <Field id="sv3#area9#page27#enu11#fld45" name="username" type="string" modifiable="true"/>
+      <Field id="sv3#area9#page27#enu11#fld46" name="password" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area9#page27#enu11#sfld8" name="group" type="integer" preselectValue="1" slotOrder="sv3#area9#page27#enu11#sfld8#slot8 sv3#area9#page27#enu11#sfld8#slot11">
+        <Slot id="sv3#area9#page27#enu11#sfld8#slot8" name="group" label="true" output="false" value="admin|custormer"/>
+        <Slot id="sv3#area9#page27#enu11#sfld8#slot11" name="groupvalue" label="false" output="true" value="1|2"/>
+      </SelectionField>
+      <Field id="sv3#area9#page27#enu11#fld47" name="email" type="string" modifiable="true"/>
+      <Field id="sv3#area9#page27#enu11#fld48" name="firstName" type="string" modifiable="true" attribute="User#att27"/>
+      <Field id="sv3#area9#page27#enu11#fld49" name="lastName" type="string" modifiable="true" attribute="User#att28"/>
+      <Field id="sv3#area9#page27#enu11#fld50" name="gender" type="string" modifiable="true" attribute="User#att29"/>
+      <Field id="sv3#area9#page27#enu11#fld51" name="birthdate" type="date" modifiable="true" attribute="User#att30"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area9#page27#enu11">
+          <layout:Link link="sv3#area9#page27#enu11#ln42"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld45"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld46"/>
+          <layout:Field field="sv3#area9#page27#enu11#sfld8"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld47"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld48"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld49"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld50"/>
+          <layout:Field field="sv3#area9#page27#enu11#fld51"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#area9#page27#ln43" name="logout" to="sv3#lou1" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

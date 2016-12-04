@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?webml version="7.2.0.4"?>
 
-<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="false" jobGroupName="WEBRATIO" wrTempNewProject="true">
+<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="true" jobGroupName="WEBRATIO" wrTempNewProject="true">
   <ServiceDataProviders/>
   <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="Multiflex" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="BootstrapStyle" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="MetroStyle" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="StoreTemplates" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="StoreComponents" natureId="com.webratio.ide.units.wrunitsnature"/>
 </WebProject>

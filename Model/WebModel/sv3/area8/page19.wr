@@ -1,0 +1,64 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area8#page19" name="UpdateBook" gr:x="85" gr:y="345">
+  <ContentUnits>
+    <EntryUnit id="sv3#area8#page19#enu8" name="updatebook" linkOrder="sv3#area8#page19#enu8#ln24" gr:x="5" gr:y="150" entity="ent3" fieldOrder="sv3#area8#page19#enu8#fld19 sv3#area8#page19#enu8#fld20 sv3#area8#page19#enu8#fld23 sv3#area8#page19#enu8#fld24 sv3#area8#page19#enu8#fld25 sv3#area8#page19#enu8#fld26 sv3#area8#page19#enu8#fld27 sv3#area8#page19#enu8#sfld5">
+      <Field id="sv3#area8#page19#enu8#fld19" name="ISBN" type="string" modifiable="true" attribute="ent3#att16"/>
+      <Field id="sv3#area8#page19#enu8#fld20" name="name" type="string" modifiable="true" attribute="ent3#att17"/>
+      <Field id="sv3#area8#page19#enu8#fld23" name="description" type="text" modifiable="true" attribute="ent3#att18"/>
+      <Field id="sv3#area8#page19#enu8#fld24" name="price" type="float" modifiable="true" attribute="ent3#att19"/>
+      <Field id="sv3#area8#page19#enu8#fld25" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
+      <Field id="sv3#area8#page19#enu8#fld26" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
+      <Field id="sv3#area8#page19#enu8#fld27" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
+      <SelectionField id="sv3#area8#page19#enu8#sfld5" name="BookInfoToCategory" type="string" role="rel7#role13"/>
+      <Link id="sv3#area8#page19#enu8#ln24" name="update" to="sv3#mfu1" type="normal" automaticCoupling="true" validate="true"/>
+    </EntryUnit>
+    <SelectorUnit id="sv3#area8#page19#seu5" name="category" gr:x="0" gr:y="0" entity="ent1">
+      <Link id="sv3#area8#page19#seu5#ln25" name="Flow45" to="sv3#area8#page19#enu8" type="transport" validate="true">
+        <LinkParameter id="sv3#area8#page19#seu5#ln25#par47" name="category_BookInfoToCategory [label]" source="ent1#att2Array" target="sv3#area8#page19#enu8#sfld5_label"/>
+        <LinkParameter id="sv3#area8#page19#seu5#ln25#par48" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area8#page19#enu8#sfld5_output"/>
+        <LinkParameter id="sv3#area8#page19#seu5#ln25#par49" name="oid_Key Condition [oid]" source="ent1#att1Array" target="sv3#area8#page19#enu8.ent3#att15"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area8#page19#enu8">
+          <layout:Link link="sv3#area8#page19#enu8#ln24"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld19"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld20"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld23"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld24"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld25"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld26"/>
+          <layout:Field field="sv3#area8#page19#enu8#fld27"/>
+          <layout:Field field="sv3#area8#page19#enu8#sfld5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

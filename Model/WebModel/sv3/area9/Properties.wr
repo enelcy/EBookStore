@@ -1,0 +1,15 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area9" name="Users Manage" defaultPage="sv3#area9#page26" landmarks="sv3#area9#page26 sv3#area9#page27 sv3#area9#page24" landmark="true" gr:x="155" gr:y="630">
+  <OperationUnits>
+    <SelectorUnit id="sv3#area9#seu8" name="group" gr:x="175" gr:y="380" entity="Group">
+      <Link id="sv3#area9#seu8#ln31" name="readgroups" to="sv3#area9#page27#enu11" type="transport" validate="true">
+        <LinkParameter id="sv3#area9#seu8#ln31#par63" name="groupName_group[group]" source="groupNameArray" target="sv3#area9#page27#enu11#sfld8#slot8"/>
+        <LinkParameter id="sv3#area9#seu8#ln31#par64" name="oid_group[groupvalue]" source="groupOIDArray" target="sv3#area9#page27#enu11#sfld8#slot11"/>
+      </Link>
+      <Link id="sv3#area9#seu8#ln33" name="readgroup" to="sv3#area9#page22#enu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area9#seu8#ln33#par65" name="groupName_group[name]" source="groupNameArray" target="sv3#area9#page22#enu10#sfld7#slot6"/>
+        <LinkParameter id="sv3#area9#seu8#ln33#par66" name="oid_group[value]" source="groupOIDArray" target="sv3#area9#page22#enu10#sfld7#slot7"/>
+        <LinkParameter id="sv3#area9#seu8#ln33#par67" name="defaultModule.oid_group - Preselection" source="Group2DefaultModule_moduleOIDArray" target="sv3#area9#page22#enu10#sfld7_presel"/>
+      </Link>
+    </SelectorUnit>
+  </OperationUnits>
+</Area>
