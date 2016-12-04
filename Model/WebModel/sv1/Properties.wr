@@ -19,7 +19,7 @@
       <OKLink id="sv1#miu1#oln39" name="OKFlow39" to="sv1#page41" automaticCoupling="true"/>
       <KOLink id="sv1#miu1#kln10" name="KOFlow10" to="sv1#page42" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <GetUnit id="sv1#gtu12" name="Get user" gr:x="-210" gr:y="1015" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#gtu12" name="Get user" gr:x="-150" gr:y="1070" contextParameters="UserCtxParam">
       <Link id="sv1#gtu12#ln109" name="Flow30" to="sv1#miu1" type="transport" validate="true">
         <LinkParameter id="sv1#gtu12#ln109#par214" name="UserCtxParam.oid_UserID" source="sv1#gtu12.UserCtxParam" target="sv1#miu1.mov2#opm2#icu2#icp13"/>
       </Link>

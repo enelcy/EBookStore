@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="40" gr:y="1115" id="sv1#page6" name="Place Order" linkOrder="sv1#page6#ln120">
   <ContentUnits>
-    <EntryUnit id="sv1#page6#enu24" name="Payment Information" gr:x="115" gr:y="130" entity="ent4" fieldOrder="sv1#page6#enu24#sfld12 sv1#page6#enu24#sfld13 sv1#page6#enu24#fld74 sv1#page6#enu24#fld84 sv1#page6#enu24#fld72" linkOrder="sv1#page6#enu24#ln108">
+    <EntryUnit id="sv1#page6#enu24" name="Payment Information" gr:x="115" gr:y="130" entity="ent4" fieldOrder="sv1#page6#enu24#sfld12 sv1#page6#enu24#sfld13 sv1#page6#enu24#fld74 sv1#page6#enu24#fld84 sv1#page6#enu24#fld72 sv1#page6#enu24#fld52" linkOrder="sv1#page6#enu24#ln108">
       <Field id="sv1#page6#enu24#fld72" name="Shipping Address" type="string" modifiable="true" attribute="ent4#att12"/>
       <Field id="sv1#page6#enu24#fld74" name="Card Number" type="string" modifiable="true" attribute="ent4#att21" hidden="false">
         <VRules/>
@@ -17,8 +17,10 @@
         <LinkParameter id="sv1#page6#enu24#ln108#par210" name="Card Type_CardType" source="sv1#page6#enu24#sfld13" target="sv1#miu1.mov2#opm2#icu2#icp11"/>
         <LinkParameter id="sv1#page6#enu24#ln108#par211" name="Payment Type_PaymentType" source="sv1#page6#enu24#sfld12" target="sv1#miu1.mov2#opm2#icu2#icp10"/>
         <LinkParameter id="sv1#page6#enu24#ln108#par212" name="Shipping Address_ShippingAddress" source="sv1#page6#enu24#fld72" target="sv1#miu1.mov2#opm2#icu2#icp5"/>
+        <LinkParameter id="sv1#page6#enu24#ln108#par100" name="Comment_Comment" source="sv1#page6#enu24#fld52" target="sv1#miu1.mov2#opm2#icu2#icp6"/>
       </Link>
       <Field id="sv1#page6#enu24#fld84" name="Billing Address" type="string" modifiable="true"/>
+      <Field id="sv1#page6#enu24#fld52" name="Comment" type="string" modifiable="true"/>
     </EntryUnit>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page6#pwu16" name="OrderDetail" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att51">
       <Selector id="sv1#page6#pwu16#su38" defaultPolicy="fill" booleanOperator="and">
@@ -65,6 +67,7 @@
           <layout:Field field="sv1#page6#enu24#fld74"/>
           <layout:Field field="sv1#page6#enu24#fld84"/>
           <layout:Field field="sv1#page6#enu24#fld72"/>
+          <layout:Field field="sv1#page6#enu24#fld52"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

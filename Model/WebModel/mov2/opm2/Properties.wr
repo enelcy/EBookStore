@@ -16,8 +16,10 @@
         <LinkParameter id="mov2#opm2#icu2#oln23#par225" name="CardNumber_payinfo" source="mov2#opm2#icu2#icp12" target="mov2#opm2#opg4#cru13.ent4#att21"/>
         <LinkParameter id="mov2#opm2#icu2#oln23#par226" name="PaymentType_paymentWay" source="mov2#opm2#icu2#icp10" target="mov2#opm2#opg4#cru13.ent4#att13"/>
         <LinkParameter id="mov2#opm2#icu2#oln23#par227" name="ShippingAddress_shippingAddress" source="mov2#opm2#icu2#icp5" target="mov2#opm2#opg4#cru13.ent4#att12"/>
-        <LinkParameter id="mov2#opm2#icu2#oln23#par228" name="UserID_user" source="mov2#opm2#icu2#icp13" target="mov2#opm2#opg4#cru13.ent4#att11"/>
+        <LinkParameter id="mov2#opm2#icu2#oln23#par99" name="UserID_User.oid(OrderToUser)" source="mov2#opm2#icu2#icp13" target="mov2#opm2#opg4#cru13.rel6#role12.userOID"/>
+        <LinkParameter id="mov2#opm2#icu2#oln23#par101" name="Comment_Comment" source="mov2#opm2#icu2#icp6" target="mov2#opm2#opg4#cru13.ent4#att22"/>
       </OKLink>
+      <InputCollectorParameter id="mov2#opm2#icu2#icp6" name="Comment"/>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="880" gr:y="195" id="mov2#opm2#okcu2" name="Order Success"/>
   </OperationUnits>
