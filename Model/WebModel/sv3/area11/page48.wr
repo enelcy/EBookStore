@@ -1,0 +1,91 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area11#page48" name="All Users" landmark="true" layout:style="EbookStyle" gr:x="175" gr:y="200">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area11#page48#pwu17" name="Userlist" linkOrder="sv3#area11#page48#pwu17#ln78 sv3#area11#page48#pwu17#ln79" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userOID userName email User#att29 User2DefaultGroup.groupName" maxResults="10">
+      <Link id="sv3#area11#page48#pwu17#ln78" name="delete" to="sv3#dlu5" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area11#page48#pwu17#ln79" name="edit" to="sv3#area11#page47#enu21" type="normal" validate="true">
+        <LinkParameter id="sv3#area11#page48#pwu17#ln79#par218" name="email_email" source="data[].email" target="sv3#area11#page47#enu21#fld87_slot"/>
+        <LinkParameter id="sv3#area11#page48#pwu17#ln79#par219" name="defaultGroup.oid_group - Preselection" source="data[].User2DefaultGroup_groupOID" target="sv3#area11#page47#enu21#sfld18_presel"/>
+        <LinkParameter id="sv3#area11#page48#pwu17#ln79#par220" name="oid_Key Condition [oid]" source="data[].userOID" target="sv3#area11#page47#enu21.userOID"/>
+        <LinkParameter id="sv3#area11#page48#pwu17#ln79#par221" name="password_password" source="data[].password" target="sv3#area11#page47#enu21#fld86_slot"/>
+        <LinkParameter id="sv3#area11#page48#pwu17#ln79#par222" name="userName_username" source="data[].userName" target="sv3#area11#page47#enu21#fld85_slot"/>
+        <LinkParameter id="sv3#area11#page48#pwu17#ln79#par223" name="gender_gender - Preselection" source="data[].User#att29" target="sv3#area11#page47#enu21#sfld19_presel"/>
+      </Link>
+      <DefaultSortAttribute attribute="userOID" order="ascending"/>
+      <SortAttribute attribute="userOID" order="ascending"/>
+      <SortAttribute attribute="userName" order="ascending"/>
+      <Selector id="sv3#area11#page48#pwu17#su43" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area11#page48#pwu17#su43#acond25" name="Username" predicate="contains" booleanOperator="or" implied="true" attributes="userName" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area11#page48#pwu17#su43#acond26" name="Email" predicate="contains" booleanOperator="or" implied="true" attributes="email" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area11#page48#pwu17#su43#acond27" name="Gender" predicate="eq" booleanOperator="or" implied="true" attributes="User#att29"/>
+        <AttributesCondition id="sv3#area11#page48#pwu17#su43#acond28" name="Group" predicate="eq" booleanOperator="or" implied="true" attributes="User2DefaultGroup.groupOID"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#area11#page48#enu22" name="SearchUser" linkOrder="sv3#area11#page48#enu22#ln80" gr:x="335" gr:y="30" fieldOrder="sv3#area11#page48#enu22#fld92 sv3#area11#page48#enu22#fld91 sv3#area11#page48#enu22#sfld21 sv3#area11#page48#enu22#sfld20">
+      <SelectionField id="sv3#area11#page48#enu22#sfld20" name="Gender" type="string" modifiable="true">
+        <Slot id="sv3#area11#page48#enu22#sfld20#slot22" name="gender" label="true" output="true" value="Male|Female"/>
+      </SelectionField>
+      <SelectionField id="sv3#area11#page48#enu22#sfld21" name="Group" type="string" modifiable="true">
+        <Slot id="sv3#area11#page48#enu22#sfld21#slot23" name="grouplabel" label="true" output="false" value="Admin|Memeber"/>
+        <Slot id="sv3#area11#page48#enu22#sfld21#slot24" name="groupValue" label="false" output="true" value="1|2"/>
+      </SelectionField>
+      <Field id="sv3#area11#page48#enu22#fld91" name="Email" type="string" modifiable="true"/>
+      <Field id="sv3#area11#page48#enu22#fld92" name="Username" type="string" modifiable="true"/>
+      <Link id="sv3#area11#page48#enu22#ln80" name="Search" to="sv3#area11#page48#pwu17" type="normal" validate="true">
+        <LinkParameter id="sv3#area11#page48#enu22#ln80#par228" name="Email_Email" source="sv3#area11#page48#enu22#fld91" target="sv3#area11#page48#pwu17#su43#acond26"/>
+        <LinkParameter id="sv3#area11#page48#enu22#ln80#par229" name="Gender_Gender" source="sv3#area11#page48#enu22#sfld20" target="sv3#area11#page48#pwu17#su43#acond27"/>
+        <LinkParameter id="sv3#area11#page48#enu22#ln80#par230" name="Group_Group" source="sv3#area11#page48#enu22#sfld21" target="sv3#area11#page48#pwu17#su43#acond28"/>
+        <LinkParameter id="sv3#area11#page48#enu22#ln80#par231" name="Username_Username" source="sv3#area11#page48#enu22#fld92" target="sv3#area11#page48#pwu17#su43#acond25"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv3#area11#page48#enu22">
+          <layout:Field field="sv3#area11#page48#enu22#fld92"/>
+          <layout:Field field="sv3#area11#page48#enu22#fld91"/>
+          <layout:Field field="sv3#area11#page48#enu22#sfld21"/>
+          <layout:Field field="sv3#area11#page48#enu22#sfld20"/>
+          <layout:Link link="sv3#area11#page48#enu22#ln80"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv3#area11#page48#pwu17">
+          <layout:Link link="sv3#area11#page48#pwu17#ln78"/>
+          <layout:Link link="sv3#area11#page48#pwu17#ln79"/>
+          <layout:Link link="sv3#area11#page48#pwu17userOID"/>
+          <layout:Link link="sv3#area11#page48#pwu17userName"/>
+          <layout:Attribute attribute="userOID"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att29"/>
+          <layout:Attribute attribute="User2DefaultGroup.groupName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

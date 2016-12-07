@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area11#page47" name="Edit User" landmark="false" gr:x="20" gr:y="470">
+  <ContentUnits>
+    <EntryUnit id="sv3#area11#page47#enu21" name="Edituser" linkOrder="sv3#area11#page47#enu21#ln77" customDescriptor="false" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area11#page47#enu21#fld85 sv3#area11#page47#enu21#fld86 sv3#area11#page47#enu21#fld87 sv3#area11#page47#enu21#sfld18 sv3#area11#page47#enu21#fld88 sv3#area11#page47#enu21#fld89 sv3#area11#page47#enu21#sfld19 sv3#area11#page47#enu21#fld90 sv3#area11#page47#enu21#msfld2">
+      <Field id="sv3#area11#page47#enu21#fld85" name="Username" type="string" modifiable="false" preloaded="true">
+        <VRules/>
+      </Field>
+      <Field id="sv3#area11#page47#enu21#fld86" name="Password" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area11#page47#enu21#fld87" name="Email" type="string" modifiable="true" preloaded="true">
+        <VRules/>
+      </Field>
+      <SelectionField id="sv3#area11#page47#enu21#sfld18" name="Group" type="string" role="User2DefaultGroup" slotOrder="sv3#area11#page47#enu21#sfld18#slot19 sv3#area11#page47#enu21#sfld18#slot20">
+        <Slot id="sv3#area11#page47#enu21#sfld18#slot19" name="name" label="true" output="false" value="admin|customer"/>
+        <Slot id="sv3#area11#page47#enu21#sfld18#slot20" name="value" label="false" output="true" value="1|2"/>
+      </SelectionField>
+      <Link id="sv3#area11#page47#enu21#ln77" name="Update" to="sv3#mfu9" type="normal" validate="true">
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par206" name="email_email" source="sv3#area11#page47#enu21#fld87" target="sv3#mfu9.email"/>
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par207" name="group_Group.oid(defaultGroup)" source="sv3#area11#page47#enu21#sfld18" target="sv3#mfu9.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par208" name="group_Group.oid(groups)" source="sv3#area11#page47#enu21#sfld18" target="sv3#mfu9.User2Group.groupOID"/>
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par213" name="Key [oid]_KeyCondition10 [oid]" source="key.userOID" target="sv3#mfu9#su23#kcond12.userOID"/>
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par215" name="password_password" source="sv3#area11#page47#enu21#fld86" target="sv3#mfu9.password"/>
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par216" name="User Object_User Object" source="entityBean" target="sv3#mfu9.entityBeans"/>
+        <LinkParameter id="sv3#area11#page47#enu21#ln77#par217" name="username_userName" source="sv3#area11#page47#enu21#fld85" target="sv3#mfu9.userName"/>
+      </Link>
+      <Field id="sv3#area11#page47#enu21#fld88" name="FirstName" type="string" modifiable="true" attribute="User#att27"/>
+      <Field id="sv3#area11#page47#enu21#fld89" name="LastName" type="string" modifiable="true" attribute="User#att28"/>
+      <Field id="sv3#area11#page47#enu21#fld90" name="Birthdate" type="date" modifiable="true" attribute="User#att30"/>
+      <MultiSelectionField id="sv3#area11#page47#enu21#msfld2" name="groups" type="string" role="User2Group"/>
+      <SelectionField id="sv3#area11#page47#enu21#sfld19" name="Gender" attribute="User#att29" type="string">
+        <Slot id="sv3#area11#page47#enu21#sfld19#slot21" name="gender" label="true" output="true" value="Male|Female"/>
+      </SelectionField>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area11#page47#enu21">
+          <layout:Link link="sv3#area11#page47#enu21#ln77"/>
+          <layout:Field field="sv3#area11#page47#enu21#fld85"/>
+          <layout:Field field="sv3#area11#page47#enu21#fld86"/>
+          <layout:Field field="sv3#area11#page47#enu21#fld87"/>
+          <layout:Field field="sv3#area11#page47#enu21#sfld18"/>
+          <layout:Field field="sv3#area11#page47#enu21#fld88"/>
+          <layout:Field field="sv3#area11#page47#enu21#fld89"/>
+          <layout:Field field="sv3#area11#page47#enu21#sfld19"/>
+          <layout:Field field="sv3#area11#page47#enu21#fld90"/>
+          <layout:Field field="sv3#area11#page47#enu21#msfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

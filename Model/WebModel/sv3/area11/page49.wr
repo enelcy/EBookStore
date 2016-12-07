@@ -1,0 +1,46 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area11#page49" name="ComfirmUser" landmark="true" layout:style="EbookStyle" gr:x="210" gr:y="595">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area11#page49#pwu18" name="unconfirmeduser" linkOrder="sv3#area11#page49#pwu18#ln82 sv3#area11#page49#pwu18#ln83" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att52 ent8#att53 ent8#att54 ent8#att55 ent8#att56 ent8#att57 ent8#att58 ent8#att59">
+      <Link id="sv3#area11#page49#pwu18#ln82" name="Active" to="sv3#opg8#cru9" type="normal" validate="true">
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par232" name="birthdate_birthdate" source="data[].ent8#att53" target="sv3#opg8#cru9.User#att30"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par233" name="email_email" source="data[].ent8#att57" target="sv3#opg8#cru9.email"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par234" name="firstName_firstName" source="data[].ent8#att56" target="sv3#opg8#cru9.User#att27"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par235" name="gender_gender" source="data[].ent8#att54" target="sv3#opg8#cru9.User#att29"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par236" name="2_Group.oid(defaultGroup)" target="sv3#opg8#cru9.User2DefaultGroup.groupOID" sourceValue="2"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par238" name="lastName_lastName" source="data[].ent8#att55" target="sv3#opg8#cru9.User#att28"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par239" name="password_password" source="data[].ent8#att58" target="sv3#opg8#cru9.password"/>
+        <LinkParameter id="sv3#area11#page49#pwu18#ln82#par240" name="userName_userName" source="data[].ent8#att59" target="sv3#opg8#cru9.userName"/>
+      </Link>
+      <Link id="sv3#area11#page49#pwu18#ln83" name="Reject" to="sv3#area11#dlu6" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area11#page49#pwu18">
+          <layout:Attribute attribute="ent8#att52"/>
+          <layout:Attribute attribute="ent8#att53"/>
+          <layout:Attribute attribute="ent8#att54"/>
+          <layout:Attribute attribute="ent8#att55"/>
+          <layout:Attribute attribute="ent8#att56"/>
+          <layout:Attribute attribute="ent8#att57"/>
+          <layout:Attribute attribute="ent8#att58"/>
+          <layout:Attribute attribute="ent8#att59"/>
+          <layout:Link link="sv3#area11#page49#pwu18#ln82"/>
+          <layout:Link link="sv3#area11#page49#pwu18#ln83"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

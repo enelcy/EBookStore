@@ -9,7 +9,7 @@
     <EntryUnit gr:x="220" gr:y="20" id="sv1#area2#page4#enu3" name="Search" fieldOrder="sv1#area2#page4#enu3#sfld2 sv1#area2#page4#enu3#fld5" linkOrder="sv1#area2#page4#enu3#ln8">
       <Field id="sv1#area2#page4#enu3#fld5" name="What you are interesting in?" type="string" modifiable="true"/>
       <SelectionField id="sv1#area2#page4#enu3#sfld2" name="Category" type="string" modifiable="true"/>
-      <Link id="sv1#area2#page4#enu3#ln8" name="Search" to="sv1#area2#page4#pwu3" type="normal" validate="true">
+      <Link id="sv1#area2#page4#enu3#ln8" name="Search" to="sv1#area2#page4#pwu3" type="normal" validate="true" ajaxEnabled="true">
         <LinkParameter id="sv1#area2#page4#enu3#ln8#par20" name="Category_Category [oid]" source="sv1#area2#page4#enu3#sfld2" target="sv1#area2#page4#pwu3#su4#rcond3.ent1#att1"/>
         <LinkParameter id="sv1#area2#page4#enu3#ln8#par21" name="What you are interesting in?_Search" source="sv1#area2#page4#enu3#fld5" target="sv1#area2#page4#pwu3#su4#acond4"/>
       </Link>

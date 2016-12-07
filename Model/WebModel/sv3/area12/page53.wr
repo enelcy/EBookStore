@@ -1,0 +1,72 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page53" name="UpdateBook" gr:x="135" gr:y="295">
+  <ContentUnits>
+    <EntryUnit id="sv3#area12#page53#enu25" name="updatebook" linkOrder="sv3#area12#page53#enu25#ln90" gr:x="0" gr:y="195" entity="ent3" fieldOrder="sv3#area12#page53#enu25#fld97 sv3#area12#page53#enu25#fld98 sv3#area12#page53#enu25#fld99 sv3#area12#page53#enu25#fld100 sv3#area12#page53#enu25#fld101 sv3#area12#page53#enu25#fld102 sv3#area12#page53#enu25#fld103 sv3#area12#page53#enu25#sfld22 sv3#area12#page53#enu25#fld120 sv3#area12#page53#enu25#sfld25">
+      <Field id="sv3#area12#page53#enu25#fld97" name="ISBN" type="string" modifiable="true" attribute="ent3#att16">
+        <VRules/>
+      </Field>
+      <Field id="sv3#area12#page53#enu25#fld98" name="name" type="string" modifiable="true" attribute="ent3#att17">
+        <VRules/>
+      </Field>
+      <Field id="sv3#area12#page53#enu25#fld99" name="description" type="text" modifiable="true" attribute="ent3#att18"/>
+      <Field id="sv3#area12#page53#enu25#fld100" name="price" type="float" modifiable="true" attribute="ent3#att19"/>
+      <Field id="sv3#area12#page53#enu25#fld101" name="photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
+      <Field id="sv3#area12#page53#enu25#fld102" name="publisher" type="string" modifiable="true" attribute="ent3#att23"/>
+      <Field id="sv3#area12#page53#enu25#fld103" name="author" type="string" modifiable="true" attribute="ent3#att24"/>
+      <SelectionField id="sv3#area12#page53#enu25#sfld22" name="BookInfoToCategory" type="string" role="rel7#role13"/>
+      <Link id="sv3#area12#page53#enu25#ln90" name="update" to="sv3#mfu8" type="normal" automaticCoupling="true" validate="true"/>
+      <Field id="sv3#area12#page53#enu25#fld120" name="rentprice" type="float" modifiable="true" attribute="ent3#att65"/>
+      <SelectionField id="sv3#area12#page53#enu25#sfld25" name="BookInfoToInventory" type="string" role="rel3#role5"/>
+    </EntryUnit>
+    <SelectorUnit id="sv3#area12#page53#seu14" name="category" gr:x="15" gr:y="0" entity="ent1">
+      <Link id="sv3#area12#page53#seu14#ln91" name="Flow45" to="sv3#area12#page53#enu25" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page53#seu14#ln91#par250" name="category_BookInfoToCategory [label]" source="ent1#att2Array" target="sv3#area12#page53#enu25#sfld22_label"/>
+        <LinkParameter id="sv3#area12#page53#seu14#ln91#par251" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area12#page53#enu25#sfld22_output"/>
+        <LinkParameter id="sv3#area12#page53#seu14#ln91#par252" name="oid_Key Condition [oid]" source="ent1#att1Array" target="sv3#area12#page53#enu25.ent3#att15"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page53#enu25">
+          <layout:Link link="sv3#area12#page53#enu25#ln90"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld97"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld98"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld99"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld100"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld101"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld102"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld103"/>
+          <layout:Field field="sv3#area12#page53#enu25#sfld22"/>
+          <layout:Field field="sv3#area12#page53#enu25#fld120"/>
+          <layout:Field field="sv3#area12#page53#enu25#sfld25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

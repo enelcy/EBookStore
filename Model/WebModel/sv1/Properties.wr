@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Memeber" landmarks="sv1#area2 sv1#page33 sv1#area7 sv1#lou2 sv1#page3" homePage="sv1#area2#page4" layout:frameLayout="BootstrapStyle/Default" protected="true" layout:style="BootstrapStyle">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Memeber" landmarks="sv1#area2 sv1#area7 sv1#page33 sv1#page3 sv1#lou2" homePage="sv1#area2#page4" layout:frameLayout="BootstrapStyle/Default" protected="true" layout:style="BootstrapStyle">
   <OperationUnits>
     <LogoutUnit gr:x="-400" gr:y="540" id="sv1#lou2" name="Logout" siteView="sv2" protected="false" landmark="true"/>
     <ModuleInstanceUnit gr:x="310" gr:y="205" id="sv1#miu2" moduleId="mov2#opm1" action="true">

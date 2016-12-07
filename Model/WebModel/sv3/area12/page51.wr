@@ -1,0 +1,47 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page51" name="Categories Mgt" linkOrder="sv3#area12#page51#ln87" landmark="true" gr:x="635" gr:y="790">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area12#page51#pwu19" name="categories list" linkOrder="sv3#area12#page51#pwu19#ln86" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2">
+      <Link id="sv3#area12#page51#pwu19#ln86" name="Update" to="sv3#area12#page54#enu26" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page51#pwu19#ln86#par248" name="category_category" source="data[].ent1#att2" target="sv3#area12#page54#enu26#fld104_slot"/>
+        <LinkParameter id="sv3#area12#page51#pwu19#ln86#par249" name="oid_Key Condition [oid]" source="data[].ent1#att1" target="sv3#area12#page54#enu26.ent1#att1"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page51#pwu19">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv3#area12#page51#pwu19#ln86"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#area12#page51#ln87" name="Add new" to="sv3#area12#page55" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

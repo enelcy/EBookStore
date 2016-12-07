@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area11#page45" name="Add User" landmark="true" layout:style="EbookStyle" gr:x="380" gr:y="440">
+  <ContentUnits>
+    <EntryUnit id="sv3#area11#page45#enu20" name="Adduser" linkOrder="sv3#area11#page45#enu20#ln74" gr:x="0" gr:y="0" entity="User" fieldOrder="sv3#area11#page45#enu20#fld73 sv3#area11#page45#enu20#fld75 sv3#area11#page45#enu20#sfld15 sv3#area11#page45#enu20#fld76 sv3#area11#page45#enu20#fld77 sv3#area11#page45#enu20#fld78 sv3#area11#page45#enu20#sfld17 sv3#area11#page45#enu20#fld79">
+      <Link id="sv3#area11#page45#enu20#ln74" name="Add" to="sv3#cru11" type="normal" validate="true">
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par196" name="Key [oid]_oid" source="key.userOID" target="sv3#cru11.userOID"/>
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par197" name="User Object_User Object" source="entityBean" target="sv3#cru11.entityBeans"/>
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par198" name="email_email" source="sv3#area11#page45#enu20#fld76" target="sv3#cru11.email"/>
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par199" name="group_Group.oid(defaultGroup)" source="sv3#area11#page45#enu20#sfld15" target="sv3#cru11.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par200" name="group_Group.oid(groups)" source="sv3#area11#page45#enu20#sfld15" target="sv3#cru11.User2Group.groupOID"/>
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par201" name="password_password" source="sv3#area11#page45#enu20#fld75" target="sv3#cru11.password"/>
+        <LinkParameter id="sv3#area11#page45#enu20#ln74#par205" name="username_userName" source="sv3#area11#page45#enu20#fld73" target="sv3#cru11.userName"/>
+      </Link>
+      <Field id="sv3#area11#page45#enu20#fld73" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area11#page45#enu20#fld73#mnd5" name="masthave"/>
+          <CollectionValidationRule id="sv3#area11#page45#enu20#fld73#clc5" name="uniqueusername" predicate="notIn" entity="User" attribute="userName" errorMessage="Duplicated username!"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area11#page45#enu20#fld75" name="Password" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area11#page45#enu20#fld75#mnd6" name="musthave"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#area11#page45#enu20#sfld15" name="Group" type="integer" preselectValue="1" slotOrder="sv3#area11#page45#enu20#sfld15#slot16 sv3#area11#page45#enu20#sfld15#slot17">
+        <Slot id="sv3#area11#page45#enu20#sfld15#slot16" name="group" label="true" output="false" value="admin|custormer"/>
+        <Slot id="sv3#area11#page45#enu20#sfld15#slot17" name="groupvalue" label="false" output="true" value="1|2"/>
+        <VRules>
+          <MandatoryValidationRule id="sv3#area11#page45#enu20#sfld15#mnd7" name="musthave"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv3#area11#page45#enu20#fld76" name="Email" type="string" modifiable="true">
+        <VRules>
+          <EMailValidationRule id="sv3#area11#page45#enu20#fld76#email2" name="Email" errorMessage="Email is not valid!"/>
+          <MandatoryValidationRule id="sv3#area11#page45#enu20#fld76#mnd8" name="musthave"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area11#page45#enu20#fld77" name="FirstName" type="string" modifiable="true" attribute="User#att27"/>
+      <Field id="sv3#area11#page45#enu20#fld78" name="LastName" type="string" modifiable="true" attribute="User#att28"/>
+      <Field id="sv3#area11#page45#enu20#fld79" name="Birthdate" type="date" modifiable="true" attribute="User#att30"/>
+      <SelectionField id="sv3#area11#page45#enu20#sfld17" name="Gender" attribute="User#att29" type="string">
+        <Slot id="sv3#area11#page45#enu20#sfld17#slot18" name="gender" label="true" output="true" value="Male|Femal"/>
+      </SelectionField>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area11#page45#enu20">
+          <layout:Link link="sv3#area11#page45#enu20#ln74"/>
+          <layout:Field field="sv3#area11#page45#enu20#fld73"/>
+          <layout:Field field="sv3#area11#page45#enu20#fld75"/>
+          <layout:Field field="sv3#area11#page45#enu20#sfld15"/>
+          <layout:Field field="sv3#area11#page45#enu20#fld76"/>
+          <layout:Field field="sv3#area11#page45#enu20#fld77"/>
+          <layout:Field field="sv3#area11#page45#enu20#fld78"/>
+          <layout:Field field="sv3#area11#page45#enu20#sfld17"/>
+          <layout:Field field="sv3#area11#page45#enu20#fld79"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

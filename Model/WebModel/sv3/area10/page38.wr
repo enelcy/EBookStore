@@ -1,0 +1,107 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area10#page38" name="DecideOrder" gr:x="515" gr:y="355">
+  <ContentUnits>
+    <DataUnit id="sv3#area10#page38#dau5" name="orderItemDetail" linkOrder="sv3#area10#page38#dau5#ln68 sv3#area10#page38#dau5#ln67" gr:x="5" gr:y="110" entity="ent5" displayAttributes="ent5#att10 ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69 ent5#att44 rel5#role10.rel6#role12.userName">
+      <Selector id="sv3#area10#page38#dau5#su35" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area10#page38#dau5#su35#kcond19" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area10#page38#dau5#ln66" name="Check Inventory" to="sv3#area10#page38#dau7" type="transport" validate="true">
+        <LinkParameter id="sv3#area10#page38#dau5#ln66#par171" name="ISBN_AttCondition18" source="data.ent5#att26" target="sv3#area10#page38#dau7#su41#acond24"/>
+      </Link>
+      <Link id="sv3#area10#page38#dau5#ln67" name="Accept" to="sv3#area10#mfu10" type="normal" validate="true" ajaxEnabled="false">
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par172" name="bookName_bookName" source="data.ent5#att40" target="sv3#area10#mfu10.ent5#att40"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par173" name="declineReason_declineReason" source="data.ent5#att38" target="sv3#area10#mfu10.ent5#att38"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par174" name="from_from" source="data.ent5#att33" target="sv3#area10#mfu10.ent5#att33"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par175" name="ISBN_ISBN" source="data.ent5#att26" target="sv3#area10#mfu10.ent5#att26"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par176" name="oid_KeyCondition18 [oid]" source="data.ent5#att10" target="sv3#area10#mfu10#su24#kcond14.ent5#att10"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par177" name="price_price" source="data.ent5#att36" target="sv3#area10#mfu10.ent5#att36"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par178" name="quantity_quantity" source="data.ent5#att35" target="sv3#area10#mfu10.ent5#att35"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par179" name="Processed_Status" target="sv3#area10#mfu10.ent5#att69" sourceValue="Accepted"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par180" name="to_to" source="data.ent5#att34" target="sv3#area10#mfu10.ent5#att34"/>
+        <LinkParameter id="sv3#area10#page38#dau5#ln67#par181" name="type_type" source="data.ent5#att32" target="sv3#area10#mfu10.ent5#att32"/>
+      </Link>
+      <Link id="sv3#area10#page38#dau5#ln68" name="Deny" to="sv3#area10#page37#enu19" type="normal" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <DataUnit id="sv3#area10#page38#dau7" name="BookInfo" linkOrder="sv3#area10#page38#dau7#ln69" gr:x="0" gr:y="260" entity="ent3" displayAttributes="ent3#att17 ent3#att18 ent3#att19 ent3#att20 rel3#role5.ent2#att5 rel3#role5.ent2#att7">
+      <Selector id="sv3#area10#page38#dau7#su41" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area10#page38#dau7#su41#acond24" name="ISBN" predicate="contains" booleanOperator="or" implied="false" attributes="ent3#att16"/>
+      </Selector>
+      <Link id="sv3#area10#page38#dau7#ln69" name="UpdateInventory" to="sv3#area10#page35#seu10" type="normal" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <MultiMessageUnit id="sv3#area10#page38#mssu17" name="Processed" gr:x="95" gr:y="0"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area10#page38#mssu17"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#area10#page38#dau5">
+          <layout:Link link="sv3#area10#page38#dau5#ln68"/>
+          <layout:Link link="sv3#area10#page38#dau5#ln67"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att40"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att32"/>
+          <layout:Attribute attribute="ent5#att33"/>
+          <layout:Attribute attribute="ent5#att34"/>
+          <layout:Attribute attribute="ent5#att35"/>
+          <layout:Attribute attribute="ent5#att36"/>
+          <layout:Attribute attribute="ent5#att38"/>
+          <layout:Attribute attribute="ent5#att4"/>
+          <layout:Attribute attribute="ent5#att68"/>
+          <layout:Attribute attribute="ent5#att69"/>
+          <layout:Attribute attribute="ent5#att44"/>
+          <layout:Attribute attribute="rel5#role10.rel6#role12.userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#area10#page38#dau7">
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="rel3#role5.ent2#att5"/>
+          <layout:Attribute attribute="rel3#role5.ent2#att7"/>
+          <layout:Link link="sv3#area10#page38#dau7#ln69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

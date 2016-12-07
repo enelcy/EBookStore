@@ -1,0 +1,118 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page59" name="Book List" landmark="true" layout:style="EbookStyle" gr:x="0" gr:y="690">
+  <ContentUnits>
+    <SelectorUnit id="sv3#area12#page59#seu17" name="category" gr:x="465" gr:y="0" entity="ent1">
+      <Link id="sv3#area12#page59#seu17#ln99" name="Flow49" to="sv3#area12#page59#enu32" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page59#seu17#ln99#par301" name="category_BookInfoToCategory [label]" source="ent1#att2Array" target="sv3#area12#page59#enu32#sfld24_label"/>
+        <LinkParameter id="sv3#area12#page59#seu17#ln99#par302" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area12#page59#enu32#sfld24_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area12#page59#enu32" name="Search Book" linkOrder="sv3#area12#page59#enu32#ln100" gr:x="320" gr:y="15" fieldOrder="sv3#area12#page59#enu32#fld117 sv3#area12#page59#enu32#fld118 sv3#area12#page59#enu32#sfld24">
+      <Field id="sv3#area12#page59#enu32#fld117" name="Name" type="string" modifiable="true"/>
+      <Field id="sv3#area12#page59#enu32#fld118" name="Author" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area12#page59#enu32#sfld24" name="BookInfoToCategory" type="string"/>
+      <Link id="sv3#area12#page59#enu32#ln100" name="Filter" to="sv3#area12#page59#pwu20" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page59#enu32#ln100#par303" name="author_author" source="sv3#area12#page59#enu32#fld118" target="sv3#area12#page59#pwu20#su50#acond29"/>
+        <LinkParameter id="sv3#area12#page59#enu32#ln100#par304" name="name_name" source="sv3#area12#page59#enu32#fld117" target="sv3#area12#page59#pwu20#su50#acond30"/>
+        <LinkParameter id="sv3#area12#page59#enu32#ln100#par305" name="BookInfoToCategory_current oid" target="sv3#area12#page59#pwu20.current.ent3#att15" blank="true"/>
+        <LinkParameter id="sv3#area12#page59#enu32#ln100#par321" name="BookInfoToCategory_category is [oid]" source="sv3#area12#page59#enu32#sfld24" target="sv3#area12#page59#pwu20#su50#rcond5.ent1#att1"/>
+        <LinkParameter id="sv3#area12#page59#enu32#ln100#par322" name="InventoryGT_sailInventoryGT" source="sv3#area12#page59#enu32#fld117" target="sv3#area12#page59#pwu20#su50#acond31"/>
+        <LinkParameter id="sv3#area12#page59#enu32#ln100#par323" name="InventoryLT_sailInventoryLT" source="sv3#area12#page59#enu32#fld118" target="sv3#area12#page59#pwu20#su50#acond32"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit id="sv3#area12#page59#pwu20" name="booklist" linkOrder="sv3#area12#page59#pwu20#ln102 sv3#area12#page59#pwu20#ln103" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" maxResults="15" entity="ent3" displayAttributes="ent3#att16 ent3#att17 ent3#att23 ent3#att24 ent3#att19 rel3#role5.ent2#att5 rel3#role5.ent2#att7 rel3#role5.ent2#att6 rel7#role13.ent1#att2">
+      <Selector id="sv3#area12#page59#pwu20#su50" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area12#page59#pwu20#su50#acond29" name="author is" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att24" ignoreCase="true"/>
+        <RelationshipRoleCondition id="sv3#area12#page59#pwu20#su50#rcond5" name="category is" predicate="in" implied="true" role="rel7#role14"/>
+        <AttributesCondition id="sv3#area12#page59#pwu20#su50#acond30" name="book name is" predicate="contains" booleanOperator="or" implied="true" attributes="ent3#att17" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area12#page59#pwu20#su50#acond31" name="sailInventoryGT" predicate="gt" booleanOperator="or" implied="true" attributes="rel3#role5.ent2#att5"/>
+        <AttributesCondition id="sv3#area12#page59#pwu20#su50#acond32" name="sailInventoryLT" predicate="lt" booleanOperator="or" implied="true" attributes="rel3#role5.ent2#att5"/>
+      </Selector>
+      <Link id="sv3#area12#page59#pwu20#ln102" name="Update" to="sv3#area12#page53#enu25" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area12#page59#pwu20#ln103" name="Inventory" to="sv3#area12#page50#enu23" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page59#pwu20#ln103#par324" name="BookInfoToInventory.oid_Key Condition [oid]" source="data[].rel3#role5_ent2#att3" target="sv3#area12#page50#enu23.ent2#att3"/>
+      </Link>
+    </PowerIndexUnit>
+    <MultiMessageUnit id="sv3#area12#page59#mssu24" name="Msg" gr:x="415" gr:y="105"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page59#mssu24"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page59#enu32">
+          <layout:Field field="sv3#area12#page59#enu32#fld117"/>
+          <layout:Field field="sv3#area12#page59#enu32#fld118"/>
+          <layout:Field field="sv3#area12#page59#enu32#sfld24"/>
+          <layout:Link link="sv3#area12#page59#enu32#ln100"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page59#pwu20">
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att23"/>
+          <layout:Attribute attribute="ent3#att24"/>
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Attribute attribute="rel3#role5.ent2#att5"/>
+          <layout:Attribute attribute="rel3#role5.ent2#att7"/>
+          <layout:Attribute attribute="rel3#role5.ent2#att6"/>
+          <layout:Attribute attribute="rel7#role13.ent1#att2"/>
+          <layout:Link link="sv3#area12#page59#pwu20#ln102"/>
+          <layout:Link link="sv3#area12#page59#pwu20#ln103"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area10#page37" name="Denyreason" gr:x="530" gr:y="190">
+  <ContentUnits>
+    <EntryUnit id="sv3#area10#page37#enu19" name="denyreason" linkOrder="sv3#area10#page37#enu19#ln65" gr:x="0" gr:y="0" entity="ent5">
+      <Field id="sv3#area10#page37#enu19#fld61" name="declineReason" type="text" modifiable="true" attribute="ent5#att38"/>
+      <Link id="sv3#area10#page37#enu19#ln65" name="OK" to="sv3#area10#mfu11" type="normal" validate="true">
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par160" name="bookName_bookName" source="sv3#area10#page37#enu19#fld62" target="sv3#area10#mfu11.ent5#att40"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par161" name="declineReason_declineReason" source="sv3#area10#page37#enu19#fld61" target="sv3#area10#mfu11.ent5#att38"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par162" name="from_from" source="sv3#area10#page37#enu19#fld65" target="sv3#area10#mfu11.ent5#att33"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par163" name="ISBN_ISBN" source="sv3#area10#page37#enu19#fld63" target="sv3#area10#mfu11.ent5#att26"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par164" name="Key [oid]_KeyCondition20 [oid]" source="key.ent5#att10" target="sv3#area10#mfu11#su25#kcond15.ent5#att10"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par165" name="OrderItem Object_OrderItem Object" source="entityBean" target="sv3#area10#mfu11.entityBeans"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par166" name="price_price" source="sv3#area10#page37#enu19#fld68" target="sv3#area10#mfu11.ent5#att36"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par167" name="quantity_quantity" source="sv3#area10#page37#enu19#fld67" target="sv3#area10#mfu11.ent5#att35"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par168" name="Denied_Status" target="sv3#area10#mfu11.ent5#att69" sourceValue="Denied"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par169" name="to_to" source="sv3#area10#page37#enu19#fld66" target="sv3#area10#mfu11.ent5#att34"/>
+        <LinkParameter id="sv3#area10#page37#enu19#ln65#par170" name="type_type" source="sv3#area10#page37#enu19#fld64" target="sv3#area10#mfu11.ent5#att32"/>
+      </Link>
+      <Field id="sv3#area10#page37#enu19#fld62" name="bookName" type="string" modifiable="true" attribute="ent5#att40" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld63" name="ISBN" type="string" modifiable="true" attribute="ent5#att26" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld64" name="type" type="string" modifiable="true" attribute="ent5#att32" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld65" name="from" type="date" modifiable="true" attribute="ent5#att33" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld66" name="to" type="date" modifiable="true" attribute="ent5#att34" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld67" name="quantity" type="integer" modifiable="true" attribute="ent5#att35" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld68" name="price" type="float" modifiable="true" attribute="ent5#att36" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld69" name="ItemTotalAmount" type="float" modifiable="true" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld70" name="RentDays" type="integer" modifiable="true" hidden="true"/>
+      <Field id="sv3#area10#page37#enu19#fld71" name="Status" type="string" modifiable="true" attribute="ent5#att69" hidden="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area10#page37#enu19">
+          <layout:Link link="sv3#area10#page37#enu19#ln65"/>
+          <layout:Field field="sv3#area10#page37#enu19#fld61"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

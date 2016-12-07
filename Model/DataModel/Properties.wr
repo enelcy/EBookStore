@@ -95,7 +95,7 @@
     <Attribute id="ent4#att64" name="billingaddress" db:column="billingaddress" type="string" key="false"/>
     <Attribute id="ent4#att22" name="Comment" type="string" db:column="comment"/>
   </Entity>
-  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69" db:database="db1" db:table="orderitem">
+  <Entity gr:x="405" gr:y="560" id="ent5" name="OrderItem" duration="persistent" attributeOrder="ent5#att10 ent5#att40 ent5#att44 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69" db:database="db1" db:table="orderitem">
     <Attribute id="ent5#att10" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att36" name="price" type="float" key="false" db:column="price"/>
     <Attribute id="ent5#att35" name="quantity" type="integer" key="false" db:column="quantity"/>
@@ -109,7 +109,8 @@
       <db:JoinColumn attribute="ent5#att10" name="oid"/>
     </Attribute>
     <Attribute id="ent5#att68" name="RentDays" type="integer" derivationQuery="simpleCalculated::Self.ent5#att34 - Self.ent5#att33" key="false"/>
-    <Attribute id="ent5#att69" name="Status" type="string" db:column="status"/>
+    <Attribute id="ent5#att69" name="Status" type="string" db:column="status" key="false"/>
+    <Attribute id="ent5#att44" name="Picture" type="blob" key="false" db:column="picture" contentType="image"/>
   </Entity>
   <Relationship id="rel5" name="Order_OrderItem" sourceEntity="ent4" targetEntity="ent5" db:database="db1" db:table="orderitem">
     <RelationshipRole1 id="rel5#role9" name="OrderToOrderItem" maxCard="N">
@@ -134,7 +135,7 @@
       <db:JoinColumn attribute="ent6#att31" name="oid"/>
     </Attribute>
   </Entity>
-  <Entity gr:x="920" gr:y="175" id="ent7" name="CartItems" duration="persistent" attributeOrder="ent7#att43 ent7#att45 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att66 ent7#att67 ent7#att51" db:database="db1" db:table="cartitems">
+  <Entity gr:x="920" gr:y="175" id="ent7" name="CartItems" duration="persistent" attributeOrder="ent7#att43 ent7#att45 ent7#att37 ent7#att46 ent7#att47 ent7#att48 ent7#att49 ent7#att50 ent7#att66 ent7#att67 ent7#att51" db:database="db1" db:table="cartitems">
     <Attribute id="ent7#att43" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att51" name="Total" type="float" derivationQuery="calculated::Self.ent7#att48 * Self.ent7#att47 *  ( Self.ent7#att50 - Self.ent7#att49 )" storageType="file" key="false" db:table="cartitems_total_view" db:column="der_attr">
       <db:JoinColumn attribute="ent7#att43" name="oid"/>
@@ -147,6 +148,7 @@
     <Attribute id="ent7#att45" name="ISBN" type="string" db:column="isbn" key="false"/>
     <Attribute id="ent7#att66" name="Type" type="string" db:column="type" key="false"/>
     <Attribute id="ent7#att67" name="RentDays" type="integer" key="false" derivationQuery="simpleCalculated::Self.ent7#att50 - Self.ent7#att49"/>
+    <Attribute id="ent7#att37" name="Picture" type="blob" db:column="picture"/>
   </Entity>
   <Relationship id="rel2" name="User_Cart" sourceEntity="User" targetEntity="ent6" db:database="db1" db:table="cart">
     <RelationshipRole1 id="rel2#role3" name="UserToCart" maxCard="1">

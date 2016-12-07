@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page55" name="Add Category" gr:x="1020" gr:y="690">
+  <ContentUnits>
+    <EntryUnit id="sv3#area12#page55#enu27" name="New Category" linkOrder="sv3#area12#page55#enu27#ln93" gr:x="0" gr:y="0" entity="ent1">
+      <Field id="sv3#area12#page55#enu27#fld105" name="category" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Link id="sv3#area12#page55#enu27#ln93" name="Add" to="sv3#cru10" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page55#enu27#ln93#par253" name="category_category" source="sv3#area12#page55#enu27#fld105" target="sv3#cru10.ent1#att2"/>
+        <LinkParameter id="sv3#area12#page55#enu27#ln93#par254" name="Category Object_Category Object" source="entityBean" target="sv3#cru10.entityBeans"/>
+        <LinkParameter id="sv3#area12#page55#enu27#ln93#par257" name="Key [oid]_oid" source="key.ent1#att1" target="sv3#cru10.ent1#att1"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page55#enu27">
+          <layout:Field field="sv3#area12#page55#enu27#fld105"/>
+          <layout:Link link="sv3#area12#page55#enu27#ln93"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

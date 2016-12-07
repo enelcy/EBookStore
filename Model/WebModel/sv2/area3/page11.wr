@@ -21,7 +21,7 @@
     <EntryUnit id="sv2#area3#page11#enu6" name="Search" linkOrder="sv2#area3#page11#enu6#ln55" gr:x="225" gr:y="0" fieldOrder="sv2#area3#page11#enu6#sfld3 sv2#area3#page11#enu6#fld10">
       <Field id="sv2#area3#page11#enu6#fld10" name="What are you interesting in?" type="string" modifiable="true"/>
       <SelectionField id="sv2#area3#page11#enu6#sfld3" name="Category" type="string" modifiable="true"/>
-      <Link id="sv2#area3#page11#enu6#ln55" name="Search" to="sv2#area3#page11#pwu5" type="normal" validate="true">
+      <Link id="sv2#area3#page11#enu6#ln55" name="Search" to="sv2#area3#page11#pwu5" type="normal" validate="true" ajaxEnabled="true">
         <LinkParameter id="sv2#area3#page11#enu6#ln55#par109" name="What are you interesting in?_Search" source="sv2#area3#page11#enu6#fld10" target="sv2#area3#page11#pwu5#su18#acond8"/>
         <LinkParameter id="sv2#area3#page11#enu6#ln55#par110" name="Category_Category [oid]" source="sv2#area3#page11#enu6#sfld3" target="sv2#area3#page11#pwu5#su18#rcond13.ent1#att1"/>
       </Link>

@@ -1,0 +1,126 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page57" name="Add Book" landmark="true" gr:x="320" gr:y="0">
+  <ContentUnits>
+    <SelectorUnit id="sv3#area12#page57#seu16" name="category" gr:x="150" gr:y="0" entity="ent1">
+      <Link id="sv3#area12#page57#seu16#ln95" name="Flow43" to="sv3#area12#page57#enu28" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page57#seu16#ln95#par264" name="category_BookInfoToCategory [label]" source="ent1#att2Array" target="sv3#area12#page57#enu28#sfld23_label"/>
+        <LinkParameter id="sv3#area12#page57#seu16#ln95#par266" name="oid_BookInfoToCategory [output]" source="ent1#att1Array" target="sv3#area12#page57#enu28#sfld23_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area12#page57#enu28" name="addbook" linkOrder="sv3#area12#page57#enu28#ln96" gr:x="0" gr:y="105" entity="ent3" fieldOrder="sv3#area12#page57#enu28#fld106 sv3#area12#page57#enu28#fld107 sv3#area12#page57#enu28#fld108 sv3#area12#page57#enu28#fld109 sv3#area12#page57#enu28#fld119 sv3#area12#page57#enu28#fld110 sv3#area12#page57#enu28#fld111 sv3#area12#page57#enu28#fld112 sv3#area12#page57#enu28#sfld23">
+      <Field id="sv3#area12#page57#enu28#fld106" name="ISBN" type="string" modifiable="true" attribute="ent3#att16">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#fld106#mnd9" name="Mandatory"/>
+          <CollectionValidationRule id="sv3#area12#page57#enu28#fld106#clc6" name="Unique" predicate="notIn" entity="ent3" attribute="ent3#att16" errorMessage="Duplicated ISBN"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page57#enu28#fld107" name="Name" type="string" modifiable="true" attribute="ent3#att17">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#fld107#mnd10" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page57#enu28#fld108" name="Description" type="text" modifiable="true" attribute="ent3#att18"/>
+      <Field id="sv3#area12#page57#enu28#fld109" name="Price" type="float" modifiable="true" attribute="ent3#att19">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#fld109#mnd11" name="Mandatory"/>
+          <TypeValidationRule id="sv3#area12#page57#enu28#fld109#tvr2" name="Type Validation" type="float" errorMessage="Price type is incorrect!"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page57#enu28#fld110" name="Photo" type="blob" modifiable="true" contentType="image" attribute="ent3#att20"/>
+      <Field id="sv3#area12#page57#enu28#fld111" name="Publisher" type="string" modifiable="true" attribute="ent3#att23">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#fld111#mnd12" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page57#enu28#fld112" name="Author" type="string" modifiable="true" attribute="ent3#att24">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#fld112#mnd13" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#area12#page57#enu28#sfld23" name="Category" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#sfld23#mnd14" name="Mandatory"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#area12#page57#enu28#ln96" name="Add" to="sv3#area12#opg9#cru12" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par267" name="author_author" source="sv3#area12#page57#enu28#fld112" target="sv3#area12#opg9#cru12.ent3#att24"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par268" name="BookInfo Object_BookInfo Object" source="entityBean" target="sv3#area12#opg9#cru12.entityBeans"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par269" name="BookInfoToCategory_Category.oid(BookinfoToCategory)" source="sv3#area12#page57#enu28#sfld23" target="sv3#area12#opg9#cru12.rel7#role13.ent1#att1"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par270" name="description_description" source="sv3#area12#page57#enu28#fld108" target="sv3#area12#opg9#cru12.ent3#att18"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par271" name="ISBN_ISBN" source="sv3#area12#page57#enu28#fld106" target="sv3#area12#opg9#cru12.ent3#att16"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par272" name="name_name" source="sv3#area12#page57#enu28#fld107" target="sv3#area12#opg9#cru12.ent3#att17"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par273" name="Key [oid]_oid" source="key.ent3#att15" target="sv3#area12#opg9#cru12.ent3#att15"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par274" name="photo_photo" source="sv3#area12#page57#enu28#fld110" target="sv3#area12#opg9#cru12.ent3#att20"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par284" name="photo_photo [file name]" source="sv3#area12#page57#enu28#fld110" target="sv3#area12#opg9#cru12.ent3#att20_name"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par287" name="price_price" source="sv3#area12#page57#enu28#fld109" target="sv3#area12#opg9#cru12.ent3#att19"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par298" name="publisher_publisher" source="sv3#area12#page57#enu28#fld111" target="sv3#area12#opg9#cru12.ent3#att23"/>
+        <LinkParameter id="sv3#area12#page57#enu28#ln96#par325" name="Rent preice_rentprice" source="sv3#area12#page57#enu28#fld119" target="sv3#area12#opg9#cru12.ent3#att65"/>
+      </Link>
+      <Field id="sv3#area12#page57#enu28#fld119" name="Rent preice" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page57#enu28#fld119#mnd19" name="Mandatory"/>
+          <TypeValidationRule id="sv3#area12#page57#enu28#fld119#tvr1" name="Type Validation" type="float" errorMessage="Price type is incorrect!"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+    <MultiMessageUnit id="sv3#area12#page57#mssu23" name="Result" gr:x="85" gr:y="215"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page57#mssu23"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page57#enu28">
+          <layout:Link link="sv3#area12#page57#enu28#ln96"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld106"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld107"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld108"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld109"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld119"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld110"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld111"/>
+          <layout:Field field="sv3#area12#page57#enu28#fld112"/>
+          <layout:Field field="sv3#area12#page57#enu28#sfld23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

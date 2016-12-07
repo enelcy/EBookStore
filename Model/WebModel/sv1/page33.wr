@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-625" gr:y="805" id="sv1#page33" name="My Order" landmark="true" linkOrder="sv1#page33#ln121">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="5" id="sv1#page33#pwu11" name="Order" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="sv1#page33#pwu11#ln117" displayAttributes="ent4#att13 ent4#att12 ent4#att14 ent4#att21 ent4#att41 ent4#att63">
+    <PowerIndexUnit gr:x="0" gr:y="5" id="sv1#page33#pwu11" name="Order" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="sv1#page33#pwu11#ln117" displayAttributes="ent4#att13 ent4#att41 ent4#att63 ent4#att22">
       <Link id="sv1#page33#pwu11#ln117" name="Order Detail" to="sv1#page33#pwu12" type="normal" validate="true" ajaxEnabled="true">
         <LinkParameter id="sv1#page33#pwu11#ln117#par237" name="oid_current oid" target="sv1#page33#pwu12.current.ent5#att10" blank="true"/>
         <LinkParameter id="sv1#page33#pwu11#ln117#par307" name="oid_OrderID [oid]" source="data[].ent4#att9" target="sv1#page33#pwu12#su45#rcond23.ent4#att9"/>
@@ -9,7 +9,7 @@
         <AttributesCondition id="sv1#page33#pwu11#su40#acond19" name="UserID" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
       </Selector>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="270" gr:y="0" id="sv1#page33#pwu12" name="Order Items" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69">
+    <PowerIndexUnit gr:x="270" gr:y="0" id="sv1#page33#pwu12" name="Order Items" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att4 ent5#att68 ent5#att69 ent5#att38">
       <Selector id="sv1#page33#pwu12#su45" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page33#pwu12#su45#rcond23" name="OrderID" role="rel5#role9" predicate="in" implied="false"/>
       </Selector>
@@ -26,11 +26,9 @@
         <layout:Unit unitId="sv1#page33#pwu11">
           <layout:Link link="sv1#page33#pwu11#ln117"/>
           <layout:Attribute attribute="ent4#att13"/>
-          <layout:Attribute attribute="ent4#att12"/>
-          <layout:Attribute attribute="ent4#att14"/>
-          <layout:Attribute attribute="ent4#att21"/>
           <layout:Attribute attribute="ent4#att41"/>
           <layout:Attribute attribute="ent4#att63"/>
+          <layout:Attribute attribute="ent4#att22"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -47,10 +45,10 @@
           <layout:Attribute attribute="ent5#att34"/>
           <layout:Attribute attribute="ent5#att35"/>
           <layout:Attribute attribute="ent5#att36"/>
-          <layout:Attribute attribute="ent5#att38"/>
           <layout:Attribute attribute="ent5#att4"/>
           <layout:Attribute attribute="ent5#att68"/>
           <layout:Attribute attribute="ent5#att69"/>
+          <layout:Attribute attribute="ent5#att38"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,0 +1,126 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area10#page36" name="Need to process" landmark="true" gr:x="20" gr:y="425">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area10#page36#pwu14" name="orders" linkOrder="sv3#area10#page36#pwu14#ln63" gr:x="0" gr:y="120" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att26 ent5#att32 ent5#att35 ent5#att36 ent5#att69 rel5#role10.ent4#att21">
+      <Selector id="sv3#area10#page36#pwu14#su33" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area10#page36#pwu14#su33#acond18" name="type" predicate="contains" booleanOperator="or" implied="true" attributes="ent5#att32"/>
+        <AttributesCondition id="sv3#area10#page36#pwu14#su33#acond22" name="status" predicate="contains" booleanOperator="or" implied="true" attributes="ent5#att69" value="Accepted"/>
+        <AttributesCondition id="sv3#area10#page36#pwu14#su33#acond23" name="bookname" predicate="contains" booleanOperator="or" implied="true" attributes="ent5#att40"/>
+      </Selector>
+      <Link id="sv3#area10#page36#pwu14#ln63" name="Process" to="sv3#area10#mfu13" type="normal" validate="true" ajaxEnabled="false">
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par147" name="bookName_bookName" source="data[].ent5#att40" target="sv3#area10#mfu13.ent5#att40"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par148" name="declineReason_declineReason" source="data[].ent5#att38" target="sv3#area10#mfu13.ent5#att38"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par149" name="from_from" source="data[].ent5#att33" target="sv3#area10#mfu13.ent5#att33"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par150" name="ISBN_ISBN" source="data[].ent5#att26" target="sv3#area10#mfu13.ent5#att26"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par151" name="price_price" source="data[].ent5#att36" target="sv3#area10#mfu13.ent5#att36"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par152" name="quantity_quantity" source="data[].ent5#att35" target="sv3#area10#mfu13.ent5#att35"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par153" name="Processed_Status" target="sv3#area10#mfu13.ent5#att69" sourceValue="Processed"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par154" name="to_to" source="data[].ent5#att34" target="sv3#area10#mfu13.ent5#att34"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par155" name="type_type" source="data[].ent5#att32" target="sv3#area10#mfu13.ent5#att32"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par156" name="oid_KeyCondition22 [oid]" source="data[].ent5#att10" target="sv3#area10#mfu13#su27#kcond17.ent5#att10"/>
+        <LinkParameter id="sv3#area10#page36#pwu14#ln63#par157" name="OrderItemToOrder.oid_Order.oid(OrderItemToOrder)" source="data[].rel5#role10_ent4#att9" target="sv3#area10#mfu13.rel5#role10.ent4#att9"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#area10#page36#enu18" name="OrderFilter" linkOrder="sv3#area10#page36#enu18#ln64" gr:x="45" gr:y="0" fieldOrder="sv3#area10#page36#enu18#sfld14 sv3#area10#page36#enu18#fld60">
+      <Link id="sv3#area10#page36#enu18#ln64" name="Filter" to="sv3#area10#page36#pwu14" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv3#area10#page36#enu18#ln64#par158" name="Bookname_bookname" source="sv3#area10#page36#enu18#fld60" target="sv3#area10#page36#pwu14#su33#acond23"/>
+        <LinkParameter id="sv3#area10#page36#enu18#ln64#par159" name="type_type" source="sv3#area10#page36#enu18#sfld14" target="sv3#area10#page36#pwu14#su33#acond18"/>
+      </Link>
+      <SelectionField id="sv3#area10#page36#enu18#sfld14" name="type" type="string">
+        <Slot id="sv3#area10#page36#enu18#sfld14#slot15" name="type" label="true" output="true" value="Buy|Rent"/>
+      </SelectionField>
+      <Field id="sv3#area10#page36#enu18#fld60" name="Bookname" type="string" modifiable="true"/>
+    </EntryUnit>
+    <MultiMessageUnit id="sv3#area10#page36#mssu16" name="Message17" gr:x="175" gr:y="45"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area10#page36#mssu16"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv3#area10#page36#enu18">
+          <layout:Field field="sv3#area10#page36#enu18#sfld14"/>
+          <layout:Field field="sv3#area10#page36#enu18#fld60"/>
+          <layout:Link link="sv3#area10#page36#enu18#ln64"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv3#area10#page36#pwu14">
+          <layout:Link link="sv3#area10#page36#pwu14#ln63"/>
+          <layout:Attribute attribute="ent5#att40"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att32"/>
+          <layout:Attribute attribute="ent5#att35"/>
+          <layout:Attribute attribute="ent5#att36"/>
+          <layout:Attribute attribute="ent5#att69"/>
+          <layout:Attribute attribute="rel5#role10.ent4#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

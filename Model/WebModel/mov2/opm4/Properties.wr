@@ -12,6 +12,7 @@
         <LinkParameter id="mov2#opm4#icu4#ln134#par310" name="Rent_Type" sourceValue="Rent" target="mov2#opm4#opg5#cru15.ent7#att66"/>
         <LinkParameter id="mov2#opm4#icu4#ln134#par313" name="Quantity_Quantity" source="mov2#opm4#icu4#icp20" target="mov2#opm4#opg5#cru15.ent7#att47"/>
         <LinkParameter id="mov2#opm4#icu4#ln134#par314" name="ISBN_ISBN" source="mov2#opm4#icu4#icp21" target="mov2#opm4#opg5#cru15.ent7#att45"/>
+        <LinkParameter id="mov2#opm4#icu4#ln134#par105" name="Picture_Picture" source="mov2#opm4#icu4#icp7" target="mov2#opm4#opg5#cru15.ent7#att37"/>
       </Link>
       <OKLink id="mov2#opm4#icu4#oln28" name="OKFlow1" to="mov2#opm4#opg5#seu13">
         <LinkParameter id="mov2#opm4#icu4#oln28#par258" name="UserID_UserID [oid]" source="mov2#opm4#icu4#icp18" target="mov2#opm4#opg5#seu13#su34#rcond17.userOID"/>
@@ -23,6 +24,7 @@
       <InputCollectorParameter id="mov2#opm4#icu4#icp19" name="To"/>
       <InputCollectorParameter id="mov2#opm4#icu4#icp20" name="Quantity"/>
       <InputCollectorParameter id="mov2#opm4#icu4#icp21" name="ISBN"/>
+      <InputCollectorParameter id="mov2#opm4#icu4#icp7" name="Picture"/>
     </InputCollectorUnit>
     <OKCollectorUnit id="mov2#opm4#okcu3" name="Cart Success" gr:x="960" gr:y="275"/>
   </OperationUnits>

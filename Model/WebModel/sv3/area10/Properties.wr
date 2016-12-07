@@ -1,0 +1,36 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area10" name="Order Manage" defaultPage="sv3#area10#page34" landmarks="sv3#area10#page34 sv3#area10#page36 sv3#area10#page32" landmark="true" layout:style="EbookStyle" gr:x="865" gr:y="1320">
+  <OperationUnits>
+    <ModifyUnit id="sv3#area10#mfu10" name="Accept" gr:x="775" gr:y="460" entity="ent5">
+      <Selector id="sv3#area10#mfu10#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area10#mfu10#su24#kcond14" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area10#mfu10#oln41" name="OKFlow37" to="sv3#area10#page38#mssu17">
+        <LinkParameter id="sv3#area10#mfu10#oln41#par124" name="Order Accepted! Please update Inventory._Shown Messages" target="sv3#area10#page38#mssu17.shownMessages" sourceValue="Order Accepted! Please update Inventory."/>
+      </OKLink>
+    </ModifyUnit>
+    <ModifyUnit id="sv3#area10#mfu11" name="Deny" gr:x="945" gr:y="195" entity="ent5">
+      <Selector id="sv3#area10#mfu11#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area10#mfu11#su25#kcond15" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area10#mfu11#oln42" name="OKFlow41" to="sv3#area10#page34#mssu15">
+        <LinkParameter id="sv3#area10#mfu11#oln42#par125" name="Order denied!_Shown Messages" target="sv3#area10#page34#mssu15.shownMessages" sourceValue="Order denied!"/>
+      </OKLink>
+    </ModifyUnit>
+    <ModifyUnit id="sv3#area10#mfu12" name="UpdateInventory" gr:x="1075" gr:y="0" entity="ent2">
+      <Selector id="sv3#area10#mfu12#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area10#mfu12#su26#kcond16" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area10#mfu12#oln43" name="OKFlow42" to="sv3#area10#page34#mssu15">
+        <LinkParameter id="sv3#area10#mfu12#oln43#par126" name="Order accepted and inventory updated!_Shown Messages" target="sv3#area10#page34#mssu15.shownMessages" sourceValue="Order accepted and inventory updated!"/>
+      </OKLink>
+    </ModifyUnit>
+    <ModifyUnit id="sv3#area10#mfu13" name="Processed" gr:x="375" gr:y="560" entity="ent5">
+      <OKLink id="sv3#area10#mfu13#oln44" name="OK" to="sv3#area10#page36#mssu16">
+        <LinkParameter id="sv3#area10#mfu13#oln44#par127" name="Order processed!_Shown Messages" target="sv3#area10#page36#mssu16.shownMessages" sourceValue="Order processed!"/>
+      </OKLink>
+      <Selector id="sv3#area10#mfu13#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area10#mfu13#su27#kcond17" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+  </OperationUnits>
+</Area>

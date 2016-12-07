@@ -1,0 +1,34 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area12" name="Books Manage" defaultPage="sv3#area12#page59" landmarks="sv3#area12#page59 sv3#area12#page57 sv3#area12#page51" landmark="true" gr:x="1120" gr:y="0">
+  <OperationUnits>
+    <ModifyUnit id="sv3#area12#mfu14" name="Update Category" gr:x="895" gr:y="490" entity="ent1">
+      <Selector id="sv3#area12#mfu14#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#mfu14#su44#kcond21" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area12#mfu14#oln49" name="OKFlow4" to="sv3#area12#page52#mssu21">
+        <LinkParameter id="sv3#area12#mfu14#oln49#par243" name="Category updated!_Shown Messages" target="sv3#area12#page52#mssu21.shownMessages" sourceValue="Category updated!"/>
+      </OKLink>
+    </ModifyUnit>
+    <ModifyUnit id="sv3#area12#mfu15" name="updateInventory" gr:x="475" gr:y="365" entity="ent2">
+      <Selector id="sv3#area12#mfu15#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#mfu15#su48#kcond22" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area12#mfu15#oln50" name="OKFlow10" to="sv3#area12#page57#mssu23">
+        <LinkParameter id="sv3#area12#mfu15#oln50#par244" name="Book added!_Shown Messages" target="sv3#area12#page57#mssu23.shownMessages" sourceValue="Book added!"/>
+      </OKLink>
+      <KOLink id="sv3#area12#mfu15#kln19" name="KOFlow11" to="sv3#area12#page57#mssu23" gr:bendpoints="-62,-70,23,65">
+        <LinkParameter id="sv3#area12#mfu15#kln19#par245" name="Book add failed!_Shown Messages" target="sv3#area12#page57#mssu23.shownMessages" sourceValue="Book add failed!"/>
+      </KOLink>
+    </ModifyUnit>
+    <ModifyUnit id="sv3#area12#mfu16" name="updateInventory" gr:x="445" gr:y="1010" entity="ent2">
+      <Selector id="sv3#area12#mfu16#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#mfu16#su49#kcond24" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area12#mfu16#oln51" name="OKFlow11" to="sv3#area12#page59#mssu24">
+        <LinkParameter id="sv3#area12#mfu16#oln51#par246" name="Update Inventory successfully!_Shown Messages" target="sv3#area12#page59#mssu24.shownMessages" sourceValue="Update Inventory successfully!"/>
+      </OKLink>
+      <KOLink id="sv3#area12#mfu16#kln20" name="KOFlow12" to="sv3#area12#page59#mssu24" gr:bendpoints="-36,-85,-1,70">
+        <LinkParameter id="sv3#area12#mfu16#kln20#par247" name="Update inventory failed!_Shown Messages" target="sv3#area12#page59#mssu24.shownMessages" sourceValue="Update inventory failed!"/>
+      </KOLink>
+    </ModifyUnit>
+  </OperationUnits>
+</Area>

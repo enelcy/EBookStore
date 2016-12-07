@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page58" name="UpdateInventory" gr:x="650" gr:y="345">
+  <ContentUnits>
+    <EntryUnit id="sv3#area12#page58#enu31" name="updateInventory" linkOrder="sv3#area12#page58#enu31#ln98" gr:x="0" gr:y="0" entity="ent2" fieldOrder="sv3#area12#page58#enu31#fld113 sv3#area12#page58#enu31#fld114 sv3#area12#page58#enu31#fld115 sv3#area12#page58#enu31#fld116">
+      <Field id="sv3#area12#page58#enu31#fld113" name="Sale_Inventory" type="integer" modifiable="true" attribute="ent2#att5">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page58#enu31#fld113#mnd15" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page58#enu31#fld114" name="Sold" type="integer" modifiable="true" attribute="ent2#att6">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page58#enu31#fld114#mnd16" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page58#enu31#fld115" name="Rent_Inventory" type="integer" modifiable="true" attribute="ent2#att7">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page58#enu31#fld115#mnd17" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area12#page58#enu31#fld116" name="Rent" type="integer" modifiable="true" attribute="ent2#att8">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area12#page58#enu31#fld116#mnd18" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Link id="sv3#area12#page58#enu31#ln98" name="Update" to="sv3#area12#mfu15" type="normal" automaticCoupling="true" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page58#enu31">
+          <layout:Field field="sv3#area12#page58#enu31#fld113"/>
+          <layout:Field field="sv3#area12#page58#enu31#fld114"/>
+          <layout:Field field="sv3#area12#page58#enu31#fld115"/>
+          <layout:Field field="sv3#area12#page58#enu31#fld116"/>
+          <layout:Link link="sv3#area12#page58#enu31#ln98"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,107 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area10#page32" name="Order history" landmark="true" gr:x="0" gr:y="790">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area10#page32#pwu10" name="orders" linkOrder="sv3#area10#page32#pwu10#ln48" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att40 ent5#att32 ent5#att69">
+      <Selector id="sv3#area10#page32#pwu10#su28" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area10#page32#pwu10#su28#acond10" name="type" predicate="contains" booleanOperator="or" implied="true" attributes="ent5#att32"/>
+        <AttributesCondition id="sv3#area10#page32#pwu10#su28#acond11" name="status" predicate="contains" booleanOperator="or" implied="true" attributes="ent5#att69" value="Denied|Processed"/>
+        <AttributesCondition id="sv3#area10#page32#pwu10#su28#acond12" name="bookname" predicate="contains" booleanOperator="or" implied="true" attributes="ent5#att40"/>
+        <AttributesCondition id="sv3#area10#page32#pwu10#su28#acond13" name="statusUserChoose" predicate="eq" booleanOperator="or" implied="true" attributes="ent5#att69"/>
+      </Selector>
+      <Link id="sv3#area10#page32#pwu10#ln48" name="Check" to="sv3#area10#page32#dau3" type="normal" automaticCoupling="true" validate="true" ajaxEnabled="true"/>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#area10#page32#enu13" name="OrderFilter" linkOrder="sv3#area10#page32#enu13#ln49" gr:x="65" gr:y="0" fieldOrder="sv3#area10#page32#enu13#sfld9 sv3#area10#page32#enu13#sfld10 sv3#area10#page32#enu13#fld53">
+      <Link id="sv3#area10#page32#enu13#ln49" name="Filter" to="sv3#area10#page32#pwu10" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv3#area10#page32#enu13#ln49#par128" name="Bookname_bookname" source="sv3#area10#page32#enu13#fld53" target="sv3#area10#page32#pwu10#su28#acond12"/>
+        <LinkParameter id="sv3#area10#page32#enu13#ln49#par129" name="type_type" source="sv3#area10#page32#enu13#sfld9" target="sv3#area10#page32#pwu10#su28#acond10"/>
+        <LinkParameter id="sv3#area10#page32#enu13#ln49#par130" name="Result_statusUserChoose" source="sv3#area10#page32#enu13#sfld10" target="sv3#area10#page32#pwu10#su28#acond13"/>
+      </Link>
+      <SelectionField id="sv3#area10#page32#enu13#sfld9" name="type" type="string">
+        <Slot id="sv3#area10#page32#enu13#sfld9#slot12" name="type" label="true" output="true" value="Buy|Rent"/>
+      </SelectionField>
+      <Field id="sv3#area10#page32#enu13#fld53" name="Bookname" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area10#page32#enu13#sfld10" name="Result" type="string">
+        <Slot id="sv3#area10#page32#enu13#sfld10#slot13" name="result" label="true" output="true" value="Denied|Processed"/>
+      </SelectionField>
+    </EntryUnit>
+    <DataUnit id="sv3#area10#page32#dau3" name="OrderDetail" gr:x="295" gr:y="140" entity="ent5" displayAttributes="ent5#att10 ent5#att40 ent5#att26 ent5#att32 ent5#att33 ent5#att34 ent5#att35 ent5#att36 ent5#att38 ent5#att4 ent5#att68 ent5#att69 rel5#role10.ent4#att12 rel5#role10.ent4#att64">
+      <Selector id="sv3#area10#page32#dau3#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area10#page32#dau3#su29#kcond18" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv3#area10#page32#enu13">
+          <layout:Link link="sv3#area10#page32#enu13#ln49"/>
+          <layout:Field field="sv3#area10#page32#enu13#sfld9"/>
+          <layout:Field field="sv3#area10#page32#enu13#sfld10"/>
+          <layout:Field field="sv3#area10#page32#enu13#fld53"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv3#area10#page32#pwu10">
+          <layout:Link link="sv3#area10#page32#pwu10#ln48"/>
+          <layout:Attribute attribute="ent5#att40"/>
+          <layout:Attribute attribute="ent5#att32"/>
+          <layout:Attribute attribute="ent5#att69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv3#area10#page32#dau3">
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att40"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att32"/>
+          <layout:Attribute attribute="ent5#att33"/>
+          <layout:Attribute attribute="ent5#att34"/>
+          <layout:Attribute attribute="ent5#att35"/>
+          <layout:Attribute attribute="ent5#att36"/>
+          <layout:Attribute attribute="ent5#att38"/>
+          <layout:Attribute attribute="ent5#att4"/>
+          <layout:Attribute attribute="ent5#att68"/>
+          <layout:Attribute attribute="ent5#att69"/>
+          <layout:Attribute attribute="rel5#role10.ent4#att12"/>
+          <layout:Attribute attribute="rel5#role10.ent4#att64"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

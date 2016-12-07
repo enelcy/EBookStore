@@ -1,0 +1,23 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area11" name="Users Manage" defaultPage="sv3#area11#page48" landmarks="sv3#area11#page48 sv3#area11#page45 sv3#area11#page49" landmark="true" gr:x="140" gr:y="535">
+  <OperationUnits>
+    <SelectorUnit id="sv3#area11#seu12" name="group" gr:x="195" gr:y="440" entity="Group">
+      <Link id="sv3#area11#seu12#ln70" name="readgroups" to="sv3#area11#page45#enu20" type="transport" validate="true">
+        <LinkParameter id="sv3#area11#seu12#ln70#par182" name="groupName_group[group]" source="groupNameArray" target="sv3#area11#page45#enu20#sfld15#slot16"/>
+        <LinkParameter id="sv3#area11#seu12#ln70#par191" name="oid_group[groupvalue]" source="groupOIDArray" target="sv3#area11#page45#enu20#sfld15#slot17"/>
+      </Link>
+      <Link id="sv3#area11#seu12#ln71" name="readgroup" to="sv3#area11#page47#enu21" type="transport" validate="true">
+        <LinkParameter id="sv3#area11#seu12#ln71#par192" name="groupName_group[name]" source="groupNameArray" target="sv3#area11#page47#enu21#sfld18#slot19"/>
+        <LinkParameter id="sv3#area11#seu12#ln71#par193" name="oid_group[value]" source="groupOIDArray" target="sv3#area11#page47#enu21#sfld18#slot20"/>
+        <LinkParameter id="sv3#area11#seu12#ln71#par194" name="defaultModule.oid_group - Preselection" source="Group2DefaultModule_moduleOIDArray" target="sv3#area11#page47#enu21#sfld18_presel"/>
+      </Link>
+    </SelectorUnit>
+    <DeleteUnit id="sv3#area11#dlu6" name="denysignup" gr:x="0" gr:y="660" entity="ent8">
+      <Selector id="sv3#area11#dlu6#su42" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area11#dlu6#su42#kcond20" name="KeyCondition29" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area11#dlu6#oln47" name="OKFlow47" to="sv3#area11#page44#mssu19">
+        <LinkParameter id="sv3#area11#dlu6#oln47#par195" name="Sign up denied!_Shown Messages" target="sv3#area11#page44#mssu19.shownMessages" sourceValue="Sign up denied!"/>
+      </OKLink>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

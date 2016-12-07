@@ -55,18 +55,19 @@
         <LinkParameter id="sv1#area7#page40#dau9#ln146#par280" name="name_Book" source="data.ent3#att17" target="sv1#miu3.mov2#opm4#icu4#icp17"/>
         <LinkParameter id="sv1#area7#page40#dau9#ln146#par281" name="price_Price" source="data.ent3#att65" target="sv1#miu3.mov2#opm4#icu4#icp15"/>
         <LinkParameter id="sv1#area7#page40#dau9#ln146#par316" name="ISBN_ISBN" source="data.ent3#att16" target="sv1#miu3.mov2#opm4#icu4#icp21"/>
+        <LinkParameter id="sv1#area7#page40#dau9#ln146#par102" name="photo_Picture" source="data.ent3#att20" target="sv1#miu3.mov2#opm4#icu4#icp7"/>
       </Link>
     </DataUnit>
     <EntryUnit id="sv1#area7#page40#enu30" name="Rent Date" linkOrder="sv1#area7#page40#enu30#ln147" gr:x="15" gr:y="140" fieldOrder="sv1#area7#page40#enu30#fld81 sv1#area7#page40#enu30#fld82 sv1#area7#page40#enu30#fld83">
       <Field id="sv1#area7#page40#enu30#fld81" name="From" type="date" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld81#mnd3" name="Mandatory3" errorMessage="Mandatory field"/>
+          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld81#mnd3" name="Mandatory3" errorMessage="Rent date is required!"/>
           <CompareValidationRule id="sv1#area7#page40#enu30#fld81#cmp1" name="Compare1" predicate="gt" value="today()" errorMessage="Rent date must be greater than today."/>
         </VRules>
       </Field>
       <Field id="sv1#area7#page40#enu30#fld82" name="To" type="date" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld82#mnd4" name="Mandatory4" errorMessage="Mandatory field"/>
+          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld82#mnd4" name="Mandatory4" errorMessage="Return date is required!"/>
           <CompareValidationRule id="sv1#area7#page40#enu30#fld82#cmp2" name="Compare2" predicate="gt" valueField="sv1#area7#page40#enu30#fld81" errorMessage="Return date must be greater than rent date."/>
         </VRules>
       </Field>
@@ -77,7 +78,7 @@
       </Link>
       <Field id="sv1#area7#page40#enu30#fld83" name="Quantity" type="integer" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld83#mnd2" name="Mandatory2" errorMessage="Mandatory field"/>
+          <MandatoryValidationRule id="sv1#area7#page40#enu30#fld83#mnd2" name="Mandatory2" errorMessage="Quantity is required!"/>
         </VRules>
       </Field>
       <VRules/>

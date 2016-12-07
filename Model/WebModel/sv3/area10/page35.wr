@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area10#page35" name="UpdateInventory" gr:x="1065" gr:y="320">
+  <ContentUnits>
+    <SelectorUnit id="sv3#area10#page35#seu10" name="selectInventory" gr:x="0" gr:y="135" entity="ent2">
+      <Selector id="sv3#area10#page35#seu10#su32" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area10#page35#seu10#su32#rcond4" name="RoleCondition4" role="rel3#role5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area10#page35#seu10#ln57" name="Flow74" to="sv3#area10#page35#enu17" type="transport" validate="true">
+        <LinkParameter id="sv3#area10#page35#seu10#ln57#par134" name="InventoryToBookInfo.oid_InventoryToBookInfo" source="rel3#role6_ent3#att15Array" target="sv3#area10#page35#enu17#fld59_slot"/>
+        <LinkParameter id="sv3#area10#page35#seu10#ln57#par135" name="oid_Key Condition [oid]" source="ent2#att3Array" target="sv3#area10#page35#enu17.ent2#att3"/>
+        <LinkParameter id="sv3#area10#page35#seu10#ln57#par136" name="Rent_Rent" source="ent2#att8Array" target="sv3#area10#page35#enu17#fld58_slot"/>
+        <LinkParameter id="sv3#area10#page35#seu10#ln57#par137" name="Rent_Inventory_Rent_Inventory" source="ent2#att7Array" target="sv3#area10#page35#enu17#fld57_slot"/>
+        <LinkParameter id="sv3#area10#page35#seu10#ln57#par138" name="Sale_Inventory_Sale_Inventory" source="ent2#att5Array" target="sv3#area10#page35#enu17#fld55_slot"/>
+        <LinkParameter id="sv3#area10#page35#seu10#ln57#par139" name="Sold_Sold" source="ent2#att6Array" target="sv3#area10#page35#enu17#fld56_slot"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv3#area10#page35#enu17" name="Inventory" linkOrder="sv3#area10#page35#enu17#ln62" gr:x="40" gr:y="0" entity="ent2">
+      <Field id="sv3#area10#page35#enu17#fld55" name="Sale_Inventory" type="integer" modifiable="true" attribute="ent2#att5" preloaded="true"/>
+      <Field id="sv3#area10#page35#enu17#fld56" name="Sold" type="integer" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv3#area10#page35#enu17#fld57" name="Rent_Inventory" type="integer" modifiable="true" attribute="ent2#att7" preloaded="true"/>
+      <Field id="sv3#area10#page35#enu17#fld58" name="Rent" type="integer" modifiable="true" attribute="ent2#att8" preloaded="true"/>
+      <Link id="sv3#area10#page35#enu17#ln62" name="Update" to="sv3#area10#mfu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par140" name="Inventory Object_Inventory Object" source="entityBean" target="sv3#area10#mfu12.entityBeans"/>
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par141" name="Key [oid]_KeyCondition21 [oid]" source="key.ent2#att3" target="sv3#area10#mfu12#su26#kcond16.ent2#att3"/>
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par142" name="Rent_Rent" source="sv3#area10#page35#enu17#fld58" target="sv3#area10#mfu12.ent2#att8"/>
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par143" name="Rent_Inventory_Rent_Inventory" source="sv3#area10#page35#enu17#fld57" target="sv3#area10#mfu12.ent2#att7"/>
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par144" name="Sale_Inventory_Sale_Inventory" source="sv3#area10#page35#enu17#fld55" target="sv3#area10#mfu12.ent2#att5"/>
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par145" name="Sold_Sold" source="sv3#area10#page35#enu17#fld56" target="sv3#area10#mfu12.ent2#att6"/>
+        <LinkParameter id="sv3#area10#page35#enu17#ln62#par146" name="InventoryToBookInfo_BookInfo.oid(InventoryToBookInfo)" source="sv3#area10#page35#enu17#fld59" target="sv3#area10#mfu12.rel3#role6.ent3#att15"/>
+      </Link>
+      <Field id="sv3#area10#page35#enu17#fld59" name="InventoryToBookInfo" type="string" modifiable="true" hidden="true" preloaded="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area10#page35#enu17">
+          <layout:Link link="sv3#area10#page35#enu17#ln62"/>
+          <layout:Field field="sv3#area10#page35#enu17#fld55"/>
+          <layout:Field field="sv3#area10#page35#enu17#fld56"/>
+          <layout:Field field="sv3#area10#page35#enu17#fld57"/>
+          <layout:Field field="sv3#area10#page35#enu17#fld58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page50" name="UpdateInventory" layout:style="EbookStyle" gr:x="60" gr:y="990">
+  <ContentUnits>
+    <EntryUnit id="sv3#area12#page50#enu23" name="updateInventory" linkOrder="sv3#area12#page50#enu23#ln85" gr:x="0" gr:y="0" entity="ent2">
+      <Field id="sv3#area12#page50#enu23#fld93" name="Sale_Inventory" type="integer" modifiable="true" attribute="ent2#att5" preloaded="true"/>
+      <Field id="sv3#area12#page50#enu23#fld94" name="Sold" type="integer" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv3#area12#page50#enu23#fld95" name="Rent_Inventory" type="integer" modifiable="true" attribute="ent2#att7" preloaded="true"/>
+      <Field id="sv3#area12#page50#enu23#fld96" name="Rent" type="integer" modifiable="true" attribute="ent2#att8" preloaded="true"/>
+      <Link id="sv3#area12#page50#enu23#ln85" name="Update" to="sv3#area12#mfu16" type="normal" automaticCoupling="true" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page50#enu23">
+          <layout:Field field="sv3#area12#page50#enu23#fld93"/>
+          <layout:Field field="sv3#area12#page50#enu23#fld94"/>
+          <layout:Field field="sv3#area12#page50#enu23#fld95"/>
+          <layout:Field field="sv3#area12#page50#enu23#fld96"/>
+          <layout:Link link="sv3#area12#page50#enu23#ln85"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
